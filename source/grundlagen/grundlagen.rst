@@ -48,7 +48,7 @@ Die magnetischen Grundgrößen
 Bei einem Stromfluss durch einen kreisförmigen Leiter, entstehen konzentrische Feldlinien um den Leiter. Fließt ein Strom in den Leiter hinein, verlaufen die Feldlinien im Uhrzeigersinn. Wird die Stromrichtung umgekehrt, ändert sich die Richtung der Feldlinien. Die magnetische Kraft bzw. Stärke des Feldes ist von der Höhe des fließenden Stromes und vom Abstand zum Leiter abhängig.
 
 .. image:: pics/magnFeldstaerke0.png
-   :width: 700px
+   :width: 710px
 
 |
 
@@ -58,7 +58,7 @@ Die Gleichungen unten zeigen, welche Größen die magnetische Feldstärke einer 
 |
 
 .. image:: pics/magnFeldstaerke.png
-   :width: 700px
+   :width: 710px
 
 |
 
@@ -68,7 +68,7 @@ Die Gleichungen unten zeigen, welche Größen die magnetische Feldstärke einer 
 Die magnetische Wirkung einer Spule lässt sich erheblich steigern, wenn in den Spulenhohlraum ein massives zylindrisches Eisenstück eingeführt wird. Jedes im Spulenkörper befindliche Medium wird von den Feldlinien durchdrungen. Da bei konstanter Feldstärke und Feldlinienzahl die Stoffe Luft und Eisen sehr unterschiedlich Kraftwirkungen verursachen, scheint jeder Stoff einen bestimmten **magnetischen Widerstand** zu verursachen. Der magnetische Widerstand von Eisen ist geringer als der von Luft oder anders formuliert, die **magnetische Leitfähigkeit** des Eisens ist höher. Durch die Magnetfeld verstärkende Wirkung des Kernmaterials entsteht ein starker Elektromagnet.  
 
 .. image:: pics/eisenkern.png
-   :width: 700px
+   :width: 710px
 
 |
 
@@ -83,7 +83,7 @@ Die Veränderung der magnetischen Leitfähigkeit durch bestimmte Stoffe wird mit
 |
 
 .. image:: pics/perme.png
-   :width: 700px
+   :width: 710px
 
 |
 
@@ -98,13 +98,67 @@ Das Produkt aus der magnetischer Feldstärke und der Permeabiltät macht eine Au
 |
 
 .. image:: pics/magnFlussd.png
-   :width: 700px
+   :width: 710px
 
 |
 
 |
 
    **Nur die magnetische Flussdichte B kann etwas über die Stärke eines Magnetfeldes aussagen, denn nur sie berücksichtigt die Permeabilität und somit die magnetische Leitfähigkeit eines Materials bzw. der Luft.**
+
+|
+
+Wie bei einem elektrischen Leiter, dessen Leitwert vom Material, der Leiterlänge und dem Querschnitt abhängt, lässt sich auch für den magnetischen Kreis ein magnetischer Leitwert berechnen. Besonders einfach wird die Berechnung des Leitwertes, wenn es sich um ein homogenes und auf einen definierten räumlichen Bereich beschränktes magnetisches Feld handelt. Fließt ein Strom durch einen Spulendraht, der lediglich einmal (N = 1) um einen geschlossenen Eisenkern gewickelt wurde, so verlaufen die meisten Feldlinien im räumlich begrenzten Kernmaterial.
+
+|
+
+.. image:: pics/leitwert.png
+   :width: 450px
+
+|
+
+|
+
+Für die im Kern verlaufenden Feldlinien lässt sich die mittlere Feldlinienlänge lm über die Kernabmessungen bestimmen. Die Querschnittsfläche A ergibt sich aus dem Produkt der Kantenlängen und die materialspezifische Permeabilität kann mit Hilfe der Magnetisierungskennlinie des Herstellers für eine bestimmte Feldstärke H über die Gleichung der magnetischen Flussdichte B berechnet werden. Die Abmessungen des Eisenkernes beeinflussen somit unmittelbar den magnetischen Leitwert. Dieser steigt (in Analogie zum Leitwert eines elektrischen Leiters) mit höherer magnetischer Leitfähigkeit des Materials, bei Abnahme der mittleren Feldlinienlänge und bei Vergößerung des Querschnittes.
+
+|
+
+.. image:: pics/magnLeitwert.png
+   :width: 710px
+
+|
+
+|
+
+In Abhängigkeit der magnetischen Flussdichte B und dem magnetischen Widerstand Rm bzw. Leitwert Λ, bildet sich innerhalb des in der Spule befindlichen Werkstoffes, ein **magnetischer Fluss Φ** (Phi) aus. Dieser ist vergleichbar mit dem elektrischen Strom durch einen Leiterwiderstand. Der magnetische Fluss repräsentiert die Gesamtzahl aller auftretenden Feldlinien und somit die Höhe des „magnetischen Stromes“. Ein größerer Querschnitt A des Werkstoffes bzw. des Hohlraumes senkt den magnetischen Widerstand Rm und führt zu einem höheren magnetischen Fluss. Wird die magnetische Flussdichte B erhöht (größerer Strom, höhere Windungszahl, Kernmaterial mit höherer Permeabilität), so führt auch das zu einem proportionalen Anstieg des magnetischen Flusses Φ.
+
+|
+
+.. image:: pics/magnFluss.png
+   :width: 710px
+
+|
+
+|
+
+Im Bild unten wird die Analogie zwischen dem elektrischen Stromkreis und dem magnetischen Kreis mit Hilfe der dazugehörigen Größen verdeutlicht.
+
+Die Spannungsquelle U des elektrischen Stromkreises lässt sich aus in Reihe geschalteten Primärzellen (U0) zusammensetzen. Im magnetischen Kreis ist die magnetische Durchflutung Θ die „Spannungsquelle“. Die Durchflutung steigt mit der Größe des Stromes und der Zahl der Windungen.
+
+|
+
+.. image:: pics/elMagnKreis.png
+   :width: 690px
+
+|
+
+Nachfolgend sind die Zusammenhänge der beiden Kreise in tabellarischer Form zusammengefasst.
+
+|
+
+.. image:: pics/verglElMagn.png
+   :width: 710px
+
 
 |
 
