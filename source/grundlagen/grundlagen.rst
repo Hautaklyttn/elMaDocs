@@ -180,7 +180,7 @@ Bei solchen Einsatzfällen hat der **Drehstrommotor mit Kurzschlussläufer** Vor
 |
 
 .. image:: pics/dcVsAsync.png
-   :width: 600px
+   :width: 620px
 
 |
 
