@@ -40,8 +40,11 @@ myst_enable_extensions = {
 
 html_css_files = [
     'styleConfig.css',
+    'hacks.css',
 ]
 
 html_theme_options = {
 	'home_link': 'hide',  
 }
+
+rst_prolog = "\n.. include:: .specialStyles.rst\n"

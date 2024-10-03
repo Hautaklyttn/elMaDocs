@@ -10,7 +10,7 @@
     <link rel="icon" type="image/x-icon" href="">
 
   
-  <title>Grundlagen elektrischer Maschinen &mdash; elMaDocs</title>
+  <title>Grundlagen Elektrische Maschinen &mdash; elMaDocs</title>
   
 
   
@@ -28,6 +28,8 @@
   
     <link rel="stylesheet" href="../_static/styleConfig.css" type="text/css" />
   
+    <link rel="stylesheet" href="../_static/hacks.css" type="text/css" />
+  
 
   
 
@@ -36,7 +38,7 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="elMaDocs" href="../index.html"/>
-        <link rel="next" title="Gleichstrommotoren" href="../motoren/dcMot.html"/>
+        <link rel="next" title="Gleichstrommaschinen" href="../motoren/dcMot.html"/>
         <link rel="prev" title="elMaDocs" href="../index.html"/>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -78,17 +80,17 @@
 <li class="toctree-l2"><a class="reference internal" href="#allgemeine-grundlagen">Allgemeine Grundlagen</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../motoren/dcMot.html">DC-Motoren</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../motoren/dcMot.html">Gleichstrommaschine</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#aufbau">Aufbau</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#eigenschaften">Eigenschaften</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../motoren/syncMot.html">Synchronmotoren</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../motoren/syncMot.html">Synchronmaschine</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../motoren/syncMot.html#permantenterregte-synchronmaschine">Permantenterregte Synchronmaschine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../motoren/syncMot.html#fremderregte-synchronmaschine">Fremderregte Synchronmaschine</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../motoren/asyncMot.html">Asynchronmotoren</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../motoren/asyncMot.html">Asynchronmaschine</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../motoren/asyncMot.html#aufbau">Aufbau</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../motoren/asyncMot.html#eigenschaften">Eigenschaften</a></li>
 </ul>
@@ -145,8 +147,8 @@
 	  <dark-mode-toggle appearance="toggle" dark="switch to light mode" light="switch to dark mode">
 	  </dark-mode-toggle>
 	</div>
-  <section id="grundlagen-elektrischer-maschinen">
-<h1>Grundlagen elektrischer Maschinen<a class="headerlink" href="#grundlagen-elektrischer-maschinen" title="Link to this heading">¶</a></h1>
+  <section id="grundlagen-elektrische-maschinen">
+<h1>Grundlagen Elektrische Maschinen<a class="headerlink" href="#grundlagen-elektrische-maschinen" title="Link to this heading">¶</a></h1>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -157,17 +159,14 @@
 <section id="allgemeine-grundlagen">
 <h2>Allgemeine Grundlagen<a class="headerlink" href="#allgemeine-grundlagen" title="Link to this heading">¶</a></h2>
 <p>Elektrische Maschinen dienen der <strong>Umformung von Energie</strong></p>
-<ul class="simple">
-<li><p>      -   Generatoren <strong>erzeugen elektrische Energie</strong>  aus mechanischer Energie</p></li>
-<li><p>      -   Motoren <strong>erzeugen mechanische Energie</strong> aus elektrischer Energie</p></li>
-<li><p>      -   Rotierende Umformer <strong>wandeln Frequenz und Spannung</strong> elektrischer Energie</p></li>
-</ul>
-<div class="line-block">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Generatoren</font> erzeugen elektrische Energie</b>  aus mechanischer Energie</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Motoren</font> erzeugen mechanische Energie</b> aus elektrischer Energie</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Rotierende Umformer</font> wandeln Frequenz und Spannung</b> elektrischer Energie</span><div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>Trotz aller Vielfalt im konstruktiven Detail, nach dem elektrische Maschinen ausgeführt sein können, Iässt sich ihre Wirkungsweise stets durch Anwendung von nur drei physikalischen Grundgesetzen verstehen und beschreiben:</p>
 <ul class="simple">
-<li><p>Das <strong>Induktionsgesetz</strong>, das <strong>Durchflutungsgesetz</strong> und das <strong>Kraftwirkungsgesetz</strong>.</p></li>
+<li><p>Das <span class="navy">Induktionsgesetz</span>, das <span class="navy">Durchflutungsgesetz</span> und das <span class="navy">Kraftwirkungsgesetz</span>.</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -178,27 +177,19 @@
 <section id="das-magnetische-feld">
 <h3>Das magnetische Feld<a class="headerlink" href="#das-magnetische-feld" title="Link to this heading">¶</a></h3>
 <p>Je größer die Zahl der nebeneinander liegenden und gleichsinnig vom Strom durchflossenen Leiter ist, desto stärker ist das die Leiter umschließende magnetische Feld. Das Magnetfeld der Spule ist mit dem eines Stabmagneten vergleichbar. Dort wo die Feldlinien die Spule verlassen, bildet sich ein magnetischer Nordpol; dort wo sie in die Spule eindringen, ein Südpol.</p>
-<p>Die Spule stellt somit ein Magnet dar, der sich elektrisch ein- und ausschalten lässt (Elektromagnet). Allerdings ist für die Ausbildung eines starken Magnetfeldes in der Luftspule ein relativ hoher Strom notwendig, der mit einem größeren Querschnitt für den Wickeldraht (Vermeidung einer unzulässigen Erwärmung der Wicklung) verbunden ist.</p>
+<p>Die Spule stellt somit ein Magnet dar, der sich elektrisch ein- und ausschalten lässt (<span class="navy">Elektromagnet</span>). Allerdings ist für die Ausbildung eines starken Magnetfeldes in der Luftspule ein relativ hoher Strom notwendig, der mit einem größeren Querschnitt für den Wickeldraht (Vermeidung einer unzulässigen Erwärmung der Wicklung) verbunden ist.</p>
 <a class="reference internal image-reference" href="../_images/magnFeld.png"><img alt="../_images/magnFeld.png" src="../_images/magnFeld.png" style="width: 700px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</section>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;</section>
 <section id="die-magnetischen-grundgroszen">
 <h3>Die magnetischen Grundgrößen<a class="headerlink" href="#die-magnetischen-grundgroszen" title="Link to this heading">¶</a></h3>
-<p>Bei einem Stromfluss durch einen kreisförmigen Leiter, entstehen konzentrische Feldlinien um den Leiter. Fließt ein Strom in den Leiter hinein, verlaufen die Feldlinien im Uhrzeigersinn. Wird die Stromrichtung umgekehrt, ändert sich die Richtung der Feldlinien. Die magnetische Kraft bzw. Stärke des Feldes ist von der Höhe des fließenden Stromes und vom Abstand zum Leiter abhängig.</p>
+<p>Bei einem Stromfluss durch einen kreisförmigen Leiter, entstehen konzentrische Feldlinien um den Leiter. Fließt ein Strom in den Leiter hinein, verlaufen die Feldlinien im Uhrzeigersinn. Wird die Stromrichtung umgekehrt, ändert sich die Richtung der Feldlinien. Die magnetische Kraft bzw. Stärke des Feldes ist von der Höhe des fließenden Stromes und vom Abstand zum Leiter abhängig:</p>
 <a class="reference internal image-reference" href="../_images/magnFeldstaerke0.png"><img alt="../_images/magnFeldstaerke0.png" src="../_images/magnFeldstaerke0.png" style="width: 710px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Obige Gleichung zeigt die magnetische Kraftwirkung um einen geraden Leiter im Zusammenhang mit der magnetischen Feldstärke H (magnetische Kraft).
-Die Gleichungen unten zeigen, welche Größen die magnetische Feldstärke einer zylindrischen Luftspule beeinflussen.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<p>Für die magnetische Feldstärke in einer zylindrischen Luftspule gilt:</p>
 <a class="reference internal image-reference" href="../_images/magnFeldstaerke.png"><img alt="../_images/magnFeldstaerke.png" src="../_images/magnFeldstaerke.png" style="width: 710px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -206,7 +197,7 @@ Die Gleichungen unten zeigen, welche Größen die magnetische Feldstärke einer 
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Die magnetische Wirkung einer Spule lässt sich erheblich steigern, wenn in den Spulenhohlraum ein massives zylindrisches Eisenstück eingeführt wird. Jedes im Spulenkörper befindliche Medium wird von den Feldlinien durchdrungen. Da bei konstanter Feldstärke und Feldlinienzahl die Stoffe Luft und Eisen sehr unterschiedlich Kraftwirkungen verursachen, scheint jeder Stoff einen bestimmten <strong>magnetischen Widerstand</strong> zu verursachen. Der magnetische Widerstand von Eisen ist geringer als der von Luft oder anders formuliert, die <strong>magnetische Leitfähigkeit</strong> des Eisens ist höher. Durch die Magnetfeld verstärkende Wirkung des Kernmaterials entsteht ein starker Elektromagnet.</p>
+<p>Die magnetische Wirkung einer Spule lässt sich erheblich steigern, wenn in den Spulenhohlraum ein massives zylindrisches Eisenstück eingeführt wird. Jedes im Spulenkörper befindliche Medium wird von den Feldlinien durchdrungen. Da bei konstanter Feldstärke und Feldlinienzahl die Stoffe Luft und Eisen sehr unterschiedlich Kraftwirkungen verursachen, scheint jeder Stoff einen bestimmten <span class="navy">magnetischen Widerstand</span> zu verursachen. Der magnetische Widerstand von Eisen ist geringer als der von Luft oder anders formuliert, die <span class="navy">magnetische Leitfähigkeit</span> des Eisens ist höher. Durch die Magnetfeld verstärkende Wirkung des Kernmaterials entsteht ein starker Elektromagnet.</p>
 <a class="reference internal image-reference" href="../_images/eisenkern.png"><img alt="../_images/eisenkern.png" src="../_images/eisenkern.png" style="width: 710px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -215,10 +206,10 @@ Die Gleichungen unten zeigen, welche Größen die magnetische Feldstärke einer 
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><p><strong>Die verstärkende Wirkung beruht darauf, dass bestimmte Materialien ihre Elementarmagnete unter dem Einfluss magnetischer Fremdfelder ausrichten und damit selbst zu einem Magneten werden.</strong></p>
+<div><p><span class="navy">Die verstärkende Wirkung beruht darauf, dass bestimmte Materialien ihre Elementarmagnete unter dem Einfluss magnetischer Fremdfelder ausrichten und damit selbst zu einem Magneten werden.</span></p>
 </div></blockquote>
 <p>Zu ihnen gehören Eisen, Kobalt und Nickel. Sie sind „ferromagnetisch“. Aufgrund dieser Eigenschaft, besitzen sie eine gute magnetische Leitfähigkeit. Die Leitfähigkeit ist allerdings stark von der Stärke des äußeren Magnetfeldes abhängig.</p>
-<p>Die Veränderung der magnetischen Leitfähigkeit durch bestimmte Stoffe wird mit Hilfe der <strong>magnetischen Permeabilität µ</strong> beschrieben. Sie ist vergleichbar mit der Permittivität des Kondensators. Als Maßstab dient auch hier der materiefreie Raum – das Vakuum. Im Vakuum ist die Permeabilität eine konstante Größe. Der absolute Wert dieser Größe wird <strong>absolute Permeabilität</strong> oder <strong>magnetische Feldkonstante µ0</strong> genannt.</p>
+<p>Die Veränderung der magnetischen Leitfähigkeit durch bestimmte Stoffe wird mit Hilfe der <span class="navy">magnetischen Permeabilität µ</span> beschrieben. Sie ist vergleichbar mit der Permittivität des Kondensators. Als Maßstab dient auch hier der materiefreie Raum – das Vakuum. Im Vakuum ist die Permeabilität eine konstante Größe. Der absolute Wert dieser Größe wird <span class="navy">absolute Permeabilität</span> oder <span class="navy">magnetische Feldkonstante µ0</span> genannt.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -230,12 +221,12 @@ Die Gleichungen unten zeigen, welche Größen die magnetische Feldstärke einer 
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><p><strong>Eine höhere magnetische Leitfähigkeit führt zu einer Verdichtung der Feldlinien und somit zu einer Konzentration des magnetischen Feldes innerhalb des in die Spule eingebrachten Stoffes.</strong> Die höhere Feldliniendichte erzeugt eine größere magnetische Kraft.</p>
+<div><p><span class="navy">Eine höhere magnetische Leitfähigkeit führt zu einer Verdichtung der Feldlinien und somit zu einer Konzentration des magnetischen Feldes innerhalb des in die Spule eingebrachten Stoffes. Die höhere Feldliniendichte erzeugt eine größere magnetische Kraft.</span></p>
 </div></blockquote>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Das Produkt aus der magnetischer Feldstärke und der Permeabiltät macht eine Aussage über die Feldliniendichte. Sie wird <strong>magnetische Flussdichte B</strong> oder <strong>magnetische Induktion</strong> genannt.</p>
+<p>Das Produkt aus der magnetischer Feldstärke und der Permeabiltät macht eine Aussage über die Feldliniendichte. Sie wird <span class="navy">magnetische Flussdichte B</span> oder <span class="navy">magnetische Induktion</span> genannt.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -247,7 +238,7 @@ Die Gleichungen unten zeigen, welche Größen die magnetische Feldstärke einer 
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><p><strong>Nur die magnetische Flussdichte B kann etwas über die Stärke eines Magnetfeldes aussagen, denn nur sie berücksichtigt die Permeabilität und somit die magnetische Leitfähigkeit eines Materials bzw. der Luft.</strong></p>
+<div><p><span class="navy">Nur die magnetische Flussdichte B kann etwas über die Stärke eines Magnetfeldes aussagen, denn nur sie berücksichtigt die Permeabilität und somit die magnetische Leitfähigkeit eines Materials bzw. der Luft.</span></p>
 </div></blockquote>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -274,7 +265,7 @@ Die Gleichungen unten zeigen, welche Größen die magnetische Feldstärke einer 
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>In Abhängigkeit der magnetischen Flussdichte B und dem magnetischen Widerstand Rm bzw. Leitwert Λ, bildet sich innerhalb des in der Spule befindlichen Werkstoffes, ein <strong>magnetischer Fluss Φ</strong> (Phi) aus. Dieser ist vergleichbar mit dem elektrischen Strom durch einen Leiterwiderstand. Der magnetische Fluss repräsentiert die Gesamtzahl aller auftretenden Feldlinien und somit die Höhe des „magnetischen Stromes“. Ein größerer Querschnitt A des Werkstoffes bzw. des Hohlraumes senkt den magnetischen Widerstand Rm und führt zu einem höheren magnetischen Fluss. Wird die magnetische Flussdichte B erhöht (größerer Strom, höhere Windungszahl, Kernmaterial mit höherer Permeabilität), so führt auch das zu einem proportionalen Anstieg des magnetischen Flusses Φ.</p>
+<p>In Abhängigkeit der magnetischen Flussdichte B und dem magnetischen Widerstand Rm bzw. Leitwert Λ, bildet sich innerhalb des in der Spule befindlichen Werkstoffes, ein <span class="navy">magnetischer Fluss Φ</span> (Phi) aus. Dieser ist vergleichbar mit dem elektrischen Strom durch einen Leiterwiderstand. Der magnetische Fluss repräsentiert die Gesamtzahl aller auftretenden Feldlinien und somit die Höhe des „magnetischen Stromes“. Ein größerer Querschnitt A des Werkstoffes bzw. des Hohlraumes senkt den magnetischen Widerstand Rm und führt zu einem höheren magnetischen Fluss. Wird die magnetische Flussdichte B erhöht (größerer Strom, höhere Windungszahl, Kernmaterial mit höherer Permeabilität), so führt auch das zu einem proportionalen Anstieg des magnetischen Flusses Φ.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -310,9 +301,9 @@ Die Gleichungen unten zeigen, welche Größen die magnetische Feldstärke einer 
 <section id="drehstrom-oder-gleichstrom">
 <h3>Drehstrom oder Gleichstrom?<a class="headerlink" href="#drehstrom-oder-gleichstrom" title="Link to this heading">¶</a></h3>
 <p>Ein Rückblick auf die Entwicklung zeigt den Weg. War früher ein Antrieb mit fester Drehzahl über einen Drehstromasynchronmotor mit Verteilung der mechanischen Leistung über Transmissionen üblich, ging der Trend Ende der 90er verstärkt zum angepassten Einzelmotorenantrieb (Module). Der Einsatz der Halbleitertechnik begünstigte diese Entwicklung.</p>
-<p>Zunächst fanden <strong>Halbleitergeräte als netzgeführte Stromrichter oder Steller im Gleichstrombereich</strong> Eingang in die Technik der drehzahlvariablen Antriebe. Damit kann die Ankerspannung eines Gleichstrommotors und damit die Drehzahl in weiten Bereichen kontinuierlich und nahezu verlustfrei verstellt werden. Die Verstellung kann erfolgen; verschleißbehaftete Stellwiderstände usw. entfallen. Über den Ankerstrom kann damit auch gleichzeitig das Drehmoment geregelt begrenzt werden. Auf diesem Wege lassen sich Antriebe aufbauen, die sanft und ruckfrei anlaufen, die gewünschte vorgewählto Drehzahl lastunabhängig halten und mit einer hohen Dynamik arbeiten.</p>
+<p>Zunächst fanden <span class="navy">Halbleitergeräte als netzgeführte Stromrichter oder Steller im Gleichstrombereich</span> Eingang in die Technik der drehzahlvariablen Antriebe. Damit kann die Ankerspannung eines Gleichstrommotors und damit die Drehzahl in weiten Bereichen kontinuierlich und nahezu verlustfrei verstellt werden. Die Verstellung kann erfolgen; verschleißbehaftete Stellwiderstände usw. entfallen. Über den Ankerstrom kann damit auch gleichzeitig das Drehmoment geregelt begrenzt werden. Auf diesem Wege lassen sich Antriebe aufbauen, die sanft und ruckfrei anlaufen, die gewünschte vorgewählto Drehzahl lastunabhängig halten und mit einer hohen Dynamik arbeiten.</p>
 <p>Der Gleichstrommotor benötigt einen mechanischen Stromwenderapparat. Hierin begründet liegt — trotz stark verbesserter Bürstenstandzeiten von bis zu 20.000 Betriebsstunden — wegen des Verschleißes an Stromwender und Bürsten ein gewisser Wartungsaufwand. Überdies erfordert der Stromwender Rücksichtnahme manchen Einsatzfällen, z. B. bei aggressiver Atmosphäre, Rüttelkräften, hohen Drehzahlen über 4.500 min-l oder bei Stillstandsbelastung.</p>
-<p>Bei solchen Einsatzfällen hat der <strong>Drehstrommotor mit Kurzschlussläufer</strong> Vorteile, da bei ihm die elektrische Leistung verschleißfrei über das Drehfeld vom Ständer auf den Läufer übertragen wird. Die einfach aufgebaute Käfigwicklung im Läufer lässt hohe Drehzahlen zu; die vollständige Kapselung ermöglicht den Betrieb in fast jeder Umgebung. Der Einsatz der Frequenzumrichter zur Speisung der Drehfeldmaschinen brachte so eine Umorientierung der elektrischen Antriebstechnik.</p>
+<p>Bei solchen Einsatzfällen hat der <span class="navy">Drehstrommotor mit Kurzschlussläufer</span> Vorteile, da bei ihm die elektrische Leistung verschleißfrei über das Drehfeld vom Ständer auf den Läufer übertragen wird. Die einfach aufgebaute Käfigwicklung im Läufer lässt hohe Drehzahlen zu; die vollständige Kapselung ermöglicht den Betrieb in fast jeder Umgebung. Der Einsatz der Frequenzumrichter zur Speisung der Drehfeldmaschinen brachte so eine Umorientierung der elektrischen Antriebstechnik.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -320,7 +311,7 @@ Die Gleichungen unten zeigen, welche Größen die magnetische Feldstärke einer 
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>War der Drehstrommotor bislang an die vom Netz vorgegebene feste synchrone Drehzahl gebunden, so ermöglichte es der <strong>Frequenzumrichter</strong> aus jedem Drehstrom-Normmotor
+<p>War der Drehstrommotor bislang an die vom Netz vorgegebene feste synchrone Drehzahl gebunden, so ermöglichte es der <span class="navy">Frequenzumrichter</span> aus jedem Drehstrom-Normmotor
 einen drehzahlvariablen Antrieb zu machen. Frequenz und Spannung des Wechselstrom- oder Drehstromnetzes werden vom Frequenzumrichter so variiert, dass der Motor in weiten
 Stellbereichen drehzahlvariabel betrieben werden kann. Die Elektronik erlaubt dabei eine gute Anpassung an die Charakteristiken der Arbeits- oder Kraftmaschinen. Die Einführung der
 Digitaltechnik brachte auch der Regelverfahren, die sogar bessere Dynamiken als die Gleichstromantriebe erreichen. Hier zeichnen Sich heute im Besonderen Servoantriebe, bestehend aus Servo-Umrichter und trägheitsmomentarmen Servomotoren, aus.</p>
@@ -341,7 +332,7 @@ Digitaltechnik brachte auch der Regelverfahren, die sogar bessere Dynamiken als 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../motoren/dcMot.html" class="btn btn-neutral float-right" title="Gleichstrommotoren">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../motoren/dcMot.html" class="btn btn-neutral float-right" title="Gleichstrommaschinen">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral" title="elMaDocs"><span class="fa fa-arrow-circle-left"></span> Previous</a>

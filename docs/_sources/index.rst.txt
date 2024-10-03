@@ -5,12 +5,12 @@ elMaDocs
 |
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
 
    Grundlagen <grundlagen/grundlagen>
-   DC-Motoren <motoren/dcMot>
-   Synchronmotoren <motoren/syncMot>
-   Asynchronmotoren <motoren/asyncMot>
+   Gleichstrommaschine <motoren/dcMot>
+   Synchronmaschine <motoren/syncMot>
+   Asynchronmaschine <motoren/asyncMot>
    Weitere Motortypen <motoren/weitMot>
    Drehgeber <geber/drehgeber>
 
