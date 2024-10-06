@@ -197,6 +197,21 @@ Digitaltechnik brachte auch der Regelverfahren, die sogar bessere Dynamiken als 
 
 |
 
+Was wird wo eingesetzt?
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Die fortschreitende Automatisierung verlangt Antriebe mit großem Drehzahlssteuerbereich und guten Regeleigenschaften. Obwohl im Allgemeinen keine Gleichstromnetze zur Verfügung stehen, werden vorwiegend :navy:`Gleichstrom-Nebenschlussmotoren und Doppelschlussmotoren` eingesetzt, da sie für die vorher genannten Forderungen besonders gut geeignet sind und sich eine Einspeisung über steuerbare Stromrichter preiswert realisieren lässt.
+
+Für den Antrieb elektrisch betriebener Fahrzeuge verwendet man :navy:`Gleichstrom- und Einphasen-Reihenschlussmotoren`, z. B. in Straßenbahnen (meist Gleichstrom) und E-Lokomotiven (meist Wechselstrom, neuerdings Drehstromasynchronmotoren). Einphasen-Reihenschlussmotoren trifft man auch in Elektrowerkzeugen und Haushaltsmaschinen an; ebenfalls den Einphasen-Asynchronmotor (Waschmaschine). :navy:`Einphasen-Synchronnmotoren` dienen aufgrund ihrer konstanten Drehzahl als Antrieb für Tonband und Plattenspieler und als Kleinstmotoren in Programmschaltwerken.
+
+Der :navy:`Drehstrom-Asynchronmotor` ist der am weitesten verbreitete Elektromotor. Dank seines einfachen und robusten Aufbaus ist er unempfindlich gegen Überbelastung und äußerst wartungsarm, sodass bei einer Antriebsplanung zuerst die Möglichkeit des Einsatzes dieser Maschinen geprüft wird. Deshalb ist sein Einsatzgebiet auch so groß, dass man kaum spezielle Bereiche angeben kann.
+
+Der :navy:`Drehstromsynchronmotor` wird gern in der Industrie als großer, langsam laufender Elektromotor mm Antrieb von Kolbenverdichtern eingesetzt. Zudem kann er — aufgrund seines kapazitiven Betriebsverhaltens — den induktiven Anteil des Laststromes großer Verbraucher kompensieren.
+
+Mit den bisher genannten elektrischen Maschinen wird das Gebiet der elektrischen Antriebstechnik abgedeckt. Die Erzeugung elektrischer Energie ist heute das Spezialgebiet der :navy:`Drehstromsynchrongeneratoren`. (Eine Ausnahme stellt nur der Gleichstrom-Doppelschlussgenerator, der in Einzelfällen noch zur Erzeugung von Gleichspannungen eingesetzt wird.) In den Dampf- und Wasserkraftwerken arbeiten riesige Synchronmaschinen mit 200 MW Leistung in Standardausführung bis hinauf zu Höchstleistungsmaschinen mit 1311 MW.
+
+|
+
 ------------
 
 |
