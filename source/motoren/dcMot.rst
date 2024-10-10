@@ -149,20 +149,20 @@ Die am Anker angelegte Spannung U (Klemmenspannung) teilt sich auf in induzierte
 
 Soll eine Maschine im Motorbetrieb ein Moment liefern, dann muss sie elektrische Leistung aufnehmen; es muss also bei angelegter Ankerspannung U in die Maschine ein Strom I hineinfließen. Dies ist immer dann der Fall, wenn die Klemmenspannung größer ist als die induzierte Spannung
 
-**Motorbetrieb U > U_i**
+|nbsp| |nbsp| |nbsp| **Motorbetrieb U > U_i**
 
 Die Höhe des Ankerstromes ist proportional dem geforderten Moment
 
 .. code-block::
 
        M = F * r
-	   F = l* I * B
-	   F ~ I
-	   M ~ I
+       F = l* I * B
+       F ~ I
+       M ~ I
 	   
 Das Moment erzwingt also einen bestimmten Strom, der wiederum resultieren muss aus
 
-**I = (U - U_i) / R_a**
+|nbsp| |nbsp| |nbsp| **I = (U - U_i) / R_a**
  
 Dazu ist bei vorgegebenem Ankerkreiswiderstand eine Spannungsdifferenz notwendig, die sich über die induzierte Spannung U_i durch Änderung der Motordrehzahl einstellt.
 
@@ -174,9 +174,9 @@ Bei :navy:`Lasterhöhung` gilt Entsprechendes. Das zusätzliche Moment wirkt auf
 
 |
 
-Da die induzierte Spannung proportional der Drehzahl der Maschine ist (bei Φ = const.), ergibt sich für den Motorbetrieb - bezogen auf die angelegte Klemmenspannung U - ein festgelegtes Drehzahlintervall
+Da die induzierte Spannung proportional der Drehzahl der Maschine ist (bei Φ = const.), ergibt sich für den Motorbetrieb - bezogen auf die angelegte Klemmenspannung U - ein festgelegtes Drehzahlintervall.
 
-**Motorbetrieb 0 <= n <= n_0**
+|nbsp| |nbsp| |nbsp| **Motorbetrieb 0 <= n <= n_0**
 
 wobei die :navy:`Leerlaufdrehzahl n_0` dann erreicht wird, wenn die Maschine durch kein Moment belastet wird (weder Lastmoment noch Reibungs- und Eisenverluste). 
 
