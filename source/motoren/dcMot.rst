@@ -114,7 +114,13 @@ Erweitern wir diese Erkenntnisse auf eine drehbar gelagerte stromdurchflossene L
 
 |
 
-In dieser Stellung würde das System verharren. Um eine Drehbewegung aufrechtzuerhalten, ist es deshalb notwendig, dass die Kraftrichtung immer dann geändert wird, wenn die Leiterschleife die zum Magnetfeld senkrechte Ebene (neutrale Zone) durchläuft |rarr| **dies wird durch eine Stromrichtungsumkehr im Leiter erzielt**.
+In dieser Stellung würde das System verharren. Um eine Drehbewegung aufrechtzuerhalten, ist es deshalb notwendig, dass die Kraftrichtung immer dann geändert wird, wenn die Leiterschleife die zum Magnetfeld senkrechte Ebene (neutrale Zone) durchläuft, :navy:`dies wird durch eine Stromrichtungsumkehr im Leiter erzielt`.
+
+|
+
+Um ein bei konstanter Drehzahl gleichbleibendes Moment zu erzeugen, verwendet man heute bei allen Gleichstrommaschinen die so genannte :navy:`Trommelwicklung`, die aus der Hintereinanderschaltung vieler einzelner Leiterschleifen auf der Mantelfläche eines zylindrischen Läufers (:navy:`Trommelanker`). Die Ankerleiter liegen immer in Nuten, damit nutzt man zwei Vorteile: Die Leiter sind mechanisch gut gegen Fliehkräfte gesichert, und der zwischen Polschuh und Läufer wirksame Luftspalt, der bei vorgegebenem Erregerstrom die Größe der magnetischen Feldstärke beeinflusst, wird klein gehalten.
+
+Jede Leiterschleife ist mit einer Lamelle des Stromwenders verbunden, der in Verbindung mit den Kohlebürsten für die Stromzuführung zum rotierenden Läufer sorgt und so geschaltet ist, dass sich trotz rotierendem Anker eine konstante Stromrichtungsverteilung im Bereich von Nord- und Südpol des Erregerfeldes ergibt.
 
 .. raw:: html
 
@@ -125,6 +131,56 @@ In dieser Stellung würde das System verharren. Um eine Drehbewegung aufrechtzue
    
 Der Motorbetrieb
 ^^^^^^^^^^^^^^^^
+
+Legt man die Erregerwicklunen im Ständer an eine Gleichspannung, so erzeugt der fließende Erregerstrom einen konstanten magnetischen Fluss, der vom Nordpol über Luftspalt und Anker zum Südpol verläuft und über der Ständer wieder zum Nordpol zurückgeführt wird. Beaufschlagt man die Läuferwicklung zusätzlich mit einem Strom,so wird ein Drehmoment auf den Läufer ausgeübt, das diesen in Rotation versetzt. Aufgrund der Drehung der Läuferwicklung im konstanten Magnetfeld wird in der Wicklung eine Spannung U_i induziert, die der amgelegten Ankerspannung entgegengerichtet ist und deren Größe abhängig ist vom konstruktiven Aufbau der Maschine, von der Stärke des Magnetfeldes und von der Umfangsgeschwindigkeit des Ankers, d.h. proportional der Ankerdrehzahl.
+
+Fassen wir die konstruktiv bedingten Werte zu einer *Maschinenkonstanten k1* zusammen, so lässt sich folgender Ersatstromkreis aufstellen:
+
+.. code-block::
+
+       U = U_i + R_a * I
+	   
+	   U    am Anker angelegte Spannung
+	   I    Ankerstrom
+	   R_a  ohmscher Widerstand des Ankerkreises
+	   U_i  am Anker induzierte Spannung
+
+Die am Anker angelegte Spannung U (Klemmenspannung) teilt sich auf in induzierte Spannung und Spannungsabfall über den ohmschen Widerständen im Ankerkreis.
+
+Soll eine Maschine im Motorbetrieb ein Moment liefern, dann muss sie elektrische Leistung aufnehmen; es muss also bei angelegter Ankerspannung U in die Maschine ein Strom I hineinfließen. Dies ist immer dann der Fall, wenn die Klemmenspannung größer ist als die induzierte Spannung
+
+**Motorbetrieb U > U_i**
+
+Die Höhe des Ankerstromes ist proportional dem geforderten Moment
+
+.. code-block::
+
+       M = F * r
+	   F = l* I * B
+	   F ~ I
+	   M ~ I
+	   
+Das Moment erzwingt also einen bestimmten Strom, der wiederum resultieren muss aus
+
+**I = (U - U_i) / R_a**
+ 
+Dazu ist bei vorgegebenem Ankerkreiswiderstand eine Spannungsdifferenz notwendig, die sich über die induzierte Spannung U_i durch Änderung der Motordrehzahl einstellt.
+
+|
+
+Bei :navy:`Lastverminderung` liefert ein Gleichstrommotor im Augenblick des Lastwechsels ein höheres Moment als gefordert. Das überschüssige Moment beschleunigt den Läufer, und die Drehzahl der Maschine steigt solange, bis die im Anker induzierte Spannung U_i einen Wert erreicht, der den Ankerstrom so weit vermindert, wie dies für das neue Moment erforderlich ist.
+
+Bei :navy:`Lasterhöhung` gilt Entsprechendes. Das zusätzliche Moment wirkt auf den Läufer bremsend und zwingt ihn zu geringeren Drehzahlen, die dann eine größere Spannungsdifferenz (U - U_i) bewirken und für die Maschine einen höheren Ankerstrom ermöglichen.
+
+|
+
+Da die induzierte Spannung proportional der Drehzahl der Maschine ist (bei Φ = const.), ergibt sich für den Motorbetrieb - bezogen auf die angelegte Klemmenspannung U - ein festgelegtes Drehzahlintervall
+
+**Motorbetrieb 0 <= n <= n_0**
+
+wobei die :navy:`Leerlaufdrehzahl n_0` dann erreicht wird, wenn die Maschine durch kein Moment belastet wird (weder Lastmoment noch Reibungs- und Eisenverluste). 
+
+|
 
 Der Generatorbetrieb
 ^^^^^^^^^^^^^^^^^^^^
