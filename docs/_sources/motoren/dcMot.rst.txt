@@ -132,13 +132,13 @@ Jede Leiterschleife ist mit einer Lamelle des Stromwenders verbunden, der in Ver
 Der Motorbetrieb
 ^^^^^^^^^^^^^^^^
 
-Legt man die Erregerwicklunen im Ständer an eine Gleichspannung, so erzeugt der fließende Erregerstrom einen konstanten magnetischen Fluss, der vom Nordpol über Luftspalt und Anker zum Südpol verläuft und über der Ständer wieder zum Nordpol zurückgeführt wird. Beaufschlagt man die Läuferwicklung zusätzlich mit einem Strom,so wird ein Drehmoment auf den Läufer ausgeübt, das diesen in Rotation versetzt. Aufgrund der Drehung der Läuferwicklung im konstanten Magnetfeld wird in der Wicklung eine Spannung U_i induziert, die der amgelegten Ankerspannung entgegengerichtet ist und deren Größe abhängig ist vom konstruktiven Aufbau der Maschine, von der Stärke des Magnetfeldes und von der Umfangsgeschwindigkeit des Ankers, d.h. proportional der Ankerdrehzahl.
+Legt man die Erregerwicklungen im Ständer an eine Gleichspannung, so erzeugt der fließende Erregerstrom einen konstanten magnetischen Fluss, der vom Nordpol über Luftspalt und Anker zum Südpol verläuft und über den Ständer wieder zum Nordpol zurückgeführt wird. Beaufschlagt man die Läuferwicklung zusätzlich mit einem Strom, so wird ein Drehmoment auf den Läufer ausgeübt, das diesen in Rotation versetzt. Aufgrund der Drehung der Läuferwicklung im konstanten Magnetfeld wird in der Wicklung eine Spannung U_i induziert, die der angelegten Ankerspannung entgegengerichtet ist und deren Größe abhängig ist vom konstruktiven Aufbau der Maschine, von der Stärke des Magnetfeldes und von der Umfangsgeschwindigkeit des Ankers, d.h. proportional der Ankerdrehzahl.
 
-Fassen wir die konstruktiv bedingten Werte zu einer *Maschinenkonstanten k1* zusammen, so lässt sich folgender Ersatstromkreis aufstellen:
+Es lässt sich folgender Ersatstromkreis aufstellen:
 
 .. code-block::
 
-       U = U_i + R_a * I
+       U = U_i + I * R_a
 	   
 	   U    am Anker angelegte Spannung
 	   I    Ankerstrom
@@ -147,7 +147,7 @@ Fassen wir die konstruktiv bedingten Werte zu einer *Maschinenkonstanten k1* zus
 
 Die am Anker angelegte Spannung U (Klemmenspannung) teilt sich auf in induzierte Spannung und Spannungsabfall über den ohmschen Widerständen im Ankerkreis.
 
-Soll eine Maschine im Motorbetrieb ein Moment liefern, dann muss sie elektrische Leistung aufnehmen; es muss also bei angelegter Ankerspannung U in die Maschine ein Strom I hineinfließen. Dies ist immer dann der Fall, wenn die Klemmenspannung größer ist als die induzierte Spannung
+Soll eine Maschine im Motorbetrieb ein Moment liefern, dann muss sie elektrische Leistung aufnehmen; es muss also bei angelegter Ankerspannung U in die Maschine ein Strom I hineinfließen. Dies ist immer dann der Fall, wenn die Klemmenspannung größer ist als die induzierte Spannung.
 
 |nbsp| |nbsp| |nbsp| **Motorbetrieb U > U_i**
 
@@ -185,10 +185,58 @@ wobei die :navy:`Leerlaufdrehzahl n_0` dann erreicht wird, wenn die Maschine dur
 Der Generatorbetrieb
 ^^^^^^^^^^^^^^^^^^^^
 
+Wir betrachten nach wie vor eine Gleichstrommaschine, deren Errecgerwicklung von einer konstanten Spannungsquelle gespeist wird (Φ = const.). Als Generator arbeitet die Maschine definitionsgemäß dann, wenn sie elektrische Leistung abgibt. :navy:`Dazu muss sie mechanisch angetrieben werden mit Drehzahlen, die bei gegebener Spannung U des einzuspeisenden Netzes höher liegen als die Leerlaufdrehzahl n > n_0 = U/(k_1 * Φ), damit U_i > U wird und ein Strom aus der Maschine ins Netz fließen kann.` Es ergibt sich also ein negativer Strom, der in die Maschine hineinfließt. Aus dem Ersatstromkreis folgt die Spannungsgleichung:
+
+.. code-block::
+
+       U = U_i - I * R_a
+	   
+Entsprechend der Gleichung kann ein Gleichstromgenerator gleichgesetzt werden mit einer Gleichspannungsquelle der Leerlaufspannung U_i = k_1 * Φ * n und dem Innenwiderstand R_a. Zusammenfassend kann man über den Betriebszustand einer Gleichstrommaschine sagen, dass bei Belastung ein Ankerstrom fließt, der in den ohmschen Widerständen des Ankerkreises Spannungsabfälle hervorruft; es weicht also die an den Anschlussklemmen der Maschine messbare Spannung U um diesen Spannungsabfall von der induzierten Spannung U_i ab.
+
+Ist :navy:`U > U_i`, so fließt ein Strom in die Maschine hinein; es wird elektrische Leistung aufgenommen (:navy:`Motorbetrieb`).
+
+Ist :navy:`U < U_i`, so fließt ein Strom aus der Maschine hinaus; es wird elektrische Leistung abgegeben (:navy:`Generatorbetrieb`).
+
+Für :navy:`U = U_i` befindet sich die Maschine im :navy:`Leerlauf`; der Ankerstrom ist Null.
+
+|
+
 Die Wendepol- und Kompensationswicklung
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Zur Aufrechterhaltung einer Drehbewegung ist es notwending, den Leiterstrom in der Ankerwicklung immer dann in der Richtung umzukehren, wenn die entsprechende Leiterschleife durch die :navy:`neutrale Zone` läuft; das bedeutet, dass in diesem Augenblick der Leiterstrom von +I auf -I wechseln muss. Dies geschieht, wenn die den Leiterschleifen zugeordneten Kommutatorlamellen die Bürsten passieren. Aufgrund der hohen Stromänderung di/dt, die sich aus Stromstärke und Drehzahl der Maschine ergibt, wird für den Augenblick der Stromwendung in der betroffenen Windung ein Spannungsstoß
 
+.. code-block::
+
+       U = L * di/dt
+
+erzeugt, der zur Funkenbildung zwischen Bürste und jeweils ablaufender Kommutatorlamelle führt. Das daraus resultierende :navy:`Bürstenfeuer` hat einen erhöhten Verschleiß des Kommutatorsystems zur Folge.
+
+Um dies zu verhindern, muss zur Zeit der Kommutierung in der Leiterschleife eine zweite Spannung induziert werden, die nach Größe und Richtung so geartet sein muss, dass sie den Spannungsstoß bei der Stromwendung aufhebt. Das erreicht man durch die Wendepolwicklungen, die im Bereich der neutralen Zone ein :navy:`Wendepolfeld` aufbauen, das in den durchlaufenden Ankerwindungen während der Kommutierungsphase eine Gegenspannung erzeugt. Da der Spannungsstoß während der Kommutierung von der Höhe des Ankerstroms und der Drehzahl abhängt, muss auch die aufhebende Wirkung des Wendepolfeldes dem angepasst sein; d. h., die Wendepolwicklungen werden auch vom Ankerstrom durchflossen.
+
+Bislang sind wir davon ausgegangen, dass der magnetische Fluss Φ unverzerrt vom Nordpol über den Läufer zum Südpol verläuft (Bild unten a) ).
+
+Die Ströme in den Leitern der Ankerwicklung erzeugen aber ebenfalls ein Magnetfeld, das :navy:`Ankerquerfeld`, das senkrecht zum Feld der Erregerwicklungen verläuft (Bild unten b) ). Das Ankerquerfeld bewirkt Verzerrungen des Hauptfeldes (:navy:`Ankerrückwirkung`), die zu einer Verschiebung der neutralen Zone führen (Bild unten c) ). Um die Kommutierung nach wie vor in der neutralen Zone durchzuführen, müssen bei Maschinen ohne Wendepole die Bürsten verschoben werden, dies müsste für eine optimale Stromwendung stets dann wiederholt werden, wenn sich die Belastung, d.h. der Ankerstrom der Maschine, ändert. Dabei erfolgt die Verschiebung bei Motoren gegen die Drehrichtung, bei Generatoren in Drehrichtung.
+
+|
+
+.. image:: pics/ankerRueck.png
+   :width: 606px
+
+|
+
+Maschinen mit Wendepolen sind so ausgelegt, dass das Wendepolfeld im Bereich der neutralen Zone gegen das Ankerquerfeld magnetisiert; das Wendepolfeld muss größer sein als das Ankerquerfeld, damit ein resultierendes Wendepolfeld übrig bleibt, um dem auftretenden Spannungsstoß bei der Kommutierung entgegenzuwirken. Durch richtige Windungszahl der Wendepolwicklung und der Größe des Luftspalts unter den Wendepolen wird die erforderliche Stärke des Wendepolfeldes erzielt.
+
+Die Verzerrung des Hauptfeldes durch die Ankerrückwirkung bewirkt im Bereich der Polschuhe für den magnetischen Fluss eine Verminderung der zur Verfügung stehenden Querschnittsfläche für den Übergang vom Polschuh über den Luftspalt zum Läufer. Daraus ergibt sich eine Erhöhung des magnetischen Widerstandes und bei gleichbleibendem Erregerstrom demzufolge eine Schwächung des Hauptfeldes.
+
+Insbesondere größere Maschinen versieht man deshalb mit einer :navy:`Kompensationswicklung`, die in den Polschuhen der Hauptpole liegt. Diese Wicklung wird ebenfalls vom Ankerstrom durchflossen und ist so geschaltet, dass sie das Ankerquerfeld im Bereich der Polschuhe kompensiert. Das Bild unten zeigt die Skizze einer zweipoligen Maschine im Motorbetrieb mit den zugeordneten Stromrichtungen in Anker-, Wendepol- und Kompensationswicklung.
+
+|
+
+.. image:: pics/kompWicklung.png
+   :width: 480px
+
+|
 
 .. raw:: html
 
@@ -197,5 +245,71 @@ Die Wendepol- und Kompensationswicklung
    &nbsp;<br>
    &nbsp;
 
-Eigenschaften
--------------
+Schaltungsarten
+---------------
+
+Das Betriebsverhalten einer Gleichstrommaschine ist von der Schaltung der Erregerwicklung abhängig. Je nach Beschaltung der Erregerwicklung zum Ankerkreis kann man die Gleichstrommaschinen einteilen in
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Fremderregte Maschinen</font></b></span><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Nebenschluss-Maschinen</font></b></span><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Reihenschluss-Maschinen</font></b></span><br>
+
+|
+
+und darüber hinaus als Kombination aus Nebenschluss und Reihenschluss noch die 
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Doppelschluss- oder Kompound-Maschine</font></b></span><br>
+
+|
+
+Der jeweilige Maschinentyp ist durch die Klemmenbezeichnung an der Maschine zu erkennen (s. Bild unten).
+
+.. image:: pics/schaltungsarten.png
+   :width: 574px
+
+|
+
+Jede Wicklung wird mit einem Buchstaben bezeichnet, die Ziffern kennzeichnen die Wicklungsanschlüsse.
+
+.. list-table::
+
+   * - Ankerwicklung
+     - A1 - A2
+   * - Wendepolwicklung
+     - B1 - B2
+   * - Kompensationswicklung
+     - C1 - C2
+   * - Reihenschlusswicklung
+     - D1 - D2
+   * - Nebenschlusswicklung
+     - E1 - E2
+   * - fremderregte Wicklung
+     - F1 - F2
+
+Die Ziffer 1 in der Klemmenbezeichnung einer Wicklung kennzeichnet immer die positive Seite; d. h. bei Generatorbetrieb die Seite, aus der der Strom des Ankers herausfließt; bei Motorbetrieb die Seite, in die der Ankerstrom hineinfließt.
+
+Die in den Schaltbildern gewählte Lage der Wendepolwicklung soll veranschaulichen, dass der Fluss der Wendepole gegen das Ankerquerfeld magnetisiert.
+
+|
+
+Die fremderregte Gleichstrommaschine
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|
+
+Die Gleichstrom-Nebenschlussmaschine
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|
+
+Die Gleichstrom-Reihenschlussmaschine
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|
+
+Die Gleichstrom-Doppelschlussmaschine
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
