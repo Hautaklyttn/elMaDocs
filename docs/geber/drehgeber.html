@@ -100,8 +100,8 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Drehgeber</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">…</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#einleitung">Einleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aufbau">Aufbau</a></li>
 </ul>
 </li>
 </ul>
@@ -153,49 +153,41 @@
 <div class="line"><br /></div>
 </div>
 <hr class="docutils" />
-<section id="id1">
-<h2>…<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+<section id="einleitung">
+<h2>Einleitung<a class="headerlink" href="#einleitung" title="Link to this heading">¶</a></h2>
+<p>Nahezu überall, wo etwas bewegt wird, drehen sich Achsen. Um diese rotatorische Bewegung <span class="navy">steuern und regeln</span> zu können, bedarf es Encoder und Motor-Feedback-Systeme. Diese wandeln den Winkel zweier relativ zueinander drehbarer Objekte in ein elektrisches Signal um. Encoder und Motor-Feedback-Systeme unterscheiden sich dabei primär in der Anwendung und sich daraus ergebenden Geräteanforderungen.</p>
+<p><span class="navy">Encoder</span> (Lagegeber) werden im Allgemeinen zur Erfassung eines Winkels einer Drehachse verwendet.</p>
+<p><span class="navy">Motor-Feedback-Systeme</span> (Motorgeber) sind speziell für den Einsatz in Elektromotoren ausgelegt.</p>
+<p>Man kann auch unterscheiden, dass ein Encoder als <span class="navy">Lastgeber</span> dient (er misst an der Lastachse) und ein Motor-Feedback-System als <span class="navy">Motorgeber</span> (es ist direkt im oder am Elektromotor angebracht).</p>
+<p>Allgmein wird bevorzugt der Begriff <span class="navy">Drehgeber</span> verwendet, da es sich um allgemeine Darstellungen handelt.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
 <section id="aufbau">
-<h3>Aufbau<a class="headerlink" href="#aufbau" title="Link to this heading">¶</a></h3>
+<h2>Aufbau<a class="headerlink" href="#aufbau" title="Link to this heading">¶</a></h2>
+<p>Der Sensorkern eines Drehgebers besteht grundsätzlich aus drei Elementen (s.Bild unten). Der <span class="navy">Sender</span> bringt Energie in das System ein. Der <span class="navy">Modulator</span> verändert die eingebrachte Energie proportional zum mechanischen Winkel und dient somit als Maßverkörperung. Der <span class="navy">Empfänger</span> wandelt die modulierte physikalische Größe in ein elektrisches Signal. Kombiniert mit Signalverarbeitung, elektrischer und mechanischer Anbindung erhält man einen Drehgeber.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/funcBlocks.png"><img alt="../_images/funcBlocks.png" src="../_images/funcBlocks.png" style="width: 520px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Diese abstrakte Betrachtungsweise hinsichtlich Sender-Modulator-Empfänger lässt sich mittels unterschiedlicher sensorischer Prinzipien umsetzen. In Drehgebern finden sich <span class="navy">optische, magnetische, induktive, kapazitive und resistiv-potenziometrische Sensorkerne</span>.</p>
+<p>Weiterhin kann man nach <span class="navy">elektromechanischen</span> und <span class="navy">mechatronischen</span> Drehgebern unterscheiden. Bei elektromechanischen Drehgebern sind keine halbleitenden Elemente verbaut, wohl aber bei den mechatronischen. Bei den elektromechanischen Drehgebern stellt der Drehgeber nur den <span class="navy">Transducer</span> (dt.: Wandler) dar. Die auswertende Einheit steuert Sender und Empfänger und führt alle Maßnahmen zur Winkelausertung durch. Bei einem mechatronischen Drehgeber hingegen geschieht dies alles geräteintern. Die aufbereitete Winkelinformation kann mit geringem Aufwand durch die auswertende Einheit verwendet werden.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
-</section>
-<section id="eigenschaften">
-<h3>Eigenschaften<a class="headerlink" href="#eigenschaften" title="Link to this heading">¶</a></h3>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
-<hr class="docutils" />
-</section>
-</section>
-<section id="id2">
-<h2>…<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<section id="id3">
-<h3>Aufbau<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
-</section>
-<section id="id4">
-<h3>Eigenschaften<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
+<section id="messen">
+<h3>Messen<a class="headerlink" href="#messen" title="Link to this heading">¶</a></h3>
 </section>
 </section>
 </section>
