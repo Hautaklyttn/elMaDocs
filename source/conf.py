@@ -19,7 +19,10 @@ release = '0.0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser']
+extensions = ['sphinx.ext.mathjax', 'myst_parser']
+
+# MathJax library 
+mathjax_path = "mathJax_v3.js"
 
 templates_path = ['_templates']
 exclude_patterns = []

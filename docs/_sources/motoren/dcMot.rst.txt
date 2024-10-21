@@ -1,4 +1,7 @@
 .. include:: <isonum.txt>
+.. |br| raw:: html
+
+   <br />
 
 Gleichstrommaschine
 ===================
@@ -37,11 +40,11 @@ Der Ständer besteht aus dem hohlzylindrischen :navy:`Joch (1)` und den daran be
 
 |
 
-Die Erregerwicklungen auf den Hauptpolen sind in Reihe geschaltet und werden mit Gleichstrom gespeist. Bei der eingezeichneten Stromrichtung erzeugen sie einen magnetischen :navy:`Fluss (8) (Hauptfluss)`, der aus dem oberen Hauptpol austritt (Nordpo[), über den Luftspalt in den magnetisch gutleitenden Läufer eintritt und vom Läufer über den zweiten Luftspalt in den unteren Hauptpol (Südpol) fließt. Da magnetische Feldlinien stets auf einem in sich geschlossenen Weg verlaufens dient das Joch als Rückschluss der Feldlinien vom Südpol zum Nordpol, wobei die rechte und linke Jochhälfte je den halben Fluss führen.
+Die Erregerwicklungen auf den Hauptpolen sind in Reihe geschaltet und werden mit Gleichstrom gespeist. Bei der eingezeichneten Stromrichtung erzeugen sie einen magnetischen :navy:`Fluss (8) (Hauptfluss)`, der aus dem oberen Hauptpol austritt (Nordpol), über den Luftspalt in den magnetisch gutleitenden Läufer eintritt und vom Läufer über den zweiten Luftspalt in den unteren Hauptpol (Südpol) fließt. Da magnetische Feldlinien stets auf einem in sich geschlossenen Weg verlaufens dient das Joch als Rückschluss der Feldlinien vom Südpol zum Nordpol, wobei die rechte und linke Jochhälfte je den halben Fluss führen.
 
 Die Wendepole, erregen bei belasteter Maschine ebenfalls einen magnetischen Fluss, der jedoch nicht zur eigentlichen Funktion der Maschine beiträgt.
 
-Das Bild oben zeigt eine zweipolige Maschine (man sprieht auch von Polpaarzahl p = 1); je ein Nord- und ein Südpol ergeben ein Polpaar. In der Praxis werden jedoch nur vier- oder mehrpolige Maschinen (p >= 2) verwendet; ausschließlich Kleinstmotoren werden zweipolig konstruiert. Mehrpolige Gleichstrommaschinen werden deshalb bevorzugt, weil bei ihnen das Material besser ausgenutzt werden kann und weil sie bessere Eigenschaften bei niedrigen Drehzahlen aufweisen als zweipolige Austührungen. Das Bild unten zeigt die Anordnung der Pole und die Flussverteilung bei einer vierpoligen Maschine.
+Das Bild oben zeigt eine zweipolige Maschine (man spricht auch von Polpaarzahl p = 1); je ein Nord- und ein Südpol ergeben ein Polpaar. In der Praxis werden jedoch nur vier- oder mehrpolige Maschinen (p >= 2) verwendet; ausschließlich Kleinstmotoren werden zweipolig konstruiert. Mehrpolige Gleichstrommaschinen werden deshalb bevorzugt, weil bei ihnen das Material besser ausgenutzt werden kann und weil sie bessere Eigenschaften bei niedrigen Drehzahlen aufweisen als zweipolige Austührungen. Das Bild unten zeigt die Anordnung der Pole und die Flussverteilung bei einer vierpoligen Maschine.
 
 |
 
@@ -80,19 +83,15 @@ Grundlagen
 
 Aus den Grundlagen über das magnetische Feld ist bekannt, dass auf einen stromdurchflossenen Leiter im Magnetfeld eine Kraft ausgeübt wird. Der Betrag der Kraft F berechnet sich aus 
 
-.. code-block::
+:math:`\quad F = l \cdot I \cdot B \cdot sin(a)`
 
-       F = l * I * B * sin(a)
-	   
-	   l   Länge des Leiters im Magnetfeld
-	   I   Strom im Leiter
-	   B   Induktion des Magnetfeld
+:math:`\quad l \quad \,  \text{  Länge des Leiters im Magnetfeld}` |br|
+:math:`\quad I \quad  \text{ Strom im Leiter}` |br|
+:math:`\quad B \quad  \text{Induktion des Magnetfeld}` |br|
 
-mit *a* als Winkel zwischen Strom- und Induktionsrichtung. Verlaufen Strom und Magentfeld senkrecht zueinander (*a* = 90°), vereinfacht es sich zu
+mit :math:`a` als Winkel zwischen Strom- und Induktionsrichtung. Verlaufen Strom und Magentfeld senkrecht zueinander (*a* = 90°), vereinfacht es sich zu
 
-.. code-block::
-
-       F = l * I * B
+:math:`\quad F = l \cdot I \cdot B`
 
 Die Richtung der Kraft F erhält man, wenn man auf kürzestem Wege von der Stromrichtung zur Richtung des Magentfeldes übergeht. Aus dieser vollzogenen Drehung resultiert - bezogen auf den Gang einer Schraube mit Rechtsgewinde - eine Schraubenbewegung die mit der Richtung der Kraft identisch ist.
 
@@ -105,7 +104,7 @@ Das Bild unten zeigt, wie die Kraftrichtung auf anschauliche Weise bestimmt werd
 
 |
 
-Erweitern wir diese Erkenntnisse auf eine drehbar gelagerte stromdurchflossene Leiterschleife im Magnetfeld (Bild unten), so ergeben sich Kräfte an den Leiterabschnitten, die in Verbindung mit dem Hebelarm r zu einem Moment führen, das die Anordnung in eine Lage senkrecht zum Magnetfeld ausrichtet.
+Erweitern wir diese Erkenntnisse auf eine drehbar gelagerte stromdurchflossene Leiterschleife im Magnetfeld (Bild unten), so ergeben sich Kräfte an den Leiterabschnitten, die in Verbindung mit dem Hebelarm :math:`r` zu einem Moment führen, das die Anordnung in eine Lage senkrecht zum Magnetfeld ausrichtet.
 
 |
 
@@ -132,66 +131,61 @@ Jede Leiterschleife ist mit einer Lamelle des Stromwenders verbunden, der in Ver
 Der Motorbetrieb
 ^^^^^^^^^^^^^^^^
 
-Legt man die Erregerwicklungen im Ständer an eine Gleichspannung, so erzeugt der fließende Erregerstrom einen konstanten magnetischen Fluss, der vom Nordpol über Luftspalt und Anker zum Südpol verläuft und über den Ständer wieder zum Nordpol zurückgeführt wird. Beaufschlagt man die Läuferwicklung zusätzlich mit einem Strom, so wird ein Drehmoment auf den Läufer ausgeübt, das diesen in Rotation versetzt. Aufgrund der Drehung der Läuferwicklung im konstanten Magnetfeld wird in der Wicklung eine Spannung U_i induziert, die der angelegten Ankerspannung entgegengerichtet ist und deren Größe abhängig ist vom konstruktiven Aufbau der Maschine, von der Stärke des Magnetfeldes und von der Umfangsgeschwindigkeit des Ankers, d.h. proportional der Ankerdrehzahl.
+Legt man die Erregerwicklungen im Ständer an eine Gleichspannung, so erzeugt der fließende Erregerstrom einen konstanten magnetischen Fluss, der vom Nordpol über Luftspalt und Anker zum Südpol verläuft und über den Ständer wieder zum Nordpol zurückgeführt wird. Beaufschlagt man die Läuferwicklung zusätzlich mit einem Strom, so wird ein Drehmoment auf den Läufer ausgeübt, das diesen in Rotation versetzt. Aufgrund der Drehung der Läuferwicklung im konstanten Magnetfeld wird in der Wicklung eine Spannung :math:`U_i` induziert, die der angelegten Ankerspannung entgegengerichtet ist und deren Größe abhängig ist vom konstruktiven Aufbau der Maschine, von der Stärke des Magnetfeldes und von der Umfangsgeschwindigkeit des Ankers, d.h. proportional der Ankerdrehzahl.
 
 Es lässt sich folgender Ersatstromkreis aufstellen:
 
-.. code-block::
-
-       U = U_i + I * R_a
+:math:`\quad U = U_i + I \cdot R_a`
 	   
-	   U    am Anker angelegte Spannung
-	   I    Ankerstrom
-	   R_a  ohmscher Widerstand des Ankerkreises
-	   U_i  am Anker induzierte Spannung
+:math:`\quad U \quad \,  \text{am Anker angelegte Spannung}` |br|
+:math:`\quad I \quad \;  \text{Ankerstrom}` |br|
+:math:`\quad R_a \;\;  \text{ohmscher Widerstand des Ankerkreises}` |br|
+:math:`\quad U_i \;\;\;  \text{am Anker induzierte Spannung}` |br|
 
 Die am Anker angelegte Spannung U (Klemmenspannung) teilt sich auf in induzierte Spannung und Spannungsabfall über den ohmschen Widerständen im Ankerkreis.
 
 Soll eine Maschine im Motorbetrieb ein Moment liefern, dann muss sie elektrische Leistung aufnehmen; es muss also bei angelegter Ankerspannung U in die Maschine ein Strom I hineinfließen. Dies ist immer dann der Fall, wenn die Klemmenspannung größer ist als die induzierte Spannung.
 
-|nbsp| |nbsp| |nbsp| **Motorbetrieb U > U_i**
+:math:`\quad \, \text{Motorbetrieb} \quad U > U_i`
 
 Die Höhe des Ankerstromes ist proportional dem geforderten Moment
 
-.. code-block::
+:math:`\quad M = F \cdot r` |br|
+:math:`\quad F \; = l \cdot I \cdot B` |br|
+:math:`\quad F \;\; \text{~} \;\; I` |br|
+:math:`\quad M \; \text{~} \;\; I` |br|
 
-       M = F * r
-       F = l* I * B
-       F ~ I
-       M ~ I
 	   
 Das Moment erzwingt also einen bestimmten Strom, der wiederum resultieren muss aus
 
-|nbsp| |nbsp| |nbsp| **I = (U - U_i) / R_a**
+:math:`\quad \, I = \frac{U - U_i}{R_a}`
  
-Dazu ist bei vorgegebenem Ankerkreiswiderstand eine Spannungsdifferenz notwendig, die sich über die induzierte Spannung U_i durch Änderung der Motordrehzahl einstellt.
+Dazu ist bei vorgegebenem Ankerkreiswiderstand eine Spannungsdifferenz notwendig, die sich über die induzierte Spannung :math:`U_i` durch Änderung der Motordrehzahl einstellt.
 
 |
 
-Bei :navy:`Lastverminderung` liefert ein Gleichstrommotor im Augenblick des Lastwechsels ein höheres Moment als gefordert. Das überschüssige Moment beschleunigt den Läufer, und die Drehzahl der Maschine steigt solange, bis die im Anker induzierte Spannung U_i einen Wert erreicht, der den Ankerstrom so weit vermindert, wie dies für das neue Moment erforderlich ist.
+Bei :navy:`Lastverminderung` liefert ein Gleichstrommotor im Augenblick des Lastwechsels ein höheres Moment als gefordert. Das überschüssige Moment beschleunigt den Läufer, und die Drehzahl der Maschine steigt solange, bis die im Anker induzierte Spannung :math:`U_i` einen Wert erreicht, der den Ankerstrom so weit vermindert, wie dies für das neue Moment erforderlich ist.
 
-Bei :navy:`Lasterhöhung` gilt Entsprechendes. Das zusätzliche Moment wirkt auf den Läufer bremsend und zwingt ihn zu geringeren Drehzahlen, die dann eine größere Spannungsdifferenz (U - U_i) bewirken und für die Maschine einen höheren Ankerstrom ermöglichen.
+Bei :navy:`Lasterhöhung` gilt Entsprechendes. Das zusätzliche Moment wirkt auf den Läufer bremsend und zwingt ihn zu geringeren Drehzahlen, die dann eine größere Spannungsdifferenz :math:`(U - U_i)` bewirken und für die Maschine einen höheren Ankerstrom ermöglichen.
 
 |
 
 Da die induzierte Spannung proportional der Drehzahl der Maschine ist (bei Φ = const.), ergibt sich für den Motorbetrieb - bezogen auf die angelegte Klemmenspannung U - ein festgelegtes Drehzahlintervall.
 
-|nbsp| |nbsp| |nbsp| **Motorbetrieb 0 <= n <= n_0**
+:math:`\quad \, \text{Motorbetrieb} \quad 0 <= n <= n_0`
 
-wobei die :navy:`Leerlaufdrehzahl n_0` dann erreicht wird, wenn die Maschine durch kein Moment belastet wird (weder Lastmoment noch Reibungs- und Eisenverluste). 
+wobei die :navy:`Leerlaufdrehzahl` :math:`n_0` dann erreicht wird, wenn die Maschine durch kein Moment belastet wird (weder Lastmoment noch Reibungs- und Eisenverluste). 
 
 |
 
 Der Generatorbetrieb
 ^^^^^^^^^^^^^^^^^^^^
 
-Wir betrachten nach wie vor eine Gleichstrommaschine, deren Errecgerwicklung von einer konstanten Spannungsquelle gespeist wird (Φ = const.). Als Generator arbeitet die Maschine definitionsgemäß dann, wenn sie elektrische Leistung abgibt. :navy:`Dazu muss sie mechanisch angetrieben werden mit Drehzahlen, die bei gegebener Spannung U des einzuspeisenden Netzes höher liegen als die Leerlaufdrehzahl n > n_0 = U/(k_1 * Φ), damit U_i > U wird und ein Strom aus der Maschine ins Netz fließen kann.` Es ergibt sich also ein negativer Strom, der in die Maschine hineinfließt. Aus dem Ersatstromkreis folgt die Spannungsgleichung:
+Wir betrachten nach wie vor eine Gleichstrommaschine, deren Errecgerwicklung von einer konstanten Spannungsquelle gespeist wird (Φ = const.). Als Generator arbeitet die Maschine definitionsgemäß dann, wenn sie elektrische Leistung abgibt. :navy:`Dazu muss sie mechanisch angetrieben werden mit Drehzahlen, die bei gegebener Spannung U des einzuspeisenden Netzes höher liegen als die Leerlaufdrehzahl` :math:`n > n_0 = \frac{U}{(k_1 * Φ)}`, damit :math:`U_i > U` wird und ein Strom aus der Maschine ins Netz fließen kann. Es ergibt sich also ein negativer Strom, der in die Maschine hineinfließt. Aus dem Ersatstromkreis folgt die Spannungsgleichung:
 
-.. code-block::
-
-       U = U_i - I * R_a
+:math:`\quad \, U = U_i - I \cdot R_a`
 	   
-Entsprechend der Gleichung kann ein Gleichstromgenerator gleichgesetzt werden mit einer Gleichspannungsquelle der Leerlaufspannung U_i = k_1 * Φ * n und dem Innenwiderstand R_a. Zusammenfassend kann man über den Betriebszustand einer Gleichstrommaschine sagen, dass bei Belastung ein Ankerstrom fließt, der in den ohmschen Widerständen des Ankerkreises Spannungsabfälle hervorruft; es weicht also die an den Anschlussklemmen der Maschine messbare Spannung U um diesen Spannungsabfall von der induzierten Spannung U_i ab.
+Entsprechend der Gleichung kann ein Gleichstromgenerator gleichgesetzt werden mit einer Gleichspannungsquelle der Leerlaufspannung :math:`U_i = k_1 \cdot Φ \cdot n` und dem Innenwiderstand :math:`R_a`. Zusammenfassend kann man über den Betriebszustand einer Gleichstrommaschine sagen, dass bei Belastung ein Ankerstrom fließt, der in den ohmschen Widerständen des Ankerkreises Spannungsabfälle hervorruft; es weicht also die an den Anschlussklemmen der Maschine messbare Spannung U um diesen Spannungsabfall von der induzierten Spannung :math:`U_i` ab.
 
 Ist :navy:`U > U_i`, so fließt ein Strom in die Maschine hinein; es wird elektrische Leistung aufgenommen (:navy:`Motorbetrieb`).
 
@@ -204,11 +198,9 @@ Für :navy:`U = U_i` befindet sich die Maschine im :navy:`Leerlauf`; der Ankerst
 Die Wendepol- und Kompensationswicklung
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Zur Aufrechterhaltung einer Drehbewegung ist es notwending, den Leiterstrom in der Ankerwicklung immer dann in der Richtung umzukehren, wenn die entsprechende Leiterschleife durch die :navy:`neutrale Zone` läuft; das bedeutet, dass in diesem Augenblick der Leiterstrom von +I auf -I wechseln muss. Dies geschieht, wenn die den Leiterschleifen zugeordneten Kommutatorlamellen die Bürsten passieren. Aufgrund der hohen Stromänderung di/dt, die sich aus Stromstärke und Drehzahl der Maschine ergibt, wird für den Augenblick der Stromwendung in der betroffenen Windung ein Spannungsstoß
+Zur Aufrechterhaltung einer Drehbewegung ist es notwending, den Leiterstrom in der Ankerwicklung immer dann in der Richtung umzukehren, wenn die entsprechende Leiterschleife durch die :navy:`neutrale Zone` läuft; das bedeutet, dass in diesem Augenblick der Leiterstrom von +I auf -I wechseln muss. Dies geschieht, wenn die den Leiterschleifen zugeordneten Kommutatorlamellen die Bürsten passieren. Aufgrund der hohen Stromänderung :math:`\frac{di}{dt}`, die sich aus Stromstärke und Drehzahl der Maschine ergibt, wird für den Augenblick der Stromwendung in der betroffenen Windung ein Spannungsstoß
 
-.. code-block::
-
-       U = L * di/dt
+:math:`\quad \, U = L \cdot \frac{di}{dt}`
 
 erzeugt, der zur Funkenbildung zwischen Bürste und jeweils ablaufender Kommutatorlamelle führt. Das daraus resultierende :navy:`Bürstenfeuer` hat einen erhöhten Verschleiß des Kommutatorsystems zur Folge.
 

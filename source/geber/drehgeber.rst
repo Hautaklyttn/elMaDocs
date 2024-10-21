@@ -1,4 +1,5 @@
 .. include:: <isonum.txt>
+.. include:: <isogrk1.txt>
 
 Drehgeber
 =========
@@ -29,7 +30,7 @@ Allgmein wird bevorzugt der Begriff :navy:`Drehgeber` verwendet, da es sich um a
 Aufbau
 ------
 
-Der Sensorkern eines Drehgebers besteht grundsätzlich aus drei Elementen (s.Bild unten). Der :navy:`Sender` bringt Energie in das System ein. Der :navy:`Modulator` verändert die eingebrachte Energie proportional zum mechanischen Winkel und dient somit als Maßverkörperung. Der :navy:`Empfänger` wandelt die modulierte physikalische Größe in ein elektrisches Signal. Kombiniert mit Signalverarbeitung, elektrischer und mechanischer Anbindung erhält man einen Drehgeber.
+Der Sensorkern eines Drehgebers besteht grundsätzlich aus drei Elementen (s.Bild unten). Der :navy:`Sender` bringt Energie in das System ein. Der :navy:`Modulator` verändert die eingebrachte Energie proportional zum mechanischen Winkel |phgr| und dient somit als Maßverkörperung. Der :navy:`Empfänger` wandelt die modulierte physikalische Größe in ein elektrisches Signal. Kombiniert mit Signalverarbeitung, elektrischer und mechanischer Anbindung erhält man einen Drehgeber.
 
 |
 
@@ -46,5 +47,12 @@ Weiterhin kann man nach :navy:`elektromechanischen` und :navy:`mechatronischen` 
 |
 |
 
-Messen
-^^^^^^
+
+
+
+Messaufgabe
+-----------
+
+Die Messaufgabe von Drehgebern besteht darin die :navy:`Winkelstellung` einer rotatorischen Achse zu einem Referenzpunkt zu messen und anzuzeigen. Dabei wird nicht nur die eigentliche Winkelmessung betrachtet, sondern auch die Erfassung abgeleiteter Größen wie die Drehzahl und die Winkelbeschleunigung.
+
+

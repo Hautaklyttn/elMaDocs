@@ -1,4 +1,7 @@
 .. include:: <isonum.txt>
+.. |br| raw:: html
+
+   <br />
 
 Grundlagen Elektrische Maschinen
 ================================
@@ -84,7 +87,7 @@ Die magnetische Wirkung einer Spule lässt sich erheblich steigern, wenn in den 
 
 Zu ihnen gehören Eisen, Kobalt und Nickel. Sie sind „ferromagnetisch“. Aufgrund dieser Eigenschaft, besitzen sie eine gute magnetische Leitfähigkeit. Die Leitfähigkeit ist allerdings stark von der Stärke des äußeren Magnetfeldes abhängig.
 
-Die Veränderung der magnetischen Leitfähigkeit durch bestimmte Stoffe wird mit Hilfe der :navy:`magnetischen Permeabilität µ` beschrieben. Sie ist vergleichbar mit der Permittivität des Kondensators. Als Maßstab dient auch hier der materiefreie Raum – das Vakuum. Im Vakuum ist die Permeabilität eine konstante Größe. Der absolute Wert dieser Größe wird :navy:`absolute Permeabilität` oder :navy:`magnetische Feldkonstante µ0` genannt.
+Die Veränderung der magnetischen Leitfähigkeit durch bestimmte Stoffe wird mit Hilfe der :navy:`magnetischen Permeabilität µ` beschrieben. Sie ist vergleichbar mit der Permittivität des Kondensators. Als Maßstab dient auch hier der materiefreie Raum – das Vakuum. Im Vakuum ist die Permeabilität eine konstante Größe. Der absolute Wert dieser Größe wird :navy:`absolute Permeabilität` oder :navy:`magnetische Feldkonstante` :math:`µ_0` genannt.
 
 |
 
@@ -136,7 +139,7 @@ Für die im Kern verlaufenden Feldlinien lässt sich die mittlere Feldlinienlän
 
 |
 
-In Abhängigkeit der magnetischen Flussdichte B und dem magnetischen Widerstand Rm bzw. Leitwert Λ, bildet sich innerhalb des in der Spule befindlichen Werkstoffes, ein :navy:`magnetischer Fluss Φ` (Phi) aus. Dieser ist vergleichbar mit dem elektrischen Strom durch einen Leiterwiderstand. Der magnetische Fluss repräsentiert die Gesamtzahl aller auftretenden Feldlinien und somit die Höhe des „magnetischen Stromes“. Ein größerer Querschnitt A des Werkstoffes bzw. des Hohlraumes senkt den magnetischen Widerstand Rm und führt zu einem höheren magnetischen Fluss. Wird die magnetische Flussdichte B erhöht (größerer Strom, höhere Windungszahl, Kernmaterial mit höherer Permeabilität), so führt auch das zu einem proportionalen Anstieg des magnetischen Flusses Φ.
+In Abhängigkeit der magnetischen Flussdichte B und dem magnetischen Widerstand :math:`R_m` bzw. Leitwert Λ, bildet sich innerhalb des in der Spule befindlichen Werkstoffes, ein :navy:`magnetischer Fluss Φ` (Phi) aus. Dieser ist vergleichbar mit dem elektrischen Strom durch einen Leiterwiderstand. Der magnetische Fluss repräsentiert die Gesamtzahl aller auftretenden Feldlinien und somit die Höhe des „magnetischen Stromes“. Ein größerer Querschnitt A des Werkstoffes bzw. des Hohlraumes senkt den magnetischen Widerstand :math:`R_m` und führt zu einem höheren magnetischen Fluss. Wird die magnetische Flussdichte B erhöht (größerer Strom, höhere Windungszahl, Kernmaterial mit höherer Permeabilität), so führt auch das zu einem proportionalen Anstieg des magnetischen Flusses Φ.
 
 |
 
@@ -149,7 +152,7 @@ In Abhängigkeit der magnetischen Flussdichte B und dem magnetischen Widerstand 
 
 Im Bild unten wird die Analogie zwischen dem elektrischen Stromkreis und dem magnetischen Kreis mit Hilfe der dazugehörigen Größen verdeutlicht.
 
-Die Spannungsquelle U des elektrischen Stromkreises lässt sich aus in Reihe geschalteten Primärzellen (U0) zusammensetzen. Im magnetischen Kreis ist die magnetische Durchflutung Θ die „Spannungsquelle“. Die Durchflutung steigt mit der Größe des Stromes und der Zahl der Windungen.
+Die Spannungsquelle U des elektrischen Stromkreises lässt sich aus in Reihe geschalteten Primärzellen (:math:`U_0`) zusammensetzen. Im magnetischen Kreis ist die magnetische Durchflutung Θ die „Spannungsquelle“. Die Durchflutung steigt mit der Größe des Stromes und der Zahl der Windungen.
 
 |
 
@@ -179,7 +182,7 @@ Ein Rückblick auf die Entwicklung zeigt den Weg. War früher ein Antrieb mit fe
 
 Zunächst fanden :navy:`Halbleitergeräte als netzgeführte Stromrichter oder Steller im Gleichstrombereich` Eingang in die Technik der drehzahlvariablen Antriebe. Damit kann die Ankerspannung eines Gleichstrommotors und damit die Drehzahl in weiten Bereichen kontinuierlich und nahezu verlustfrei verstellt werden. Die Verstellung kann erfolgen; verschleißbehaftete Stellwiderstände usw. entfallen. Über den Ankerstrom kann damit auch gleichzeitig das Drehmoment geregelt begrenzt werden. Auf diesem Wege lassen sich Antriebe aufbauen, die sanft und ruckfrei anlaufen, die gewünschte vorgewählto Drehzahl lastunabhängig halten und mit einer hohen Dynamik arbeiten.  
 
-Der Gleichstrommotor benötigt einen mechanischen Stromwenderapparat. Hierin begründet liegt — trotz stark verbesserter Bürstenstandzeiten von bis zu 20.000 Betriebsstunden — wegen des Verschleißes an Stromwender und Bürsten ein gewisser Wartungsaufwand. Überdies erfordert der Stromwender Rücksichtnahme manchen Einsatzfällen, z. B. bei aggressiver Atmosphäre, Rüttelkräften, hohen Drehzahlen über 4.500 min-l oder bei Stillstandsbelastung.  
+Der Gleichstrommotor benötigt einen mechanischen Stromwenderapparat. Hierin begründet liegt — trotz stark verbesserter Bürstenstandzeiten von bis zu 20.000 Betriebsstunden — wegen des Verschleißes an Stromwender und Bürsten ein gewisser Wartungsaufwand. Überdies erfordert der Stromwender Rücksichtnahme manchen Einsatzfällen, z. B. bei aggressiver Atmosphäre, Rüttelkräften, hohen Drehzahlen über :math:`4.500 \text{min}^{-l}` oder bei Stillstandsbelastung.  
 
 Bei solchen Einsatzfällen hat der :navy:`Drehstrommotor mit Kurzschlussläufer` Vorteile, da bei ihm die elektrische Leistung verschleißfrei über das Drehfeld vom Ständer auf den Läufer übertragen wird. Die einfach aufgebaute Käfigwicklung im Läufer lässt hohe Drehzahlen zu; die vollständige Kapselung ermöglicht den Betrieb in fast jeder Umgebung. Der Einsatz der Frequenzumrichter zur Speisung der Drehfeldmaschinen brachte so eine Umorientierung der elektrischen Antriebstechnik.
 
@@ -215,3 +218,14 @@ Mit den bisher genannten elektrischen Maschinen wird das Gebiet der elektrischen
 ------------
 
 |
+
+Merksätze
+^^^^^^^^^
+
+	:navy:`Ein permanenterregter Motor wird über Permanentmagnete erregt, ein fremderregter Motor wird über eine separat anzulegende Spannungsquelle erregt. Beide haben prinzipiell die Charakteristik eines Nebenschlussmotors, da die Erregung vom Ankerstrom unabhängig ist.`
+	
+	|br|
+
+	:navy:`Prinzipiell ist das Drehmoment proportional dem Produkt aus magnetischem Fluss und Ankerstrom. Wenn allerdings, wie beim Reihenschluss- oder Asynchronmotor der Fluss lastabhängig ist, schummelt sich da der Strom noch einmal in die Formel rein: Für DIESE Motoren gilt dann M = k * I²`
+
+
