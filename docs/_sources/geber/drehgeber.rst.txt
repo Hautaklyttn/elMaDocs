@@ -99,7 +99,7 @@ Als Einheit für die Winkelgeschwindigkeit verwendet man *rad/s*, seltener *°/s
 Winkelbeschleunigung
 ^^^^^^^^^^^^^^^^^^^^
 
-Die Winkelbeschleunigung :math:`\alpha` beschreibt die Änderung  der Winkelgeschwindigkeit :math:`\omega` mit der Zeit. Mathematisch ausgedrückt ergibt sich:
+Die Winkelbeschleunigung :math:`\alpha` beschreibt die Änderung  der Winkelgeschwindigkeit :math:`\omega \;` mit der Zeit. Mathematisch ausgedrückt ergibt sich:
 
 :math:`\quad  \alpha = \frac{d\omega}{dt} = \frac{d²\varphi}{dt²}`
 
@@ -134,12 +134,13 @@ Stehen bei Drehgebern eindeutige Winkelwerte über eine mechanische Umdrehung zu
 
 |
 
-Daneben gibt es zwei Sonderfälle zu betrachten:
+:under:`Daneben gibt es zwei Sonderfälle zu betrachten:`
+
+:navy:`Inkrementalgeber` zeigen nur eine Winkeländerung (Inkremente) gemäß deren Auflösung an. Diese Funktion steht über eine Umdrehung zur Verfügung.
+
+:navy:`Rundachsfunktion` (Endloswelle, elektronisches Getriebe) - Drehgeber zeigen einen anderen Messbereich an als den, der der verwendeten Sensorik zugrunde liegt. Die Rundachsfunktion erlaubt ganzzahlige und nicht-ganzzahlige Über-und Untersetzungsverhältnisse (s.Bild oben).
 
 .. raw:: html
-
-   &nbsp;&bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Inkrementalgeber</font></b> zeigen nur eine Winkeländerung (Inkremente) gemäß deren Auflösung an. Diese Funktion steht über eine Umdrehung zur Verfügung.</span><br>
-   &nbsp;&bull; &nbsp; <span style="font-size: 16px">Drehgeber mit einer sogenannten <b><font color =#000080>Rundachsfunktion</font></b> (Endloswelle, elektronisches Getriebe) zeigen einen anderen Messbereich an als den,der der verwendeten Sensorik zugrunde liegt. Die Rundachsfunktion erlaubt ganzzahlige und nicht-ganzzahlige Über-und Untersetzungsverhältnisse (s.Bild oben).</span><br>
 
    &nbsp;<br>
    &nbsp;<br>
@@ -149,9 +150,9 @@ Daneben gibt es zwei Sonderfälle zu betrachten:
 Winkelberechnung
 ^^^^^^^^^^^^^^^^
 
-Nur wenige Drehgeber erlauben es, einen winkelproportionalen Wert direkt sensorisch zu ermitteln (z.B. resistiv-potentiometrischer Drehgeber). Bei den anderen Prinzipien wird versucht einen in der Mathematik üblichen Weg zu gehen: :navy:`Der Winkel wird auf Basis trigonometrischer Funktionen ermittelt.` Die Sensoren werden so gestaltet, dass bei Drehbewegung sinusförmige Signale entstehen, meist ein :navy:`Sinus- und ein Cosinussignal` (s. Bild unten). Diese Signalpaarung wird auch als Quadratursignale bezeichnet, da sie in Quadratur, d.h. im rechten Winkel stehen (90° Phasenversatz). 
+Nur wenige Drehgeber erlauben es, einen winkelproportionalen Wert direkt sensorisch zu ermitteln (z.B. resistiv-potentiometrischer Drehgeber). Bei den anderen Prinzipien wird versucht einen in der Mathematik üblichen Weg zu gehen: :navy:`Der Winkel wird auf :navy:`Basis trigonometrischer Funktionen` ermittelt. Die Sensoren werden so gestaltet, dass bei Drehbewegung sinusförmige Signale entstehen, meist ein :navy:`Sinus- und ein Cosinussignal` (s. Bild unten). Diese Signalpaarung wird auch als Quadratursignale bezeichnet, da sie in Quadratur, d.h. im rechten Winkel stehen (90° Phasenversatz). 
 
-Zur Veranschaulichung kann eine Darstellung am Einheitskreis verwendet werden. Ein Zeiger (Vektor) mit der Länge 1 dreht sich gegen den Uhrzeigersinn. Als Drehachse ist der Koordinatenursprung definiert und als Nullpunkt die Lage des Zeigers auf der Abszisse in positiver Richtung liegend. Die :navy:`y-Komponente des Zeigers repräsentiert den Sinus` und die :navy:`x-Komponente den Cosinus.` Der Winkel :math:`\varphi` wird zwischen dem Vektor und der Abszisse aufgespannt.
+Zur Veranschaulichung kann eine Darstellung am Einheitskreis verwendet werden. Ein Zeiger (Vektor) mit der Länge 1 dreht sich gegen den Uhrzeigersinn. Als Drehachse ist der Koordinatenursprung definiert und als Nullpunkt die Lage des Zeigers auf der Abszisse in positiver Richtung liegend. Die :navy:`y-Komponente des Zeigers repräsentiert den Sinus` und die :navy:`x-Komponente den Cosinus.` Der Winkel :math:`\varphi\;` wird zwischen dem Vektor und der Abszisse aufgespannt.
 
 |
 
@@ -169,3 +170,49 @@ wie folgt in einen Winkel umrechnen:
 :math:`\quad \varphi = \arctan(\frac{a_{sin}}{a_{cos}})`
 
 ( :math:`\varphi` : Errechneter Winkel in [°]; |nbsp| |nbsp| :math:`a_{sin}, a_{cos}` : Momentanwerte der Sinus- und Cosinussignale)
+
+Die Gleichung bezieht sich auf eine Sinus-Cosinus-Signalperiode. Hat ein Drehgeber eine solche Signalperiode pro Umdrehung, so ergibt sich direkt die Winkelstellung des Rotors zum Stator. Da in der praktischen Umsetzung die Sinus- und Cosinussignale und somit der sich ergebende Winkel nicht unendlich hoch aufgelöst werden können, Anwendungen aber hohe Auflösungen fordern, :navy:`unterteilt man den Vollwinkel in mehrere Teilwinkel`. Dabei wird jeder Teilwinkel durch eine Signalperiode repräsentiert, man rechnet also mit mehreren Perioden pro Umdrehung (engl.: „periods per revolution", PPR). Dies wird dargestellt durch:
+
+:math:`\quad \varphi_i = \frac{1}{\text{PPR}} \arctan\frac{a_{sin}}{a_{cos}} \quad\quad\quad\quad\quad (1.1)`
+
+( :math:`\varphi_i` : Momentanwert des Winkels der i-ten Periode in [°]; |nbsp| |nbsp| PPR: Anzahl der Periode pro Umdrehung; :math:`\; a_{sin}, a_{cos}` : Momentanwerte der Sinus- und Cosinussignale)
+
+Durch diese Beziehung kann man zwar die Auflösung erhöhen, verliert aber die Aussage über einen absoluten Winkel auf eine Umdrehung. Es ist daher nun sinnvoll :math:`\varphi_{elektr}` und :math:`\varphi_{mech}` einzuführen. :math:`\varphi_{elektr}` bezeichnet :navy:`einen Winkel innerhalb einer elektrischen Periode` und :math:`\varphi_{mech}` jenen auf :navy:`eine mechanische Umdrehung`.
+
+|
+
+.. image:: pics/ppr.png
+   :width: 514px
+
+|
+
+Neben der reinen Winkelrechnung kann auf Basis der sinusförmigen Signale auch eine einfache :navy:`Überprüfung der Funktion des Drehgebers` durchgeführt werden. Geben Drehgeber direkt sinusförmige Signale an der elektrischen Schnittstelle aus, kann die bekannte goniometrische Beziehung :math:`\sin²+\cos² = 1` interpretiert werden als:
+
+:math:`a^2_{sin} + a^2_{cos} = \text{const}`
+
+Das Ergebnis wird auch als Vektorlänge bezeichnet. Diese ist in vielen Belangen von hoher Bedeutung. 
+
+Eine weitere Möglichkeit, die sich durch die Verwendung von Sinus- und Cosinussignalen ergibt ist die der Lissajous-Figur. Mit einem Oszilloskop in xy-Darstellung zeichnen die sinusförmigen Signale bei Drehung eine kreisähnliche Form (ein Kreis bei idealen Sinus-Cosinus-Signalen). Der Einheitskreis wird dadurch messtechnisch dargestellt. Auf diese Weise lassen sich verschiedene Qualitätsmerkmale der Quadratursignale abschätzen. Dies ist ein einfach umzusetzendes indikatives Verfahren.
+
+Die eigentliche Winkelrechnung basiert auf Gl. 1.1 (s.oben) wird in diesem Zusammenhang als :navy:`Interpolation` bezeichnet. Interpolatoren können in zwei Dimensionen auf unterschiedliche Weise umgesetzt werden. Zum einen gibt es
+verschiedene Verfahren und zum anderen verschiedene Integrationsstufen in der Umsetzung in Hardware und Software. :navy:`Sinus/Cosinus-Digital-Wandler` (engl.:„sine/cosine-to-digital converter"; SDC), wie Interpolatoren auch genannt werden, gibt es als dedizierte ASIC- oder ASSP-Komponenten. Auch kann die Funktion nach Digitalisierung der sinusförmigen Signale durch geeignete Analog-Digital-Wandler mittels Software auf Mikrocontrollern, digitalen Signalprozessoren (DSPs) oder FPGAs implementiert werden. Dabei wird oft der sogenannte CORDIC Algorithmus (engl.: „coordinate rotation digital computer") für die Berechnung der trigonometrischen Funktionen eingesetzt. 
+
+:under:`Bei den Verfahren sollen drei mögliche genannt werden:` 
+
+:navy:`[1]` Der klassische Ansatz ist es :navy:`die Sinus- und Cosinus-Signale gleichzeitig mit linearen Analog-Digital-Wandlern abzutasten` und die digitalen Werte gemäß Gl. 1.1 in einen Winkel umzurechnen. Alternativ kann der Winkelwert aus einer zweidimensionalen Matrix ausgelesen werden, wobei die digitalen Sinus- und Cosinuswerte die Indizes für die Reihen und Spalten darstellen. Vor der Winkelwandlung können die Digitalwerte normiert (z. B. Amplitude) und hinsichtlich Fehlerkomponenten (z. B. Offset) korrigiert werden. 
+
+:navy:`[2]` Ein :navy:`Flash-SDC` ist vergleichbar einem linearen Flash Analog-Digital-Wandler. Bei diesen wird das Eingangssignal mit mehreren Referenzspannungen durch analoge Komparatoren verglichen. Für jeden aufgelösten Schritt wird ein Komparator benötigt. Die Referenzspannungen werden aus einer Spannung durch eine Kaskade von Widerständen gebildet. Beim Flash-SDC werden im Gegensatz dazu zwei Eingangssignale zugeführt und die Widerstandskaskade ist so ausgelegt, dass die Komparatoren Winkelwerte zugeordnet werden. Flash-SDCs sind sehr schnell, der Hardwareaufwand lässt sich allerdings nur für geringe Auflösungen sinnvoll umsetzen. 
+
+:navy:`[3]` Interpolatoren die mit dem :navy:`Nachlaufverfahren` arbeiten, schätzen einen Winkel aus den Signalen ab und führen das Ergebnis auf den Eingang zurück. Dort wird eine Differenz ermittelt, die solange nachgeregelt wird, bis der Fehler minimal wird. Diese Regelung geschieht sehr schnell, insbesondere wenn ein Winkel ermittelt wurde und dieser nur nachgeführt werden muss. 
+
+Die verschiedenen Verfahren unterscheiden sich, u. a. im **Implementierungsaufwand** (Hard- und/oder Software), in der **Schnelligkeit** (somit durch Wandlung eingeführte Latenz), **Auflösung** und **Genauigkeit**.
+
+.. raw:: html
+
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;
+   
+Kodierung
+^^^^^^^^^

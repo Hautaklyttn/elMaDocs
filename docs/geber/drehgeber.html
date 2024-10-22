@@ -224,7 +224,7 @@
 </section>
 <section id="winkelbeschleunigung">
 <h3>Winkelbeschleunigung<a class="headerlink" href="#winkelbeschleunigung" title="Link to this heading">¶</a></h3>
-<p>Die Winkelbeschleunigung <span class="math notranslate nohighlight">\(\alpha\)</span> beschreibt die Änderung  der Winkelgeschwindigkeit <span class="math notranslate nohighlight">\(\omega\)</span> mit der Zeit. Mathematisch ausgedrückt ergibt sich:</p>
+<p>Die Winkelbeschleunigung <span class="math notranslate nohighlight">\(\alpha\)</span> beschreibt die Änderung  der Winkelgeschwindigkeit <span class="math notranslate nohighlight">\(\omega \;\)</span> mit der Zeit. Mathematisch ausgedrückt ergibt sich:</p>
 <p><span class="math notranslate nohighlight">\(\quad  \alpha = \frac{d\omega}{dt} = \frac{d²\varphi}{dt²}\)</span></p>
 <p>oder bei gleichförmiger Geschwindigkeitsänderung:</p>
 <p><span class="math notranslate nohighlight">\(\quad  \alpha = \frac{\Delta\omega}{\Delta t} = \frac{\Delta² \varphi}{\Delta t²}\)</span></p>
@@ -246,18 +246,17 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Daneben gibt es zwei Sonderfälle zu betrachten:</p>
-&nbsp;&bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Inkrementalgeber</font></b> zeigen nur eine Winkeländerung (Inkremente) gemäß deren Auflösung an. Diese Funktion steht über eine Umdrehung zur Verfügung.</span><br>
-&nbsp;&bull; &nbsp; <span style="font-size: 16px">Drehgeber mit einer sogenannten <b><font color =#000080>Rundachsfunktion</font></b> (Endloswelle, elektronisches Getriebe) zeigen einen anderen Messbereich an als den,der der verwendeten Sensorik zugrunde liegt. Die Rundachsfunktion erlaubt ganzzahlige und nicht-ganzzahlige Über-und Untersetzungsverhältnisse (s.Bild oben).</span><br>
-
+<p><span class="under">Daneben gibt es zwei Sonderfälle zu betrachten:</span></p>
+<p><span class="navy">Inkrementalgeber</span> zeigen nur eine Winkeländerung (Inkremente) gemäß deren Auflösung an. Diese Funktion steht über eine Umdrehung zur Verfügung.</p>
+<p><span class="navy">Rundachsfunktion</span> (Endloswelle, elektronisches Getriebe) - Drehgeber zeigen einen anderen Messbereich an als den, der der verwendeten Sensorik zugrunde liegt. Die Rundachsfunktion erlaubt ganzzahlige und nicht-ganzzahlige Über-und Untersetzungsverhältnisse (s.Bild oben).</p>
 &nbsp;<br>
 &nbsp;<br>
 &nbsp;<br>
 &nbsp;</section>
 <section id="winkelberechnung">
 <h3>Winkelberechnung<a class="headerlink" href="#winkelberechnung" title="Link to this heading">¶</a></h3>
-<p>Nur wenige Drehgeber erlauben es, einen winkelproportionalen Wert direkt sensorisch zu ermitteln (z.B. resistiv-potentiometrischer Drehgeber). Bei den anderen Prinzipien wird versucht einen in der Mathematik üblichen Weg zu gehen: <span class="navy">Der Winkel wird auf Basis trigonometrischer Funktionen ermittelt.</span> Die Sensoren werden so gestaltet, dass bei Drehbewegung sinusförmige Signale entstehen, meist ein <span class="navy">Sinus- und ein Cosinussignal</span> (s. Bild unten). Diese Signalpaarung wird auch als Quadratursignale bezeichnet, da sie in Quadratur, d.h. im rechten Winkel stehen (90° Phasenversatz).</p>
-<p>Zur Veranschaulichung kann eine Darstellung am Einheitskreis verwendet werden. Ein Zeiger (Vektor) mit der Länge 1 dreht sich gegen den Uhrzeigersinn. Als Drehachse ist der Koordinatenursprung definiert und als Nullpunkt die Lage des Zeigers auf der Abszisse in positiver Richtung liegend. Die <span class="navy">y-Komponente des Zeigers repräsentiert den Sinus</span> und die <span class="navy">x-Komponente den Cosinus.</span> Der Winkel <span class="math notranslate nohighlight">\(\varphi\)</span> wird zwischen dem Vektor und der Abszisse aufgespannt.</p>
+<p>Nur wenige Drehgeber erlauben es, einen winkelproportionalen Wert direkt sensorisch zu ermitteln (z.B. resistiv-potentiometrischer Drehgeber). Bei den anderen Prinzipien wird versucht einen in der Mathematik üblichen Weg zu gehen: <span class="navy">Der Winkel wird auf :navy:`Basis trigonometrischer Funktionen</span> ermittelt. Die Sensoren werden so gestaltet, dass bei Drehbewegung sinusförmige Signale entstehen, meist ein <span class="navy">Sinus- und ein Cosinussignal</span> (s. Bild unten). Diese Signalpaarung wird auch als Quadratursignale bezeichnet, da sie in Quadratur, d.h. im rechten Winkel stehen (90° Phasenversatz).</p>
+<p>Zur Veranschaulichung kann eine Darstellung am Einheitskreis verwendet werden. Ein Zeiger (Vektor) mit der Länge 1 dreht sich gegen den Uhrzeigersinn. Als Drehachse ist der Koordinatenursprung definiert und als Nullpunkt die Lage des Zeigers auf der Abszisse in positiver Richtung liegend. Die <span class="navy">y-Komponente des Zeigers repräsentiert den Sinus</span> und die <span class="navy">x-Komponente den Cosinus.</span> Der Winkel <span class="math notranslate nohighlight">\(\varphi\;\)</span> wird zwischen dem Vektor und der Abszisse aufgespannt.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -270,6 +269,34 @@
 <p>wie folgt in einen Winkel umrechnen:</p>
 <p><span class="math notranslate nohighlight">\(\quad \varphi = \arctan(\frac{a_{sin}}{a_{cos}})\)</span></p>
 <p>( <span class="math notranslate nohighlight">\(\varphi\)</span> : Errechneter Winkel in [°];     <span class="math notranslate nohighlight">\(a_{sin}, a_{cos}\)</span> : Momentanwerte der Sinus- und Cosinussignale)</p>
+<p>Die Gleichung bezieht sich auf eine Sinus-Cosinus-Signalperiode. Hat ein Drehgeber eine solche Signalperiode pro Umdrehung, so ergibt sich direkt die Winkelstellung des Rotors zum Stator. Da in der praktischen Umsetzung die Sinus- und Cosinussignale und somit der sich ergebende Winkel nicht unendlich hoch aufgelöst werden können, Anwendungen aber hohe Auflösungen fordern, <span class="navy">unterteilt man den Vollwinkel in mehrere Teilwinkel</span>. Dabei wird jeder Teilwinkel durch eine Signalperiode repräsentiert, man rechnet also mit mehreren Perioden pro Umdrehung (engl.: „periods per revolution”, PPR). Dies wird dargestellt durch:</p>
+<p><span class="math notranslate nohighlight">\(\quad \varphi_i = \frac{1}{\text{PPR}} \arctan\frac{a_{sin}}{a_{cos}} \quad\quad\quad\quad\quad (1.1)\)</span></p>
+<p>( <span class="math notranslate nohighlight">\(\varphi_i\)</span> : Momentanwert des Winkels der i-ten Periode in [°];     PPR: Anzahl der Periode pro Umdrehung; <span class="math notranslate nohighlight">\(\; a_{sin}, a_{cos}\)</span> : Momentanwerte der Sinus- und Cosinussignale)</p>
+<p>Durch diese Beziehung kann man zwar die Auflösung erhöhen, verliert aber die Aussage über einen absoluten Winkel auf eine Umdrehung. Es ist daher nun sinnvoll <span class="math notranslate nohighlight">\(\varphi_{elektr}\)</span> und <span class="math notranslate nohighlight">\(\varphi_{mech}\)</span> einzuführen. <span class="math notranslate nohighlight">\(\varphi_{elektr}\)</span> bezeichnet <span class="navy">einen Winkel innerhalb einer elektrischen Periode</span> und <span class="math notranslate nohighlight">\(\varphi_{mech}\)</span> jenen auf <span class="navy">eine mechanische Umdrehung</span>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/ppr.png"><img alt="../_images/ppr.png" src="../_images/ppr.png" style="width: 514px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Neben der reinen Winkelrechnung kann auf Basis der sinusförmigen Signale auch eine einfache <span class="navy">Überprüfung der Funktion des Drehgebers</span> durchgeführt werden. Geben Drehgeber direkt sinusförmige Signale an der elektrischen Schnittstelle aus, kann die bekannte goniometrische Beziehung <span class="math notranslate nohighlight">\(\sin²+\cos² = 1\)</span> interpretiert werden als:</p>
+<p><span class="math notranslate nohighlight">\(a^2_{sin} + a^2_{cos} = \text{const}\)</span></p>
+<p>Das Ergebnis wird auch als Vektorlänge bezeichnet. Diese ist in vielen Belangen von hoher Bedeutung.</p>
+<p>Eine weitere Möglichkeit, die sich durch die Verwendung von Sinus- und Cosinussignalen ergibt ist die der Lissajous-Figur. Mit einem Oszilloskop in xy-Darstellung zeichnen die sinusförmigen Signale bei Drehung eine kreisähnliche Form (ein Kreis bei idealen Sinus-Cosinus-Signalen). Der Einheitskreis wird dadurch messtechnisch dargestellt. Auf diese Weise lassen sich verschiedene Qualitätsmerkmale der Quadratursignale abschätzen. Dies ist ein einfach umzusetzendes indikatives Verfahren.</p>
+<p>Die eigentliche Winkelrechnung basiert auf Gl. 1.1 (s.oben) wird in diesem Zusammenhang als <span class="navy">Interpolation</span> bezeichnet. Interpolatoren können in zwei Dimensionen auf unterschiedliche Weise umgesetzt werden. Zum einen gibt es
+verschiedene Verfahren und zum anderen verschiedene Integrationsstufen in der Umsetzung in Hardware und Software. <span class="navy">Sinus/Cosinus-Digital-Wandler</span> (engl.:„sine/cosine-to-digital converter”; SDC), wie Interpolatoren auch genannt werden, gibt es als dedizierte ASIC- oder ASSP-Komponenten. Auch kann die Funktion nach Digitalisierung der sinusförmigen Signale durch geeignete Analog-Digital-Wandler mittels Software auf Mikrocontrollern, digitalen Signalprozessoren (DSPs) oder FPGAs implementiert werden. Dabei wird oft der sogenannte CORDIC Algorithmus (engl.: „coordinate rotation digital computer”) für die Berechnung der trigonometrischen Funktionen eingesetzt.</p>
+<p><span class="under">Bei den Verfahren sollen drei mögliche genannt werden:</span></p>
+<p><span class="navy">[1]</span> Der klassische Ansatz ist es <span class="navy">die Sinus- und Cosinus-Signale gleichzeitig mit linearen Analog-Digital-Wandlern abzutasten</span> und die digitalen Werte gemäß Gl. 1.1 in einen Winkel umzurechnen. Alternativ kann der Winkelwert aus einer zweidimensionalen Matrix ausgelesen werden, wobei die digitalen Sinus- und Cosinuswerte die Indizes für die Reihen und Spalten darstellen. Vor der Winkelwandlung können die Digitalwerte normiert (z. B. Amplitude) und hinsichtlich Fehlerkomponenten (z. B. Offset) korrigiert werden.</p>
+<p><span class="navy">[2]</span> Ein <span class="navy">Flash-SDC</span> ist vergleichbar einem linearen Flash Analog-Digital-Wandler. Bei diesen wird das Eingangssignal mit mehreren Referenzspannungen durch analoge Komparatoren verglichen. Für jeden aufgelösten Schritt wird ein Komparator benötigt. Die Referenzspannungen werden aus einer Spannung durch eine Kaskade von Widerständen gebildet. Beim Flash-SDC werden im Gegensatz dazu zwei Eingangssignale zugeführt und die Widerstandskaskade ist so ausgelegt, dass die Komparatoren Winkelwerte zugeordnet werden. Flash-SDCs sind sehr schnell, der Hardwareaufwand lässt sich allerdings nur für geringe Auflösungen sinnvoll umsetzen.</p>
+<p><span class="navy">[3]</span> Interpolatoren die mit dem <span class="navy">Nachlaufverfahren</span> arbeiten, schätzen einen Winkel aus den Signalen ab und führen das Ergebnis auf den Eingang zurück. Dort wird eine Differenz ermittelt, die solange nachgeregelt wird, bis der Fehler minimal wird. Diese Regelung geschieht sehr schnell, insbesondere wenn ein Winkel ermittelt wurde und dieser nur nachgeführt werden muss.</p>
+<p>Die verschiedenen Verfahren unterscheiden sich, u. a. im <strong>Implementierungsaufwand</strong> (Hard- und/oder Software), in der <strong>Schnelligkeit</strong> (somit durch Wandlung eingeführte Latenz), <strong>Auflösung</strong> und <strong>Genauigkeit</strong>.</p>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;</section>
+<section id="kodierung">
+<h3>Kodierung<a class="headerlink" href="#kodierung" title="Link to this heading">¶</a></h3>
 </section>
 </section>
 </section>
