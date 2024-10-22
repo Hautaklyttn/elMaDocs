@@ -191,6 +191,86 @@
 <section id="messaufgabe">
 <h2>Messaufgabe<a class="headerlink" href="#messaufgabe" title="Link to this heading">¶</a></h2>
 <p>Die Messaufgabe von Drehgebern besteht darin die <span class="navy">Winkelstellung</span> einer rotatorischen Achse zu einem Referenzpunkt zu messen und anzuzeigen. Dabei wird nicht nur die eigentliche Winkelmessung betrachtet, sondern auch die Erfassung abgeleiteter Größen wie die Drehzahl und die Winkelbeschleunigung.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/winkelPhi.png"><img alt="../_images/winkelPhi.png" src="../_images/winkelPhi.png" style="width: 270px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="winkel">
+<h3>Winkel<a class="headerlink" href="#winkel" title="Link to this heading">¶</a></h3>
+<p>Für Winkel verwendet man die Einheiten <span class="navy">Grad</span> und <span class="navy">Radiant</span>. Dabei hat eine Umdrehung bekanntermaßen 360 Grad (Einheitszeichen °) oder im Bogenmaß, 2 <span class="math notranslate nohighlight">\(\pi\)</span> Radiant (Einheitszeichen rad). Die beiden Einheiten lassen sich mit dem Umrechnungsfaktor <span class="math notranslate nohighlight">\(\rho\)</span> einfach in Beziehung setzen:</p>
+<p><span class="math notranslate nohighlight">\(\quad \rho = \frac{360°}{2\pi} = \frac{180°}{\pi}\)</span></p>
+<p>Ein Grad lässt sich unterteilen in <span class="navy">Bogen- bzw. Winkelminuten</span> (1° = 60’) oder gar <span class="navy">Bogen- bzw- Winkelsekunden</span> (1’ = 60’’). Manchmal werden auch Milli-Grad (m°; <span class="math notranslate nohighlight">\(10^{-3}\)</span> °) verwendet. Eine Umdrehung (ein Vollwinkel) hat somit:</p>
+<p>1 Umdrehung <span class="math notranslate nohighlight">\(\; \widehat{=}\)</span> 360° = 21.600’ = 1.296.000’’ = 360.000m°</p>
+<p>Entsprechend ist eine Winkelsekunde annähernd der 1,3 Millionste Teil einer Umdrehung.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="winkelgeschwindigkeit">
+<h3>Winkelgeschwindigkeit<a class="headerlink" href="#winkelgeschwindigkeit" title="Link to this heading">¶</a></h3>
+<p>Neben dem eigentlichen Winkel sind auch daraus ableitbare Größen, wie z.B. die Winkelgeschwindigkeit bzw. <span class="navy">Drehzahl</span> für viele Anwendungen relevant.</p>
+<p>Die Winkelgeschwindigkeit <span class="math notranslate nohighlight">\(\omega\)</span> bezeichnet die Änderung des Winkels mit der Zeit:</p>
+<p><span class="math notranslate nohighlight">\(\quad \omega = \frac{d\varphi}{dt}\)</span></p>
+<p>bzw. bei gleichförmiger Bewegung</p>
+<p><span class="math notranslate nohighlight">\(\quad \omega = \frac{\Delta\varphi}{\Delta t}\)</span></p>
+<p>Als Einheit für die Winkelgeschwindigkeit verwendet man <em>rad/s</em>, seltener <em>°/s</em>. In der Technik bezieht man sich oft auf die Anzahl der Umdrehungen pro Zeiteinheit, d.h. die Drehzahl (oder Umdrehungsfrequenz). Hierfür verwendet man die Einheit <span class="navy">Umdrehungen pro Minute</span> (<em>rpm</em>), 1/min oder <span class="math notranslate nohighlight">\({min}^{-1}\)</span> . Formal hat die Winkelgeschwindigkeit und die Drehzahl folgende Beziehung:</p>
+<p><span class="math notranslate nohighlight">\(\quad n = \frac{30}{\pi} \cdot \omega = \frac{30}{\pi} \cdot \frac{\Delta\varphi}{\Delta t}\)</span></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="winkelbeschleunigung">
+<h3>Winkelbeschleunigung<a class="headerlink" href="#winkelbeschleunigung" title="Link to this heading">¶</a></h3>
+<p>Die Winkelbeschleunigung <span class="math notranslate nohighlight">\(\alpha\)</span> beschreibt die Änderung  der Winkelgeschwindigkeit <span class="math notranslate nohighlight">\(\omega\)</span> mit der Zeit. Mathematisch ausgedrückt ergibt sich:</p>
+<p><span class="math notranslate nohighlight">\(\quad  \alpha = \frac{d\omega}{dt} = \frac{d²\varphi}{dt²}\)</span></p>
+<p>oder bei gleichförmiger Geschwindigkeitsänderung:</p>
+<p><span class="math notranslate nohighlight">\(\quad  \alpha = \frac{\Delta\omega}{\Delta t} = \frac{\Delta² \varphi}{\Delta t²}\)</span></p>
+<p>Bezogen auf die Drehzahl ergibt sich die folgende Beziehung:</p>
+<p><span class="math notranslate nohighlight">\(\quad  \alpha = \frac{\pi}{30} \cdot \frac{\Delta n}{\Delta t}\)</span></p>
+<p>Als Einheiten verwendet man <em>rad/s²</em>.</p>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;</section>
+<section id="messbereich">
+<h3>Messbereich<a class="headerlink" href="#messbereich" title="Link to this heading">¶</a></h3>
+<p>Bei Drehgebern unterscheidet man primär drei Messbereiche: Teilwinkel, Vollwinkel oder mehrere Umdrehungen.</p>
+<p>Stehen bei Drehgebern eindeutige Winkelwerte über eine mechanische Umdrehung zur Verfügung, spricht man von <span class="navy">Singleturn-Drehgebern</span>, bei solchen, die eindeutige Werte über mehrere Umdrehungen ausgeben von <span class="navy">Multiturn-Drehgebern</span>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/turnTypes.png"><img alt="../_images/turnTypes.png" src="../_images/turnTypes.png" style="width: 517px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Daneben gibt es zwei Sonderfälle zu betrachten:</p>
+&nbsp;&bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Inkrementalgeber</font></b> zeigen nur eine Winkeländerung (Inkremente) gemäß deren Auflösung an. Diese Funktion steht über eine Umdrehung zur Verfügung.</span><br>
+&nbsp;&bull; &nbsp; <span style="font-size: 16px">Drehgeber mit einer sogenannten <b><font color =#000080>Rundachsfunktion</font></b> (Endloswelle, elektronisches Getriebe) zeigen einen anderen Messbereich an als den,der der verwendeten Sensorik zugrunde liegt. Die Rundachsfunktion erlaubt ganzzahlige und nicht-ganzzahlige Über-und Untersetzungsverhältnisse (s.Bild oben).</span><br>
+
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;</section>
+<section id="winkelberechnung">
+<h3>Winkelberechnung<a class="headerlink" href="#winkelberechnung" title="Link to this heading">¶</a></h3>
+<p>Nur wenige Drehgeber erlauben es, einen winkelproportionalen Wert direkt sensorisch zu ermitteln (z.B. resistiv-potentiometrischer Drehgeber). Bei den anderen Prinzipien wird versucht einen in der Mathematik üblichen Weg zu gehen: <span class="navy">Der Winkel wird auf Basis trigonometrischer Funktionen ermittelt.</span> Die Sensoren werden so gestaltet, dass bei Drehbewegung sinusförmige Signale entstehen, meist ein <span class="navy">Sinus- und ein Cosinussignal</span> (s. Bild unten). Diese Signalpaarung wird auch als Quadratursignale bezeichnet, da sie in Quadratur, d.h. im rechten Winkel stehen (90° Phasenversatz).</p>
+<p>Zur Veranschaulichung kann eine Darstellung am Einheitskreis verwendet werden. Ein Zeiger (Vektor) mit der Länge 1 dreht sich gegen den Uhrzeigersinn. Als Drehachse ist der Koordinatenursprung definiert und als Nullpunkt die Lage des Zeigers auf der Abszisse in positiver Richtung liegend. Die <span class="navy">y-Komponente des Zeigers repräsentiert den Sinus</span> und die <span class="navy">x-Komponente den Cosinus.</span> Der Winkel <span class="math notranslate nohighlight">\(\varphi\)</span> wird zwischen dem Vektor und der Abszisse aufgespannt.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/unitCircle.png"><img alt="../_images/unitCircle.png" src="../_images/unitCircle.png" style="width: 512px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Diese Sinus- und Cosinussignale lassen sich anhand der bekannten trigonometrischen Beziehung</p>
+<p><span class="math notranslate nohighlight">\(\quad \tan\varphi = \frac{\sin\varphi}{\cos\varphi}\)</span></p>
+<p>wie folgt in einen Winkel umrechnen:</p>
+<p><span class="math notranslate nohighlight">\(\quad \varphi = \arctan(\frac{a_{sin}}{a_{cos}})\)</span></p>
+<p>( <span class="math notranslate nohighlight">\(\varphi\)</span> : Errechneter Winkel in [°];     <span class="math notranslate nohighlight">\(a_{sin}, a_{cos}\)</span> : Momentanwerte der Sinus- und Cosinussignale)</p>
+</section>
 </section>
 </section>
 
@@ -237,6 +317,9 @@
 
     </script>
     <script type="text/javascript" src="../_static/sphinx_highlight.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/mathJax_v3.js">
 
     </script>
 
