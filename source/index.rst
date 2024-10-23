@@ -5,7 +5,7 @@ elMaDocs
 |
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
 
    Grundlagen <grundlagen/grundlagen>
    Gleichstrommaschine <motoren/dcMot>
@@ -13,5 +13,3 @@ elMaDocs
    Asynchronmaschine <motoren/asyncMot>
    Weitere Motortypen <motoren/weitMot>
    Drehgeber <geber/drehgeber>
-
-

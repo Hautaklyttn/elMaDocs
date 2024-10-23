@@ -12,16 +12,11 @@ Grundlagen Elektrische Maschinen
 
 |
 
-Allgemeine Grundlagen
----------------------
-
 Elektrische Maschinen dienen der **Umformung von Energie**  
 
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Generatoren</font> erzeugen elektrische Energie</b>  aus mechanischer Energie</span><br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Motoren</font> erzeugen mechanische Energie</b> aus elektrischer Energie</span><br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Rotierende Umformer</font> wandeln Frequenz und Spannung</b> elektrischer Energie</span>
+- :navy:`Generatoren` **erzeugen elektrische Energie** aus mechanischer Energie
+- :navy:`Motoren` **erzeugen mechanische Energie** aus elektrischer Energie
+- :navy:`Rotierende Umformer` **wandeln Frequenz und Spannung** elektrischer Energie
 
 |
 
@@ -34,7 +29,7 @@ Trotz aller Vielfalt im konstruktiven Detail, nach dem elektrische Maschinen aus
 |
 
 Das magnetische Feld
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 Je größer die Zahl der nebeneinander liegenden und gleichsinnig vom Strom durchflossenen Leiter ist, desto stärker ist das die Leiter umschließende magnetische Feld. Das Magnetfeld der Spule ist mit dem eines Stabmagneten vergleichbar. Dort wo die Feldlinien die Spule verlassen, bildet sich ein magnetischer Nordpol; dort wo sie in die Spule eindringen, ein Südpol.  
 
@@ -51,7 +46,7 @@ Die Spule stellt somit ein Magnet dar, der sich elektrisch ein- und ausschalten 
    &nbsp;
 
 Die magnetischen Grundgrößen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 Bei einem Stromfluss durch einen kreisförmigen Leiter, entstehen konzentrische Feldlinien um den Leiter. Fließt ein Strom in den Leiter hinein, verlaufen die Feldlinien im Uhrzeigersinn. Wird die Stromrichtung umgekehrt, ändert sich die Richtung der Feldlinien. Die magnetische Kraft bzw. Stärke des Feldes ist von der Höhe des fließenden Stromes und vom Abstand zum Leiter abhängig:
 
@@ -176,7 +171,7 @@ Nachfolgend sind die Zusammenhänge der beiden Kreise in tabellarischer Form zus
 |
 
 Drehstrom oder Gleichstrom?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 Ein Rückblick auf die Entwicklung zeigt den Weg. War früher ein Antrieb mit fester Drehzahl über einen Drehstromasynchronmotor mit Verteilung der mechanischen Leistung über Transmissionen üblich, ging der Trend Ende der 90er verstärkt zum angepassten Einzelmotorenantrieb (Module). Der Einsatz der Halbleitertechnik begünstigte diese Entwicklung.
 
@@ -201,7 +196,7 @@ Digitaltechnik brachte auch der Regelverfahren, die sogar bessere Dynamiken als 
 |
 
 Was wird wo eingesetzt?
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 Die fortschreitende Automatisierung verlangt Antriebe mit großem Drehzahlssteuerbereich und guten Regeleigenschaften. Obwohl im Allgemeinen keine Gleichstromnetze zur Verfügung stehen, werden vorwiegend :navy:`Gleichstrom-Nebenschlussmotoren und Doppelschlussmotoren` eingesetzt, da sie für die vorher genannten Forderungen besonders gut geeignet sind und sich eine Einspeisung über steuerbare Stromrichter preiswert realisieren lässt.
 
@@ -220,7 +215,7 @@ Mit den bisher genannten elektrischen Maschinen wird das Gebiet der elektrischen
 |
 
 Merksätze
-^^^^^^^^^
+---------
 
 	:navy:`Ein permanenterregter Motor wird über Permanentmagnete erregt, ein fremderregter Motor wird über eine separat anzulegende Spannungsquelle erregt. Beide haben prinzipiell die Charakteristik eines Nebenschlussmotors, da die Erregung vom Ankerstrom unabhängig ist.`
 	

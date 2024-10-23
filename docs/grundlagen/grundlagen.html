@@ -77,7 +77,11 @@
           
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Grundlagen</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#allgemeine-grundlagen">Allgemeine Grundlagen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#das-magnetische-feld">Das magnetische Feld</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#die-magnetischen-grundgroszen">Die magnetischen Grundgrößen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#drehstrom-oder-gleichstrom">Drehstrom oder Gleichstrom?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#was-wird-wo-eingesetzt">Was wird wo eingesetzt?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merksatze">Merksätze</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../motoren/dcMot.html">Gleichstrommaschine</a><ul>
@@ -101,9 +105,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../geber/drehgeber.html">Drehgeber</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../geber/drehgeber.html#einleitung">Einleitung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../geber/drehgeber.html#aufbau">Aufbau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../geber/drehgeber.html#messaufgabe">Messaufgabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geber/drehgeber.html#winkel-drehzahl-und-winkelbeschleunigung">Winkel, Drehzahl und Winkelbeschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geber/drehgeber.html#messbereich">Messbereich</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geber/drehgeber.html#winkelberechnung">Winkelberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geber/drehgeber.html#kodierung">Kodierung</a></li>
 </ul>
 </li>
 </ul>
@@ -158,12 +164,13 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="allgemeine-grundlagen">
-<h2>Allgemeine Grundlagen<a class="headerlink" href="#allgemeine-grundlagen" title="Link to this heading">¶</a></h2>
 <p>Elektrische Maschinen dienen der <strong>Umformung von Energie</strong></p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Generatoren</font> erzeugen elektrische Energie</b>  aus mechanischer Energie</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Motoren</font> erzeugen mechanische Energie</b> aus elektrischer Energie</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 16px"><b><font color =#000080>Rotierende Umformer</font> wandeln Frequenz und Spannung</b> elektrischer Energie</span><div class="line-block">
+<ul class="simple">
+<li><p><span class="navy">Generatoren</span> <strong>erzeugen elektrische Energie</strong> aus mechanischer Energie</p></li>
+<li><p><span class="navy">Motoren</span> <strong>erzeugen mechanische Energie</strong> aus elektrischer Energie</p></li>
+<li><p><span class="navy">Rotierende Umformer</span> <strong>wandeln Frequenz und Spannung</strong> elektrischer Energie</p></li>
+</ul>
+<div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>Trotz aller Vielfalt im konstruktiven Detail, nach dem elektrische Maschinen ausgeführt sein können, Iässt sich ihre Wirkungsweise stets durch Anwendung von nur drei physikalischen Grundgesetzen verstehen und beschreiben:</p>
@@ -177,7 +184,7 @@
 <div class="line"><br /></div>
 </div>
 <section id="das-magnetische-feld">
-<h3>Das magnetische Feld<a class="headerlink" href="#das-magnetische-feld" title="Link to this heading">¶</a></h3>
+<h2>Das magnetische Feld<a class="headerlink" href="#das-magnetische-feld" title="Link to this heading">¶</a></h2>
 <p>Je größer die Zahl der nebeneinander liegenden und gleichsinnig vom Strom durchflossenen Leiter ist, desto stärker ist das die Leiter umschließende magnetische Feld. Das Magnetfeld der Spule ist mit dem eines Stabmagneten vergleichbar. Dort wo die Feldlinien die Spule verlassen, bildet sich ein magnetischer Nordpol; dort wo sie in die Spule eindringen, ein Südpol.</p>
 <p>Die Spule stellt somit ein Magnet dar, der sich elektrisch ein- und ausschalten lässt (<span class="navy">Elektromagnet</span>). Allerdings ist für die Ausbildung eines starken Magnetfeldes in der Luftspule ein relativ hoher Strom notwendig, der mit einem größeren Querschnitt für den Wickeldraht (Vermeidung einer unzulässigen Erwärmung der Wicklung) verbunden ist.</p>
 <a class="reference internal image-reference" href="../_images/magnFeld.png"><img alt="../_images/magnFeld.png" src="../_images/magnFeld.png" style="width: 700px;" /></a>
@@ -186,7 +193,7 @@
 &nbsp;<br>
 &nbsp;</section>
 <section id="die-magnetischen-grundgroszen">
-<h3>Die magnetischen Grundgrößen<a class="headerlink" href="#die-magnetischen-grundgroszen" title="Link to this heading">¶</a></h3>
+<h2>Die magnetischen Grundgrößen<a class="headerlink" href="#die-magnetischen-grundgroszen" title="Link to this heading">¶</a></h2>
 <p>Bei einem Stromfluss durch einen kreisförmigen Leiter, entstehen konzentrische Feldlinien um den Leiter. Fließt ein Strom in den Leiter hinein, verlaufen die Feldlinien im Uhrzeigersinn. Wird die Stromrichtung umgekehrt, ändert sich die Richtung der Feldlinien. Die magnetische Kraft bzw. Stärke des Feldes ist von der Höhe des fließenden Stromes und vom Abstand zum Leiter abhängig:</p>
 <a class="reference internal image-reference" href="../_images/magnFeldstaerke0.png"><img alt="../_images/magnFeldstaerke0.png" src="../_images/magnFeldstaerke0.png" style="width: 710px;" /></a>
 &nbsp;<br>
@@ -301,7 +308,7 @@
 </div>
 </section>
 <section id="drehstrom-oder-gleichstrom">
-<h3>Drehstrom oder Gleichstrom?<a class="headerlink" href="#drehstrom-oder-gleichstrom" title="Link to this heading">¶</a></h3>
+<h2>Drehstrom oder Gleichstrom?<a class="headerlink" href="#drehstrom-oder-gleichstrom" title="Link to this heading">¶</a></h2>
 <p>Ein Rückblick auf die Entwicklung zeigt den Weg. War früher ein Antrieb mit fester Drehzahl über einen Drehstromasynchronmotor mit Verteilung der mechanischen Leistung über Transmissionen üblich, ging der Trend Ende der 90er verstärkt zum angepassten Einzelmotorenantrieb (Module). Der Einsatz der Halbleitertechnik begünstigte diese Entwicklung.</p>
 <p>Zunächst fanden <span class="navy">Halbleitergeräte als netzgeführte Stromrichter oder Steller im Gleichstrombereich</span> Eingang in die Technik der drehzahlvariablen Antriebe. Damit kann die Ankerspannung eines Gleichstrommotors und damit die Drehzahl in weiten Bereichen kontinuierlich und nahezu verlustfrei verstellt werden. Die Verstellung kann erfolgen; verschleißbehaftete Stellwiderstände usw. entfallen. Über den Ankerstrom kann damit auch gleichzeitig das Drehmoment geregelt begrenzt werden. Auf diesem Wege lassen sich Antriebe aufbauen, die sanft und ruckfrei anlaufen, die gewünschte vorgewählto Drehzahl lastunabhängig halten und mit einer hohen Dynamik arbeiten.</p>
 <p>Der Gleichstrommotor benötigt einen mechanischen Stromwenderapparat. Hierin begründet liegt — trotz stark verbesserter Bürstenstandzeiten von bis zu 20.000 Betriebsstunden — wegen des Verschleißes an Stromwender und Bürsten ein gewisser Wartungsaufwand. Überdies erfordert der Stromwender Rücksichtnahme manchen Einsatzfällen, z. B. bei aggressiver Atmosphäre, Rüttelkräften, hohen Drehzahlen über <span class="math notranslate nohighlight">\(4.500 \text{min}^{-l}\)</span> oder bei Stillstandsbelastung.</p>
@@ -322,7 +329,7 @@ Digitaltechnik brachte auch der Regelverfahren, die sogar bessere Dynamiken als 
 </div>
 </section>
 <section id="was-wird-wo-eingesetzt">
-<h3>Was wird wo eingesetzt?<a class="headerlink" href="#was-wird-wo-eingesetzt" title="Link to this heading">¶</a></h3>
+<h2>Was wird wo eingesetzt?<a class="headerlink" href="#was-wird-wo-eingesetzt" title="Link to this heading">¶</a></h2>
 <p>Die fortschreitende Automatisierung verlangt Antriebe mit großem Drehzahlssteuerbereich und guten Regeleigenschaften. Obwohl im Allgemeinen keine Gleichstromnetze zur Verfügung stehen, werden vorwiegend <span class="navy">Gleichstrom-Nebenschlussmotoren und Doppelschlussmotoren</span> eingesetzt, da sie für die vorher genannten Forderungen besonders gut geeignet sind und sich eine Einspeisung über steuerbare Stromrichter preiswert realisieren lässt.</p>
 <p>Für den Antrieb elektrisch betriebener Fahrzeuge verwendet man <span class="navy">Gleichstrom- und Einphasen-Reihenschlussmotoren</span>, z. B. in Straßenbahnen (meist Gleichstrom) und E-Lokomotiven (meist Wechselstrom, neuerdings Drehstromasynchronmotoren). Einphasen-Reihenschlussmotoren trifft man auch in Elektrowerkzeugen und Haushaltsmaschinen an; ebenfalls den Einphasen-Asynchronmotor (Waschmaschine). <span class="navy">Einphasen-Synchronnmotoren</span> dienen aufgrund ihrer konstanten Drehzahl als Antrieb für Tonband und Plattenspieler und als Kleinstmotoren in Programmschaltwerken.</p>
 <p>Der <span class="navy">Drehstrom-Asynchronmotor</span> ist der am weitesten verbreitete Elektromotor. Dank seines einfachen und robusten Aufbaus ist er unempfindlich gegen Überbelastung und äußerst wartungsarm, sodass bei einer Antriebsplanung zuerst die Möglichkeit des Einsatzes dieser Maschinen geprüft wird. Deshalb ist sein Einsatzgebiet auch so groß, dass man kaum spezielle Bereiche angeben kann.</p>
@@ -337,13 +344,12 @@ Digitaltechnik brachte auch der Regelverfahren, die sogar bessere Dynamiken als 
 </div>
 </section>
 <section id="merksatze">
-<h3>Merksätze<a class="headerlink" href="#merksatze" title="Link to this heading">¶</a></h3>
+<h2>Merksätze<a class="headerlink" href="#merksatze" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p><span class="navy">Ein permanenterregter Motor wird über Permanentmagnete erregt, ein fremderregter Motor wird über eine separat anzulegende Spannungsquelle erregt. Beide haben prinzipiell die Charakteristik eines Nebenschlussmotors, da die Erregung vom Ankerstrom unabhängig ist.</span></p>
 <p><br /></p>
 <p><span class="navy">Prinzipiell ist das Drehmoment proportional dem Produkt aus magnetischem Fluss und Ankerstrom. Wenn allerdings, wie beim Reihenschluss- oder Asynchronmotor der Fluss lastabhängig ist, schummelt sich da der Strom noch einmal in die Formel rein: Für DIESE Motoren gilt dann M = k * I²</span></p>
 </div></blockquote>
-</section>
 </section>
 </section>
 

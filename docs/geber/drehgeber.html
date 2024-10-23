@@ -76,7 +76,11 @@
           
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../grundlagen/grundlagen.html">Grundlagen</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../grundlagen/grundlagen.html#allgemeine-grundlagen">Allgemeine Grundlagen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grundlagen/grundlagen.html#das-magnetische-feld">Das magnetische Feld</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grundlagen/grundlagen.html#die-magnetischen-grundgroszen">Die magnetischen Grundgrößen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grundlagen/grundlagen.html#drehstrom-oder-gleichstrom">Drehstrom oder Gleichstrom?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grundlagen/grundlagen.html#was-wird-wo-eingesetzt">Was wird wo eingesetzt?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grundlagen/grundlagen.html#merksatze">Merksätze</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../motoren/dcMot.html">Gleichstrommaschine</a><ul>
@@ -100,9 +104,11 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Drehgeber</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#einleitung">Einleitung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#aufbau">Aufbau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#messaufgabe">Messaufgabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#winkel-drehzahl-und-winkelbeschleunigung">Winkel, Drehzahl und Winkelbeschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#messbereich">Messbereich</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#winkelberechnung">Winkelberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kodierung">Kodierung</a></li>
 </ul>
 </li>
 </ul>
@@ -157,8 +163,6 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="einleitung">
-<h2>Einleitung<a class="headerlink" href="#einleitung" title="Link to this heading">¶</a></h2>
 <p>Nahezu überall, wo etwas bewegt wird, drehen sich Achsen. Um diese rotatorische Bewegung <span class="navy">steuern und regeln</span> zu können, bedarf es Encoder und Motor-Feedback-Systeme. Diese wandeln den Winkel zweier relativ zueinander drehbarer Objekte in ein elektrisches Signal um. Encoder und Motor-Feedback-Systeme unterscheiden sich dabei primär in der Anwendung und sich daraus ergebenden Geräteanforderungen.</p>
 <p><span class="navy">Encoder</span> (Lagegeber) werden im Allgemeinen zur Erfassung eines Winkels einer Drehachse verwendet.</p>
 <p><span class="navy">Motor-Feedback-Systeme</span> (Motorgeber) sind speziell für den Einsatz in Elektromotoren ausgelegt.</p>
@@ -169,7 +173,6 @@
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
-</section>
 <section id="aufbau">
 <h2>Aufbau<a class="headerlink" href="#aufbau" title="Link to this heading">¶</a></h2>
 <p>Der Sensorkern eines Drehgebers besteht grundsätzlich aus drei Elementen (s.Bild unten). Der <span class="navy">Sender</span> bringt Energie in das System ein. Der <span class="navy">Modulator</span> verändert die eingebrachte Energie proportional zum mechanischen Winkel φ und dient somit als Maßverkörperung. Der <span class="navy">Empfänger</span> wandelt die modulierte physikalische Größe in ein elektrisches Signal. Kombiniert mit Signalverarbeitung, elektrischer und mechanischer Anbindung erhält man einen Drehgeber.</p>
@@ -188,9 +191,9 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="messaufgabe">
-<h2>Messaufgabe<a class="headerlink" href="#messaufgabe" title="Link to this heading">¶</a></h2>
-<p>Die Messaufgabe von Drehgebern besteht darin die <span class="navy">Winkelstellung</span> einer rotatorischen Achse zu einem Referenzpunkt zu messen und anzuzeigen. Dabei wird nicht nur die eigentliche Winkelmessung betrachtet, sondern auch die Erfassung abgeleiteter Größen wie die Drehzahl und die Winkelbeschleunigung.</p>
+<section id="winkel-drehzahl-und-winkelbeschleunigung">
+<h2>Winkel, Drehzahl und Winkelbeschleunigung<a class="headerlink" href="#winkel-drehzahl-und-winkelbeschleunigung" title="Link to this heading">¶</a></h2>
+<p>Die Aufgabe von Drehgebern besteht darin die <span class="navy">Winkelstellung</span> einer rotatorischen Achse zu einem Referenzpunkt zu messen und anzuzeigen. Dabei wird nicht nur die eigentliche Winkelmessung betrachtet, sondern auch die Erfassung abgeleiteter Größen wie die Drehzahl und die Winkelbeschleunigung.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -235,11 +238,13 @@
 &nbsp;<br>
 &nbsp;<br>
 &nbsp;</section>
+</section>
 <section id="messbereich">
-<h3>Messbereich<a class="headerlink" href="#messbereich" title="Link to this heading">¶</a></h3>
+<h2>Messbereich<a class="headerlink" href="#messbereich" title="Link to this heading">¶</a></h2>
 <p>Bei Drehgebern unterscheidet man primär drei Messbereiche: Teilwinkel, Vollwinkel oder mehrere Umdrehungen.</p>
-<p>Stehen bei Drehgebern eindeutige Winkelwerte über eine mechanische Umdrehung zur Verfügung, spricht man von <span class="navy">Singleturn-Drehgebern</span>, bei solchen, die eindeutige Werte über mehrere Umdrehungen ausgeben von <span class="navy">Multiturn-Drehgebern</span>.</p>
-<div class="line-block">
+<p>Stehen bei Drehgebern</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 14px"> eindeutige Winkelwerte über <u>eine mechanische Umdrehung</u> zur Verfügung, spricht man von <b><font color =#000080>Singleturn-Drehgebern</font></b></span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 14px"> eindeutige Winkelwerte über <u>mehrere Umdrehungen</u> zur Verfügung, spricht man von <b><font color =#000080>Multiturn-Drehgebern</font></b></span><br><div class="line-block">
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="../_images/turnTypes.png"><img alt="../_images/turnTypes.png" src="../_images/turnTypes.png" style="width: 517px;" /></a>
@@ -254,8 +259,8 @@
 &nbsp;<br>
 &nbsp;</section>
 <section id="winkelberechnung">
-<h3>Winkelberechnung<a class="headerlink" href="#winkelberechnung" title="Link to this heading">¶</a></h3>
-<p>Nur wenige Drehgeber erlauben es, einen winkelproportionalen Wert direkt sensorisch zu ermitteln (z.B. resistiv-potentiometrischer Drehgeber). Bei den anderen Prinzipien wird versucht einen in der Mathematik üblichen Weg zu gehen: <span class="navy">Der Winkel wird auf :navy:`Basis trigonometrischer Funktionen</span> ermittelt. Die Sensoren werden so gestaltet, dass bei Drehbewegung sinusförmige Signale entstehen, meist ein <span class="navy">Sinus- und ein Cosinussignal</span> (s. Bild unten). Diese Signalpaarung wird auch als Quadratursignale bezeichnet, da sie in Quadratur, d.h. im rechten Winkel stehen (90° Phasenversatz).</p>
+<h2>Winkelberechnung<a class="headerlink" href="#winkelberechnung" title="Link to this heading">¶</a></h2>
+<p>Nur wenige Drehgeber erlauben es, einen winkelproportionalen Wert direkt sensorisch zu ermitteln (z.B. resistiv-potentiometrischer Drehgeber). Bei den anderen Prinzipien wird versucht einen in der Mathematik üblichen Weg zu gehen: <span class="navy">Der Winkel wird auf Basis trigonometrischer Funktionen ermittelt</span>. Die Sensoren werden so gestaltet, dass bei Drehbewegung sinusförmige Signale entstehen, meist ein <span class="navy">Sinus- und ein Cosinussignal</span> (s. Bild unten). Diese Signalpaarung wird auch als Quadratursignale bezeichnet, da sie in Quadratur, d.h. im rechten Winkel stehen (90° Phasenversatz).</p>
 <p>Zur Veranschaulichung kann eine Darstellung am Einheitskreis verwendet werden. Ein Zeiger (Vektor) mit der Länge 1 dreht sich gegen den Uhrzeigersinn. Als Drehachse ist der Koordinatenursprung definiert und als Nullpunkt die Lage des Zeigers auf der Abszisse in positiver Richtung liegend. Die <span class="navy">y-Komponente des Zeigers repräsentiert den Sinus</span> und die <span class="navy">x-Komponente den Cosinus.</span> Der Winkel <span class="math notranslate nohighlight">\(\varphi\;\)</span> wird zwischen dem Vektor und der Abszisse aufgespannt.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -281,7 +286,7 @@
 <div class="line"><br /></div>
 </div>
 <p>Neben der reinen Winkelrechnung kann auf Basis der sinusförmigen Signale auch eine einfache <span class="navy">Überprüfung der Funktion des Drehgebers</span> durchgeführt werden. Geben Drehgeber direkt sinusförmige Signale an der elektrischen Schnittstelle aus, kann die bekannte goniometrische Beziehung <span class="math notranslate nohighlight">\(\sin²+\cos² = 1\)</span> interpretiert werden als:</p>
-<p><span class="math notranslate nohighlight">\(a^2_{sin} + a^2_{cos} = \text{const}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad a^2_{sin} + a^2_{cos} = \text{const}\)</span></p>
 <p>Das Ergebnis wird auch als Vektorlänge bezeichnet. Diese ist in vielen Belangen von hoher Bedeutung.</p>
 <p>Eine weitere Möglichkeit, die sich durch die Verwendung von Sinus- und Cosinussignalen ergibt ist die der Lissajous-Figur. Mit einem Oszilloskop in xy-Darstellung zeichnen die sinusförmigen Signale bei Drehung eine kreisähnliche Form (ein Kreis bei idealen Sinus-Cosinus-Signalen). Der Einheitskreis wird dadurch messtechnisch dargestellt. Auf diese Weise lassen sich verschiedene Qualitätsmerkmale der Quadratursignale abschätzen. Dies ist ein einfach umzusetzendes indikatives Verfahren.</p>
 <p>Die eigentliche Winkelrechnung basiert auf Gl. 1.1 (s.oben) wird in diesem Zusammenhang als <span class="navy">Interpolation</span> bezeichnet. Interpolatoren können in zwei Dimensionen auf unterschiedliche Weise umgesetzt werden. Zum einen gibt es
@@ -296,8 +301,11 @@ verschiedene Verfahren und zum anderen verschiedene Integrationsstufen in der Um
 &nbsp;<br>
 &nbsp;</section>
 <section id="kodierung">
-<h3>Kodierung<a class="headerlink" href="#kodierung" title="Link to this heading">¶</a></h3>
-</section>
+<h2>Kodierung<a class="headerlink" href="#kodierung" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>dasdas</p></li>
+<li><p>asdlökals</p></li>
+</ul>
 </section>
 </section>
 

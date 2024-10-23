@@ -10,9 +10,6 @@ Drehgeber
 
 |
 
-Einleitung
-----------
-
 Nahezu überall, wo etwas bewegt wird, drehen sich Achsen. Um diese rotatorische Bewegung :navy:`steuern und regeln` zu können, bedarf es Encoder und Motor-Feedback-Systeme. Diese wandeln den Winkel zweier relativ zueinander drehbarer Objekte in ein elektrisches Signal um. Encoder und Motor-Feedback-Systeme unterscheiden sich dabei primär in der Anwendung und sich daraus ergebenden Geräteanforderungen.
 
 :navy:`Encoder` (Lagegeber) werden im Allgemeinen zur Erfassung eines Winkels einer Drehachse verwendet.
@@ -47,13 +44,10 @@ Weiterhin kann man nach :navy:`elektromechanischen` und :navy:`mechatronischen` 
 |
 |
 
+Winkel, Drehzahl und Winkelbeschleunigung
+-----------------------------------------
 
-
-
-Messaufgabe
------------
-
-Die Messaufgabe von Drehgebern besteht darin die :navy:`Winkelstellung` einer rotatorischen Achse zu einem Referenzpunkt zu messen und anzuzeigen. Dabei wird nicht nur die eigentliche Winkelmessung betrachtet, sondern auch die Erfassung abgeleiteter Größen wie die Drehzahl und die Winkelbeschleunigung.
+Die Aufgabe von Drehgebern besteht darin die :navy:`Winkelstellung` einer rotatorischen Achse zu einem Referenzpunkt zu messen und anzuzeigen. Dabei wird nicht nur die eigentliche Winkelmessung betrachtet, sondern auch die Erfassung abgeleiteter Größen wie die Drehzahl und die Winkelbeschleunigung.
 
 |
 
@@ -119,13 +113,22 @@ Als Einheiten verwendet man *rad/s²*.
    &nbsp;<br>
    &nbsp;<br>
    &nbsp;
-   
+
+
+
+
+
 Messbereich
-^^^^^^^^^^^
+-----------
 
 Bei Drehgebern unterscheidet man primär drei Messbereiche: Teilwinkel, Vollwinkel oder mehrere Umdrehungen. 
 
-Stehen bei Drehgebern eindeutige Winkelwerte über eine mechanische Umdrehung zur Verfügung, spricht man von :navy:`Singleturn-Drehgebern`, bei solchen, die eindeutige Werte über mehrere Umdrehungen ausgeben von :navy:`Multiturn-Drehgebern`.
+Stehen bei Drehgebern 
+
+.. raw:: html
+	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 14px"> eindeutige Winkelwerte über <u>eine mechanische Umdrehung</u> zur Verfügung, spricht man von <b><font color =#000080>Singleturn-Drehgebern</font></b></span><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <span style="font-size: 14px"> eindeutige Winkelwerte über <u>mehrere Umdrehungen</u> zur Verfügung, spricht man von <b><font color =#000080>Multiturn-Drehgebern</font></b></span><br>
 
 |
 
@@ -148,9 +151,9 @@ Stehen bei Drehgebern eindeutige Winkelwerte über eine mechanische Umdrehung zu
    &nbsp;
    
 Winkelberechnung
-^^^^^^^^^^^^^^^^
+----------------
 
-Nur wenige Drehgeber erlauben es, einen winkelproportionalen Wert direkt sensorisch zu ermitteln (z.B. resistiv-potentiometrischer Drehgeber). Bei den anderen Prinzipien wird versucht einen in der Mathematik üblichen Weg zu gehen: :navy:`Der Winkel wird auf :navy:`Basis trigonometrischer Funktionen` ermittelt. Die Sensoren werden so gestaltet, dass bei Drehbewegung sinusförmige Signale entstehen, meist ein :navy:`Sinus- und ein Cosinussignal` (s. Bild unten). Diese Signalpaarung wird auch als Quadratursignale bezeichnet, da sie in Quadratur, d.h. im rechten Winkel stehen (90° Phasenversatz). 
+Nur wenige Drehgeber erlauben es, einen winkelproportionalen Wert direkt sensorisch zu ermitteln (z.B. resistiv-potentiometrischer Drehgeber). Bei den anderen Prinzipien wird versucht einen in der Mathematik üblichen Weg zu gehen: :navy:`Der Winkel wird auf Basis trigonometrischer Funktionen ermittelt`. Die Sensoren werden so gestaltet, dass bei Drehbewegung sinusförmige Signale entstehen, meist ein :navy:`Sinus- und ein Cosinussignal` (s. Bild unten). Diese Signalpaarung wird auch als Quadratursignale bezeichnet, da sie in Quadratur, d.h. im rechten Winkel stehen (90° Phasenversatz). 
 
 Zur Veranschaulichung kann eine Darstellung am Einheitskreis verwendet werden. Ein Zeiger (Vektor) mit der Länge 1 dreht sich gegen den Uhrzeigersinn. Als Drehachse ist der Koordinatenursprung definiert und als Nullpunkt die Lage des Zeigers auf der Abszisse in positiver Richtung liegend. Die :navy:`y-Komponente des Zeigers repräsentiert den Sinus` und die :navy:`x-Komponente den Cosinus.` Der Winkel :math:`\varphi\;` wird zwischen dem Vektor und der Abszisse aufgespannt.
 
@@ -188,7 +191,7 @@ Durch diese Beziehung kann man zwar die Auflösung erhöhen, verliert aber die A
 
 Neben der reinen Winkelrechnung kann auf Basis der sinusförmigen Signale auch eine einfache :navy:`Überprüfung der Funktion des Drehgebers` durchgeführt werden. Geben Drehgeber direkt sinusförmige Signale an der elektrischen Schnittstelle aus, kann die bekannte goniometrische Beziehung :math:`\sin²+\cos² = 1` interpretiert werden als:
 
-:math:`a^2_{sin} + a^2_{cos} = \text{const}`
+:math:`\quad a^2_{sin} + a^2_{cos} = \text{const}`
 
 Das Ergebnis wird auch als Vektorlänge bezeichnet. Diese ist in vielen Belangen von hoher Bedeutung. 
 
@@ -215,4 +218,7 @@ Die verschiedenen Verfahren unterscheiden sich, u. a. im **Implementierungsaufwa
    &nbsp;
    
 Kodierung
-^^^^^^^^^
+---------
+
+- dasdas
+- asdlökals
