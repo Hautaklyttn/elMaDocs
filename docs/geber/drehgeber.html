@@ -38,6 +38,7 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="elMaDocs" href="../index.html"/>
+        <link rel="next" title="LabView" href="../grundlagen/labview.html"/>
         <link rel="prev" title="Weitere Motortypen" href="../motoren/weitMot.html"/>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -112,6 +113,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#kodierung">Kodierung</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../grundlagen/labview.html">LabView</a></li>
 </ul>
 
           
@@ -379,6 +381,15 @@ werden. Für magnetische Drehgeber gar wäre es eine große Herausforderung eine
 &nbsp;</section>
 <section id="synchronisation">
 <h3>Synchronisation<a class="headerlink" href="#synchronisation" title="Link to this heading">¶</a></h3>
+<p>Immer dann, wenn ein Messwert aus mehreren Teilmessungen zusammengesetzt wird, ist es sinnvoll <span class="navy">die einzelnen Teilmesswerte zueinander zu synchronisieren</span>. Dies gilt insbesondere dann, wenn die Teilmessungen durch unterschiedliche, unabhängige Sensoren erfasst werden. Beispiele hierfür sind die Kombination einer Inkrementalspur mit einem Pseudo-Random-Code, die Übertragung eines Positionswerts über eine hybride Schnittstelle (niedrig aufgelöster Absolutwert auf einem digitalen Kanal und hochaufgelöste Information innerhalb einer Sinus-Cosinus-Periode als analoges Signal) oder bei der Kaskadierung mehrerer Multiturn-Stufen untereinander und mit einer Singleturn-lnformation. Problematisch ist, dass die Ergebnisse der Teilmessungen unterschiedliche Schaltzeiten aufweisen können. Dies kann bedingt sein durch Signallaufzeiten, Getriebespiel bei einem getriebebasierten Multiturn, Hysterese, Signalrauschen, etc.. Wenn keine Maßnahmen getroffen werden, kann die Stetigkeit der Gesamtinformation verloren gehen. Die Synchronisation beschreibt nun ein Verfahren mit dem diesem Phänomen begegnet werden kann.</p>
+<p>Die Synchronisation wird bei digitalisierten Werten der Teilmessungen verwendet. Entsprechend lässt sich auch das Verfahren anhand von digitalen Codeworten am einfachsten beschreiben. In der Abbildung unten wird ein System beispielhaft angeführt, das seine Positionsinformation aus zwei Teilmessungen bildet. Dabei stellt die eine Teilmessung einen interpolierten Wert einer elektrischen Periode (Feinposition) dar und die zweite einen Absolutwert auf eine mechanische Umdrehung. Im oberen Teil schließen die Datenwörter der beiden Teilmessungen direkt aneinander an. <span class="navy">Schaltet nun der Absolutwert nicht in exakt dem Moment um in dem die Feinposition von einer Periode zur nächsten wechselt, so zeigt der Absolutwert einen falschen Periodenindex an, es kommt zu einem irregulären Positionssprung</span>. Dieser wird erst wieder aufgehoben, wenn der Absolutwert in die richtige Periode zeigt. Dieser Positionssprung kann dadurch behoben werden, dass die Absolutposition feiner aufgelöst wird, d.h. der Absolutwert repräsentiert nicht nur die Anzahl der Perioden, sondern trägt noch Information innerhalb einer Periode. In dem Beispiel in der Abbildung unten werden zwei Synchronisationsbits eingeführt. Diese werden so ausgelegt, dass sie die gleiche Wertigkeit haben wie die entsprechenden hochwertigen Bits der Feinposition. Bei der Inbetriebnahme eines Geräts werden diese so festgelegt, dass die überlappenden Bits den gleichen Wert haben. Unterschiede im Wechselverhalten können nun ausgeglichen werden. Weisen die Bits unterschiedliche Werte auf wird eine Differenz gebildet und das Datenwort des Absolutwerts so gesetzt, dass es in die Richtung der kleineren Differenz liegt. Je mehr Synchronisationsbits verwendet werden, desto sicherer funktioniert das Verfahren. Dies bringt aber einen größeren Umsetzungsaufwand mit sich.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/syncMes.png"><img alt="../_images/syncMes.png" src="../_images/syncMes.png" style="width: 499px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </section>
 </section>
 </section>
@@ -388,6 +399,8 @@ werden. Für magnetische Drehgeber gar wäre es eine große Herausforderung eine
             <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../grundlagen/labview.html" class="btn btn-neutral float-right" title="LabView">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../motoren/weitMot.html" class="btn btn-neutral" title="Weitere Motortypen"><span class="fa fa-arrow-circle-left"></span> Previous</a>
