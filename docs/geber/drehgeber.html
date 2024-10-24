@@ -84,7 +84,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../motoren/dcMot.html">Gleichstrommaschine</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#aufbau">Aufbau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#der-stander">Der Ständer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#der-laufer">Der Läufer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#die-wirkungsweise">Die Wirkungsweise</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#schaltungsarten">Schaltungsarten</a></li>
 </ul>
@@ -302,10 +303,83 @@ verschiedene Verfahren und zum anderen verschiedene Integrationsstufen in der Um
 &nbsp;</section>
 <section id="kodierung">
 <h2>Kodierung<a class="headerlink" href="#kodierung" title="Link to this heading">¶</a></h2>
-<ul class="simple">
-<li><p>dasdas</p></li>
-<li><p>asdlökals</p></li>
-</ul>
+<p>Ein Sinus- Cosinus-Signalpaar wird dazu verwendet, einen Winkel innerhalb einer elektrischen Periode darzustellen. Dies ist für industrielle Anwendungen meist
+nicht ausreichend. Es werden Konventionen und Zusatzinformationen zur Gewinnung der Absolutinformation eingeführt. Es ergeben sich Codes, die innerhalb des Drehgebers oder durch eine Steuerung weiter verarbeitet werden können. Dabei unterscheidet man <span class="navy">Inkrementalcodes</span>, die eine Winkeländerung anzeigen, von <span class="navy">Absolutcodes</span>, die zu jeder Zeit einen eindeutigen Winkel innerhalb des Messbereichs zur Verfügung stellen.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="inkrementalcode">
+<h3>Inkrementalcode<a class="headerlink" href="#inkrementalcode" title="Link to this heading">¶</a></h3>
+<p>Bei Drehgebern mit Inkrementalcode (Inkrement als Elementarschritt oder abzählbares Intervall) wird die Winkelinformation relativ ausgegeben. Das heißt, es wird nicht die absolute Winkelinformation, sondern nur eine <span class="navy">Winkeländerung</span> mittels Signaländerungen angezeigt. Es werden zwei Signalarten genutzt: rechteck- und sinusförmige Signale.</p>
+<p>Bei den inkrementalen Drehgebem mit Rechtecksignalen wird in der einfachsten Form ein einziges Signal zur Verfügung gestellt (Bild unten, links). Dieses Signal
+erlaubt nur die Ermittlung einer Winkeländerung anhand der Auswertung der Signalflanken. Erweitert man das System um ein zweites, um 90° phasenverschobenes Signal, erhält man ein Quadratursignalpaar. Die Signale dieses Paares werden mit unterschiedlichen Buchstabenkombinationen bezeichnet. Hier werden die Buchstaben <em>A</em> und <em>B</em> verwendet. Bezieht man sich auf die Signalpaarung, so kann die Bezeichnung <em>AqB</em> verwendet werden. Mit <em>AqB</em> kann man zusätzlich zur Winkeländerung die <span class="navy">Drehrichtung</span> erkennen (Bild unten, oben rechts). Hierzu werden zusätzlich zu den Signalflanken die Signalpegel ausgewertet. Gleichzeitig wird bei gleicher Anzahl an Impulsen pro Signal pro Umdrehung die Auflösung verdoppelt. Um die Zuordnung zu einem Bezugspunkt auf dem Vollwinkel zu erhalten, kann ein drittes Signal, zur Verfügung gestellt werden, der sogenannte Nullimpuls - hier Signal Z (Bild unten, oben rechts). Dieser Nullimpuls schaltet einmalig pro Umdrehung und hat eine definierte Lage und Dauer in Bezug auf die Inkrementalsignale A und B (eine eingeschränkte Anzahl von Relationen wird verwendet). Dadurch kann eine quasi-absolute Position ermittelt werden. Allerdings muss eine sogenannte Referenzfahrt beim Einschalten des Drehgebers durchgeführt werden, um diesen Bezugspunkt einmalig zu durchfahren. Durch Zählen der Inkrementalsignale kann eine pseudo-absolute Position (Single- oder gar Multiturn) nachgehalten werden.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/inkrement.png"><img alt="../_images/inkrement.png" src="../_images/inkrement.png" style="width: 502px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>In der realen Umsetzung erhält man keine perfekten Rechtecksignale direkt aus der Sensorik. Meist erhält man verschliffene, dreieckförmige oder sinusförmige Signale. Für gut schaltende Rechtecksignale, werden diese anhand eines Komparators aufbereitet. Natürlich werden aber auch die sinusförmigen Signale in Inkrementaldrehgebern verwendet (Bild oben, unten). Da Steuerungen, die für Inkrementalgeber ausgelegt sind, rechteckförmige Signale erwarten, werden die Sinus-Cosinus-Signale aufbereitet. Dazu kann auch die Interpolation verwendet werden, wodurch auch die Auflösung erhöht wird.</p>
+<p>Die Abbildung unten zeigt die Codescheibe eines optischen Inkrementalgebers. Die randnah gestrichelte Struktur besteht aus regelmäßigen, (Rechtecke polar aufgetragen) lichtdurchlässigen und -undurchlässigen Bereichen zur Generierung der AqB-Signale. Die rechteckförmige Struktur über der “500”-Kennzeichnung dient zur Generierung des Nullimpulses.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/codescheibe.png"><img alt="../_images/codescheibe.png" src="../_images/codescheibe.png" style="width: 299px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Ein Nebenaspekt hochauflösender optischer Drehgeber, in deren Ausprägung als Inkrementalgeber mit rechteckförmigen Signalen, ist, dass ihre Leistungsfähigkeit nur unwesentlich durch äußere Bedingungen, wie beispielsweise Temperatur, beeinflusst wird. Die hohe native Auflösung, die physikalisch in der Maßverkörperung vorliegt, reduziert erheblich den Einfluss von signalperiodenbezogenen Fehlern wie Offset- und/oder Amplitudenänderungen.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="absolutcode">
+<h3>Absolutcode<a class="headerlink" href="#absolutcode" title="Link to this heading">¶</a></h3>
+<p>Genügt es bei einer Anwendung nicht, dass nur Winkeländerungen oder Winkel innerhalb eines Teilwinkels (z. B. eine elektrische Periode) angezeigt werden, sondern zu jeder Zeit eine absolute Winkelposition auf eine Umdrehung (oder mehrere Umdrehungen) zur Verfügung steht, kommen <span class="navy">Absolutdrehgeber</span> zum Einsatz. Dies ist insbesondere dann wichtig, wenn die Absolutposition beim Einschalten des Drehgebers zur Verfügung stehen muss, da auf eine Referenzfahrt anwendungsbedingt verzichtet werden muss. Der Begriff Absolutposition bezieht sich eher auf eine lineare Position wird aber auch bei Drehgebern zur Angabe eines absoluten Winkels verwendet.</p>
+<p>Absolutdrehgeber verwenden eine Kombination aus einer mehr oder weniger hoch aufgelösten Inkrementalspur und weiteren Signalspuren. Diese Zusatzinformation wird dazu genutzt den elektrischen Perioden der Inkrementalspur (sinus- oder rechteckförmig) einen Index zuzuweisen. Die Signale zusammen genommen realisieren einen Code, der von der Maßverkörperung getragen wird. Zum Einsatz kommen, z. B. Binär-, Gray-, Nonius- oder Pseudo-Random-Codes.</p>
+<p>Der einfachste Code ist der <span class="navy">Binärcode</span>. Die Signale werden als Rechtecksignale gelesen, wobei jede Signalspur ein Bit eines binären Codes darstellt. Es werden zwei Arten von Code benutzt. Beim klassischen Binärcode stellt das gelesene Codewort direkt den Winkel dar (Bild unten, oben). Bei Drehgebern verwendet man allerdings
+bevorzugt den <span class="navy">Gray-Code</span> (Bild unten, unten). Dies ist ein stetiger Code mit der spezifischen Eigenart, dass sich beim Übergang von einem auflösbaren Schritt zum nächsten, jeweils nur ein Bit ändert. Es entsteht kein „Winkelprellen” beim Übergang von einem Codewort zum nächsten. Ein möglicher Ablesefehler beträgt maximal eins.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/codes.png"><img alt="../_images/codes.png" src="../_images/codes.png" style="width: 583px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Der Nachteil der Binärcodes ist, dass jedes Datenbit in einer dedizierten Codespur codiert werden muss. Dies führt zu einem großen radialen Platzbedarf bei großen
+Codebreiten. Des Weiteren kann es auch schwierig sein den Sensor zu gestalten. So muss bei optischen Drehgebern eine relativ große Fläche homogen ausgeleuchtet
+werden. Für magnetische Drehgeber gar wäre es eine große Herausforderung eine entsprechende Codescheibe zu magnetisieren. Nonius- und Pseudo-Random-Codes begegnen diesem Problem, da sie mit weniger Codespuren zur Darstellung eines absoluten Drehgebercodes auskommen.</p>
+<p>Der <span class="navy">Nonius-Code</span> (oder <em>Vernier</em> - Code) ist aus der Anwendung beim Messschieber bekannt. Bei diesem Code werden eine Hauptskala (hier bezeichnet mit <em>m</em>) und eine oder mehrere Teilskalen ( <span class="math notranslate nohighlight">\(n_i\)</span> ) miteinander verrechnet. In der typischen Verwendung des Codes in Drehgebern haben die Spuren eine um eins unterschiedliche Anzahl von Perioden pro Umdrehung ( <span class="math notranslate nohighlight">\(m = n+l\)</span> ). Bei der Wahl der Teilungsperioden muss auf das Auflösevermögen des Systems geachtet werden. Es können nicht beliebig große Teilungen verwendet werden, da diese irgendwann nicht mehr eindeutig erfasst und verrechnet werden können. Werden mehr als zwei Codespuren verwendet, lassen sich größere, oder höher aufgelöste Messbereiche realisieren. Die Gl. (1.2) stellt die Verrechnung eines zweispurigen Nonius-Codes dar (s.Bilder unten).</p>
+<div class="math notranslate nohighlight">
+\[\varphi = \frac{1}{m - n} \, \left( \arctan \left( \frac{\sin{m\varphi}}{\cos{m\varphi}} \right) - \arctan \left( \frac{\sin{n\varphi}}{\cos{n\varphi}} \right) \right) \quad\quad\quad\quad  (1.2)\]</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Sonderformen des Nonius-Codes verwenden Skalen, deren Periodenlänge sich um mehr als eine Periode unterscheiden. Auch bei diesen Codes kann man den Absolutwinkel mit Gl. (1.2) berechnen. Zu beachten ist, dass die beiden Faktoren keinen gemeinsamen Teiler haben, da sonst die Eindeutigkeit auf eine Umdrehung verloren geht. Auch mit diesem als <em>MxN</em> bezeichneten Code kann ein recht großer Messbereich erfasst werden. Der MxN-Code wird bei Drehgebern eingesetzt, bei denen es sinnvoll ist, sehr unterschiedliche Periodenlängen in den Codespuren zu verwenden. Außerdem ist er weniger empfindlich auf mechanische Toleranzen (Bild unten).</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/nonius.png"><img alt="../_images/nonius.png" src="../_images/nonius.png" style="width: 490px;" /></a>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<a class="reference internal image-reference" href="../_images/miscCodes.png"><img alt="../_images/miscCodes.png" src="../_images/miscCodes.png" style="width: 498px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Der <span class="navy">Pseudo-Random-Code [3, 4]</span> ist ein einspuriger Absolut-Code, der ebenfalls parallel zu einer Inkrementalspur verwendet werden kann. Er ist so gestaltet, dass er sequentiell ausgelesen wird. Für einen <span class="math notranslate nohighlight">\(2^x\)</span> -Code wird ein Abtaster mit mindestens x Ausleseelementen tangential zur Drehachse aufgebracht. Jeder Winkelschritt stellt ein eindeutiges Codewort dar, das mittels eines passenden Dekodierpolynoms dekodiert werden kann. Die Besonderheit bei diesem Code ist, dass er in sich geschlossen ist, d. h. das letzte Codewort geht nahtlos in das erste über, was für Drehgeber natürlich sehr günstig ist (Bild unten).</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/randomCode.png"><img alt="../_images/randomCode.png" src="../_images/randomCode.png" style="width: 514px;" /></a>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;</section>
+<section id="synchronisation">
+<h3>Synchronisation<a class="headerlink" href="#synchronisation" title="Link to this heading">¶</a></h3>
+</section>
 </section>
 </section>
 
