@@ -210,6 +210,30 @@ Mit den bisher genannten elektrischen Maschinen wird das Gebiet der elektrischen
 
 |
 
+Übersicht
+^^^^^^^^^
+
+|nbsp| |nbsp| |middot| |nbsp| :navy:`Transformatoren`: Elektrische AC-Energieübertragung: Ändern der Spannungen/Ströme |br|
+|nbsp| |nbsp| |middot| |nbsp| :navy:`Gleichstrommaschinen`: DC-Betrieb, zumeist Motoren (seltener: Generatoren) |br|
+|nbsp| |nbsp| |middot| |nbsp| :navy:`Wechselstrommaschinen`: AC-Einphasenbetrieb (z.B. Einphasen-Reihenschlussmotoren) |br|
+|nbsp| |nbsp| |middot| |nbsp| :navy:`Drehstrom-Maschinen`: AC-3-Phasenbetrieb |br|
+|nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| a) :navy:`Synchronmaschinen`: Meist Großgeneratoren, bei Motoren: |br|
+|nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| „klein“: Meist mit Permanentmagneterregung |br|
+|nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| „groß“: Meist mit elektrischer Erregung |br|
+|nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| b) :navy:`Asynchronmaschinen`: Meist: E-Motoren aller Baugrößen ! |br|
+|nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| |nbsp| Als Generatoren häufig in Windturbinen (meist mit Schleifringläufer) |br|
+
+|br|
+
+**Einsatzgebiete nach Leistung**
+
+.. image:: pics/motoren.png
+   :width: 426px
+
+|
+
+
+
 ------------
 
 |

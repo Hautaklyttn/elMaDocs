@@ -12,11 +12,20 @@ Gleichstrommaschine
 
 |
 
+Überblick
+---------
+
 Jede rotierende elektrische Maschine besteht aus einem feststehenden Teil, dem :navy:`Ständer (Stator)`, und einem rotierenden Teil, dem :navy:`Läufer (Rotor)`. 
 
    :navy:`Derjenige Teil einer Maschine, in dem Spannungen induziert werden, wird als Anker bezeichnet; bei der Gleichstrommaschine trägt der Läufer die Bezeichnung Anker.`
 
 Meist ist die ganze Maschine zylinderförmig und wird abgeschlossen durch die Lagerschilde an den Stirnseiten des Ständers. Die Lagerschilde halten den Läufer konzentrisch in der Bohrung des Ständers.
+
+|
+
+Gleichstrommotoren werden in zwei Untergruppierungen aufgeteilt. Das wären zum einen der :navy:`permanenterregte` und zum anderen der :navy:`elektrisch` erregte Gleichstrommotor. Beim permanenterregten Gleichstrommotor ist der Stator ein Permanentmagnet und nur der Rotor ein Elektromagnet. Diese Art von Gleichstrommotoren kommt beispielsweiße bei Auto-Anlassern zum Einsatz.
+
+Die andere Form ist der elektrisch erregte Gleichstrommotor. Bei dieser Art von Motor sind beide Hauptbauteile Elektromagneten. Bei den elektrisch erregten Gleichstrommotoren unterscheidet man ein weiteres Mal zwischen Reihenschlussmotor, Nebenschlussmotor und dem fremderregten Motor (Anker- und Erregerwicklung werden aus zwei unterschiedlichen und getrennt voneinander einstellbaren Gleichstromstellern gespeist). Neben- und Reihenschlussmotor haben eine einzige Spannungsquelle für Anker- und Erregerwicklung, werden aber unterschiedlich verschaltet (mehr dazu unten)
 
 .. raw:: html
 
@@ -283,22 +292,51 @@ Die Ziffer 1 in der Klemmenbezeichnung einer Wicklung kennzeichnet immer die pos
 
 Die in den Schaltbildern gewählte Lage der Wendepolwicklung soll veranschaulichen, dass der Fluss der Wendepole gegen das Ankerquerfeld magnetisiert.
 
-|
+|br|
 
 Die fremderregte Gleichstrommaschine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Hier werden :navy:`Anker- und Erregerwicklung aus zwei unterschiedlichen und getrennt voneinander einstellbaren Gleichstromstellern gespeist`. Während bei der Nebenschlussmaschine die Erregerspannung gleich der Ankerspannung ist, kann man bei fremderregten Maschinen durch Verringerung des Erregerstroms, man spricht in diesem Fall auch von einer Feldschwächung des magnetischen Flusses Φ, die Drehzahl *n* über die Nenndrehzahl *nN* hinaus steigern. In der Abbildung unten entspricht dies dem Bereich mit :math:`\frac{n}{nN}` größer als 1. Dabei kommt es gleichzeitig zu einer Reduktion des Drehmoments *M*. Andererseits kann bei der fremderregten Maschine die Ankerspannung :math:`U_A` unabhängig vom Erregerstrom abgesenkt werden. Dadurch kommt es bei konstantem Drehmoment zu einer Leistungsabsenkung und gleichzeitiger Drehzahlreduktion.
+
+Durch die getrennte Regel- bzw. Steuerbarkeit der Anker- und Erregerwicklungen lassen sich verschiedene Betriebspunkte unterhalb der rot gestrichelten Drehmomentkennlinie durch die Art der Ansteuerung erzielen. Vorteile wie hohes Drehmoment bei Stillstand oder geringen Drehzahlen sind gegeben. Daher spielten insbesondere fremderregte Gleichstrommaschinen im Bereich von hochdynamischen Antriebssystemen, beispielsweise bei Werkzeugmaschinen oder elektrischen Stadtschnellbahntriebzügen wie der DB-Baureihe 420 bis in die 1980er Jahre hinein eine bedeutende Rolle. Gleichstrommaschinen wurden in den Folgejahren in diesen Anwendungsbereichen zunehmend durch Drehstrommaschinen mit vorgeschalteten elektronischen Frequenzumrichtern abgelöst, die in Kombination die gleichen Vorteile für hochdynamische Antriebe bei geringerem Wartungsaufwand bieten.
+
 |
+
+.. image:: pics/fremdDC.png
+   :width: 220px
+
+|br|
 
 Die Gleichstrom-Nebenschlussmaschine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|
+Bei der Nebenschlussmaschine sind :navy:`Erreger- und Ankerwicklung parallelgeschaltet`. Der Erregerstrom wird nur durch den ohmschen Widerstand der Erregerwicklung, die eine hohe Windungszahl und Induktivität hat, begrenzt. Ein Wechselspannungsbetrieb ist nicht möglich, da der Erreger- dem Ankerstrom weit nacheilen würde. Die Drehzahl großer Nebenschlussmaschinen ist nahezu unabhängig vom Drehmoment, weshalb sie sich besonders für Anwendungen eignet, bei denen das Lastmoment schwankt, die Drehzahl aber möglichst konstant sein soll, z. B. bei Förderbändern und Hebezeugen, bei denen auch Asynchronmotoren benutzt werden.
+
+Nebenschlussmotoren können bei Unterbrechung des Erregerkreises durchgehen, da Drehzahl und Stromaufnahme beim Abklingen des Erregerfeldes drastisch ansteigen. Das maximal erreichbare Drehmoment wird durch den zulässigen Ankerstrom begrenzt, dieser ist hauptsächlich von den getroffenen Kühlmaßnahmen abhängig. Große Nebenschlussmaschinen in Walzwerken werden fremdbelüftet, um auch bei geringer Drehzahl einen hohen Ankerstrom und damit ein hohes Drehmoment zu ermöglichen.
+
+Nebenschlussmotoren können als Generator (z. B. zur Bremsung) arbeiten, wenn eine Hilfsspannungsquelle oder eine Restmagnetisierung dafür sorgen, dass beim Start des Bremsvorganges eine Erregung vorhanden ist. Mit steigender Erregung oder Drehzahl steigt auch die generierte Spannung – es ist die Spannung, die auch bei Motorbetrieb dem speisenden Strom entgegenwirkt und für eine konstante Drehzahl sorgt. Sie wird daher auch Gegenspannung genannt. Der Anstieg der Gegenspannung mit der Erregung, also bei Nebenschlussmotoren mit der Versorgungsspannung, bewirkt, dass ihre Drehzahl wenig von der Spannung abhängt, solange keine magnetische Sättigung eintritt. Mit sinkender Spannung sinkt auch die Drehzahlsteifigkeit. Bei einem fremderregten Gleichstrommotor mit unabhängig versorgtem, konstantem Erregerfeld ist dagegen die Leerlaufdrehzahl proportional zur Ankerspannung.
+
+Wird an eine Nebenschlussmaschine plötzlich ihre Nennbetriebsspannung gelegt, fließt durch den Anker ein sehr hoher Einschaltstrom, der Schutzschaltungen auslösen kann. Große Maschinen müssen daher mit geringerer Spannung angefahren werden. Dadurch wird die Kennlinie parallel zu geringen Drehzahlen hin verschoben, sodass sie die Momentenachse in einem Bereich außerhalb der Überlast schneidet. Das Anlaufmoment sowie der Ankerstrom im Stillstand sind dann begrenzt. Zusammen mit der folgenden Erhöhung der Antriebsdrehzahl kann auch die Spannung erhöht werden. Alternativ können zum Anfahren Vorwiderstände im Ankerkreis verwendet werden; dadurch wird die Kennlinie flacher, sodass sie wiederum die Achse in einem Bereich außerhalb der Überlast schneidet. Der Nachteil dieser Methode ist die Verlustleistung am Widerstand, dieser muss dann gegebenenfalls aktiv gekühlt werden.
+
+|br|
 
 Die Gleichstrom-Reihenschlussmaschine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|
+Bei der Reihenschlussmaschine (auch Hauptschlussmaschine genannt) sind :navy:`Anker- und Erregerwicklung in Reihe geschaltet`. Die Erregerwicklung muss niederohmig sein. Bei einer Speisung mit Wechselspannung wechseln sowohl das Erregerfeld als auch der Ankerstrom die Richtung nach jeder Halbwelle, sodass das resultierende Drehmoment auch bei Umkehr der Stromrichtung weiterhin in die gleiche Richtung wirkt. Daher kann ein Reihenschlussmotor auch mit Wechselstrom betrieben werden. Der Eisenkern des Stators muss in diesem Fall ein Blechpaket sein, damit Wirbelströme vermieden werden.
+
+Hohes Drehmoment beim Anlaufen
+++++++++++++++++++++++++++++++
+
+Das Drehmoment einer Reihenschlussmaschine ist stark drehzahlabhängig (Reihenschlussverhalten). Bei geringer Drehzahl ist die Gegeninduktionsspannung der Ankerwicklung gering. Daher fließt ein großer Strom durch Anker und Erregerwicklung, und :navy:`es kann ein großes Drehmoment aufgebracht werden`. Mit der Drehzahl steigt die Gegeninduktionsspannung. Strom und Erregung sinken und damit auch das Drehmoment der Maschine.
+
+Mit einphasigem Wechselstrom betriebene Motoren (Einphasen-Reihenschlussmotoren) sind in älteren Elektrolokomotiven (daher der Frequenzkompromiss 16,7 Hz im Bahnstromnetz) sowie in Straßenbahn-Triebwagen zu finden. Sie befinden sich auch unter dem Begriff Universalmotor oder Allstrommotor in vielen Haushaltsmaschinen (Staubsauger, Küchenmaschinen) und Elektro-Handgeräten (Bohrmaschinen). Die Anlasser großer Verbrennungsmotoren (beispielsweise in LKW) sind Reihenschlussmotoren.
+Um einen Reihenschlussmotor als Generator (z. B. beim elektrischen Bremsen von Straßenbahnen) betreiben zu können, muss seine Erregerwicklung umgepolt werden, denn sonst hebt der generierte, durch die Feldwicklung fließende Strom das Erregerfeld auf.
+
+Reihenschlussmotoren haben, insbesondere bei Wechselspannungsbetrieb („Universalmotor“, z. B. in Staubsaugern), dennoch einen wesentlich geringeren Einschaltstrom als Nebenschluss- oder permanenterregte Motoren. Sie liefern dennoch kurzzeitig ein sehr hohes Anlaufmoment. Bei Betrieb mit Wechselstrom ist das Drehmoment mit doppelter Netzfrequenz pulsierend, so dass bei großen Motoren ausgleichende Elemente zwischengeschaltet werden müssen. Das gilt auch für Einphasen-Synchronmaschinen.
+
+|br|
 
 Die Gleichstrom-Doppelschlussmaschine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

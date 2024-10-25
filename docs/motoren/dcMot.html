@@ -85,6 +85,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Gleichstrommaschine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#uberblick">Überblick</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#der-stander">Der Ständer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#der-laufer">Der Läufer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#die-wirkungsweise">Die Wirkungsweise</a></li>
@@ -166,15 +167,23 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+<section id="uberblick">
+<h2>Überblick<a class="headerlink" href="#uberblick" title="Link to this heading">¶</a></h2>
 <p>Jede rotierende elektrische Maschine besteht aus einem feststehenden Teil, dem <span class="navy">Ständer (Stator)</span>, und einem rotierenden Teil, dem <span class="navy">Läufer (Rotor)</span>.</p>
 <blockquote>
 <div><p><span class="navy">Derjenige Teil einer Maschine, in dem Spannungen induziert werden, wird als Anker bezeichnet; bei der Gleichstrommaschine trägt der Läufer die Bezeichnung Anker.</span></p>
 </div></blockquote>
 <p>Meist ist die ganze Maschine zylinderförmig und wird abgeschlossen durch die Lagerschilde an den Stirnseiten des Ständers. Die Lagerschilde halten den Läufer konzentrisch in der Bohrung des Ständers.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Gleichstrommotoren werden in zwei Untergruppierungen aufgeteilt. Das wären zum einen der <span class="navy">permanenterregte</span> und zum anderen der <span class="navy">elektrisch</span> erregte Gleichstrommotor. Beim permanenterregten Gleichstrommotor ist der Stator ein Permanentmagnet und nur der Rotor ein Elektromagnet. Diese Art von Gleichstrommotoren kommt beispielsweiße bei Auto-Anlassern zum Einsatz.</p>
+<p>Die andere Form ist der elektrisch erregte Gleichstrommotor. Bei dieser Art von Motor sind beide Hauptbauteile Elektromagneten. Bei den elektrisch erregten Gleichstrommotoren unterscheidet man ein weiteres Mal zwischen Reihenschlussmotor, Nebenschlussmotor und dem fremderregten Motor (Anker- und Erregerwicklung werden aus zwei unterschiedlichen und getrennt voneinander einstellbaren Gleichstromstellern gespeist). Neben- und Reihenschlussmotor haben eine einzige Spannungsquelle für Anker- und Erregerwicklung, werden aber unterschiedlich verschaltet (mehr dazu unten)</p>
 &nbsp;<br>
 &nbsp;<br>
 &nbsp;<br>
-&nbsp;<section id="der-stander">
+&nbsp;</section>
+<section id="der-stander">
 <h2>Der Ständer<a class="headerlink" href="#der-stander" title="Link to this heading">¶</a></h2>
 <p>Der Ständer besteht aus dem hohlzylindrischen <span class="navy">Joch (1)</span> und den daran befestigten Polen. Da diese Teile keinem magnetischen Wechselfeld unterworfen sind, werden sie aus Guss- oder Walzstahl gefertigt. Die Pole, bestehend aus <span class="navy">Hauptpolen (2)</span> und <span class="navy">Wendepolen (3</span>), werden innen im Joch angeschraubt; die Hauptpole sind unterteilt in den <span class="navy">Polkern (5)</span>, über den die <span class="navy">Erregerwicklung (6)</span> gelegt wird, und den <span class="navy">Polschuh (4)</span>, der das System zum <span class="navy">Läufer (7)</span> hin abschließt (Bild unten).</p>
 <div class="line-block">
@@ -365,26 +374,36 @@ axialer Richtung nebeneinander angeordnet und voneinander isoliert befestigt sin
 </table>
 <p>Die Ziffer 1 in der Klemmenbezeichnung einer Wicklung kennzeichnet immer die positive Seite; d. h. bei Generatorbetrieb die Seite, aus der der Strom des Ankers herausfließt; bei Motorbetrieb die Seite, in die der Ankerstrom hineinfließt.</p>
 <p>Die in den Schaltbildern gewählte Lage der Wendepolwicklung soll veranschaulichen, dass der Fluss der Wendepole gegen das Ankerquerfeld magnetisiert.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p><br /></p>
 <section id="die-fremderregte-gleichstrommaschine">
 <h3>Die fremderregte Gleichstrommaschine<a class="headerlink" href="#die-fremderregte-gleichstrommaschine" title="Link to this heading">¶</a></h3>
+<p>Hier werden <span class="navy">Anker- und Erregerwicklung aus zwei unterschiedlichen und getrennt voneinander einstellbaren Gleichstromstellern gespeist</span>. Während bei der Nebenschlussmaschine die Erregerspannung gleich der Ankerspannung ist, kann man bei fremderregten Maschinen durch Verringerung des Erregerstroms, man spricht in diesem Fall auch von einer Feldschwächung des magnetischen Flusses Φ, die Drehzahl <em>n</em> über die Nenndrehzahl <em>nN</em> hinaus steigern. In der Abbildung unten entspricht dies dem Bereich mit <span class="math notranslate nohighlight">\(\frac{n}{nN}\)</span> größer als 1. Dabei kommt es gleichzeitig zu einer Reduktion des Drehmoments <em>M</em>. Andererseits kann bei der fremderregten Maschine die Ankerspannung <span class="math notranslate nohighlight">\(U_A\)</span> unabhängig vom Erregerstrom abgesenkt werden. Dadurch kommt es bei konstantem Drehmoment zu einer Leistungsabsenkung und gleichzeitiger Drehzahlreduktion.</p>
+<p>Durch die getrennte Regel- bzw. Steuerbarkeit der Anker- und Erregerwicklungen lassen sich verschiedene Betriebspunkte unterhalb der rot gestrichelten Drehmomentkennlinie durch die Art der Ansteuerung erzielen. Vorteile wie hohes Drehmoment bei Stillstand oder geringen Drehzahlen sind gegeben. Daher spielten insbesondere fremderregte Gleichstrommaschinen im Bereich von hochdynamischen Antriebssystemen, beispielsweise bei Werkzeugmaschinen oder elektrischen Stadtschnellbahntriebzügen wie der DB-Baureihe 420 bis in die 1980er Jahre hinein eine bedeutende Rolle. Gleichstrommaschinen wurden in den Folgejahren in diesen Anwendungsbereichen zunehmend durch Drehstrommaschinen mit vorgeschalteten elektronischen Frequenzumrichtern abgelöst, die in Kombination die gleichen Vorteile für hochdynamische Antriebe bei geringerem Wartungsaufwand bieten.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+<a class="reference internal image-reference" href="../_images/fremdDC.png"><img alt="../_images/fremdDC.png" src="../_images/fremdDC.png" style="width: 220px;" /></a>
+<p><br /></p>
 </section>
 <section id="die-gleichstrom-nebenschlussmaschine">
 <h3>Die Gleichstrom-Nebenschlussmaschine<a class="headerlink" href="#die-gleichstrom-nebenschlussmaschine" title="Link to this heading">¶</a></h3>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p>Bei der Nebenschlussmaschine sind <span class="navy">Erreger- und Ankerwicklung parallelgeschaltet</span>. Der Erregerstrom wird nur durch den ohmschen Widerstand der Erregerwicklung, die eine hohe Windungszahl und Induktivität hat, begrenzt. Ein Wechselspannungsbetrieb ist nicht möglich, da der Erreger- dem Ankerstrom weit nacheilen würde. Die Drehzahl großer Nebenschlussmaschinen ist nahezu unabhängig vom Drehmoment, weshalb sie sich besonders für Anwendungen eignet, bei denen das Lastmoment schwankt, die Drehzahl aber möglichst konstant sein soll, z. B. bei Förderbändern und Hebezeugen, bei denen auch Asynchronmotoren benutzt werden.</p>
+<p>Nebenschlussmotoren können bei Unterbrechung des Erregerkreises durchgehen, da Drehzahl und Stromaufnahme beim Abklingen des Erregerfeldes drastisch ansteigen. Das maximal erreichbare Drehmoment wird durch den zulässigen Ankerstrom begrenzt, dieser ist hauptsächlich von den getroffenen Kühlmaßnahmen abhängig. Große Nebenschlussmaschinen in Walzwerken werden fremdbelüftet, um auch bei geringer Drehzahl einen hohen Ankerstrom und damit ein hohes Drehmoment zu ermöglichen.</p>
+<p>Nebenschlussmotoren können als Generator (z. B. zur Bremsung) arbeiten, wenn eine Hilfsspannungsquelle oder eine Restmagnetisierung dafür sorgen, dass beim Start des Bremsvorganges eine Erregung vorhanden ist. Mit steigender Erregung oder Drehzahl steigt auch die generierte Spannung – es ist die Spannung, die auch bei Motorbetrieb dem speisenden Strom entgegenwirkt und für eine konstante Drehzahl sorgt. Sie wird daher auch Gegenspannung genannt. Der Anstieg der Gegenspannung mit der Erregung, also bei Nebenschlussmotoren mit der Versorgungsspannung, bewirkt, dass ihre Drehzahl wenig von der Spannung abhängt, solange keine magnetische Sättigung eintritt. Mit sinkender Spannung sinkt auch die Drehzahlsteifigkeit. Bei einem fremderregten Gleichstrommotor mit unabhängig versorgtem, konstantem Erregerfeld ist dagegen die Leerlaufdrehzahl proportional zur Ankerspannung.</p>
+<p>Wird an eine Nebenschlussmaschine plötzlich ihre Nennbetriebsspannung gelegt, fließt durch den Anker ein sehr hoher Einschaltstrom, der Schutzschaltungen auslösen kann. Große Maschinen müssen daher mit geringerer Spannung angefahren werden. Dadurch wird die Kennlinie parallel zu geringen Drehzahlen hin verschoben, sodass sie die Momentenachse in einem Bereich außerhalb der Überlast schneidet. Das Anlaufmoment sowie der Ankerstrom im Stillstand sind dann begrenzt. Zusammen mit der folgenden Erhöhung der Antriebsdrehzahl kann auch die Spannung erhöht werden. Alternativ können zum Anfahren Vorwiderstände im Ankerkreis verwendet werden; dadurch wird die Kennlinie flacher, sodass sie wiederum die Achse in einem Bereich außerhalb der Überlast schneidet. Der Nachteil dieser Methode ist die Verlustleistung am Widerstand, dieser muss dann gegebenenfalls aktiv gekühlt werden.</p>
+<p><br /></p>
 </section>
 <section id="die-gleichstrom-reihenschlussmaschine">
 <h3>Die Gleichstrom-Reihenschlussmaschine<a class="headerlink" href="#die-gleichstrom-reihenschlussmaschine" title="Link to this heading">¶</a></h3>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p>Bei der Reihenschlussmaschine (auch Hauptschlussmaschine genannt) sind <span class="navy">Anker- und Erregerwicklung in Reihe geschaltet</span>. Die Erregerwicklung muss niederohmig sein. Bei einer Speisung mit Wechselspannung wechseln sowohl das Erregerfeld als auch der Ankerstrom die Richtung nach jeder Halbwelle, sodass das resultierende Drehmoment auch bei Umkehr der Stromrichtung weiterhin in die gleiche Richtung wirkt. Daher kann ein Reihenschlussmotor auch mit Wechselstrom betrieben werden. Der Eisenkern des Stators muss in diesem Fall ein Blechpaket sein, damit Wirbelströme vermieden werden.</p>
+<section id="hohes-drehmoment-beim-anlaufen">
+<h4>Hohes Drehmoment beim Anlaufen<a class="headerlink" href="#hohes-drehmoment-beim-anlaufen" title="Link to this heading">¶</a></h4>
+<p>Das Drehmoment einer Reihenschlussmaschine ist stark drehzahlabhängig (Reihenschlussverhalten). Bei geringer Drehzahl ist die Gegeninduktionsspannung der Ankerwicklung gering. Daher fließt ein großer Strom durch Anker und Erregerwicklung, und <span class="navy">es kann ein großes Drehmoment aufgebracht werden</span>. Mit der Drehzahl steigt die Gegeninduktionsspannung. Strom und Erregung sinken und damit auch das Drehmoment der Maschine.</p>
+<p>Mit einphasigem Wechselstrom betriebene Motoren (Einphasen-Reihenschlussmotoren) sind in älteren Elektrolokomotiven (daher der Frequenzkompromiss 16,7 Hz im Bahnstromnetz) sowie in Straßenbahn-Triebwagen zu finden. Sie befinden sich auch unter dem Begriff Universalmotor oder Allstrommotor in vielen Haushaltsmaschinen (Staubsauger, Küchenmaschinen) und Elektro-Handgeräten (Bohrmaschinen). Die Anlasser großer Verbrennungsmotoren (beispielsweise in LKW) sind Reihenschlussmotoren.
+Um einen Reihenschlussmotor als Generator (z. B. beim elektrischen Bremsen von Straßenbahnen) betreiben zu können, muss seine Erregerwicklung umgepolt werden, denn sonst hebt der generierte, durch die Feldwicklung fließende Strom das Erregerfeld auf.</p>
+<p>Reihenschlussmotoren haben, insbesondere bei Wechselspannungsbetrieb („Universalmotor“, z. B. in Staubsaugern), dennoch einen wesentlich geringeren Einschaltstrom als Nebenschluss- oder permanenterregte Motoren. Sie liefern dennoch kurzzeitig ein sehr hohes Anlaufmoment. Bei Betrieb mit Wechselstrom ist das Drehmoment mit doppelter Netzfrequenz pulsierend, so dass bei großen Motoren ausgleichende Elemente zwischengeschaltet werden müssen. Das gilt auch für Einphasen-Synchronmaschinen.</p>
+<p><br /></p>
+</section>
 </section>
 <section id="die-gleichstrom-doppelschlussmaschine">
 <h3>Die Gleichstrom-Doppelschlussmaschine<a class="headerlink" href="#die-gleichstrom-doppelschlussmaschine" title="Link to this heading">¶</a></h3>

@@ -4,7 +4,9 @@
 Drehgeber
 =========
 
-|
+.. raw:: html
+
+   <font size="-2">(Quelle ist hauptsächlich S.Balser - "Encoder und Motor-Feedback-Systeme")</font>
 
 ------------
 
