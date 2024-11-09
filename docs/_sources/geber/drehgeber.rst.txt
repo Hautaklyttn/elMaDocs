@@ -331,4 +331,84 @@ Die Synchronisation wird bei digitalisierten Werten der Teilmessungen verwendet.
 .. image:: pics/syncMes.png
    :width: 499px
 
+.. raw:: html
+
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;
+   
+Auflösung, Messwertabweichung, Reproduzierbarkeit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Wie für alle Messgeräte sind auch für Drehgeber deren 
+
+.. raw:: html
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Auflösung,</font></b><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Messwertabweichung,</font></b><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Wiederholgenauigkeit und</font></b><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Reproduzierbarkeit,</font></b><br>
+
+wichtige Kenndaten.
+
+Unter :navy:`Auflösung` versteht man die Fähigkeit eines Messgerätes, unterschiedliche Werte innerhalb dessen Messbereichs zu unterscheiden. Bei rein analogen Systemen
+ist die Auflösung theoretisch unendlich groß, wird aber in der Realität durch Signalrauschen begrenzt. In digitalisierten Systemen wird die Auflösung zusätzlich
+durch das Auflösevermögen der verwendeten Analog-Digital-Wandler und (wenn auch heutzutage von untergeordneter Bedeutung) die Wortbreite der Recheneinheit sowie der verwendeten Algorithmen definiert. Bei Drehgebern bezieht sich die Auflösung auf den mechanischen Winkel. Es sind für den Anwender zwei Fälle zu unterscheiden: Drehgeber mit digitalen oder analogen Signalen.
+
+Bei :under:`Inkrementaldrehgebern` mit rechteckförmigen Signalen definiert sich die Auflösung aus der Anzahl der Impulse über den Messbereich. Da Quadratursignale verwendet werden und die Impulswechsel erfasst werden können, hat der Drehgeber eine um den Faktor vier höhere Auflösung als Impulse pro Signal (Bild unten).
+
 |
+
+.. image:: pics/aufloesung.png
+   :width: 440px
+
+|
+
+:under:`Absolute Drehgeber` mit rein digitaler Schnittstelle geben deren Auflösung direkt im Datenblatt an. Für die Sicherstellung dieser Angabe ist ausschließlich der
+Gerätehersteller verantwortlich. Bei der Betrachtung der Auflösung bei Drehgebern mit analoger Schnittstelle sind neben den eingangs genannten Parametern weitere
+Einflussfaktoren zu beachten. Näher betrachtet werden die Drehgeber mit sinusförmigen Ausgangssignalen. Bei diesen werden die Signale durch Analog-Digital-Wandler oder Interpolatoren digitalisiert und in einen Winkel umgerechnet. Dies hat zusätzlichen Einfluss auf das Drehgebersystem. Wie, soll an dem Beispiel in der Abbildung unten gezeigt werden, das auf der Arkustangens-lnterpolation mittels linearem ADC gemäß Gl. 1.1 basiert und eine Sinus-Cosinus-Periode betrachtet.
+
+|
+
+.. image:: pics/amplQuant.png
+   :width: 509px
+
+|
+
+Es ist zu erkennen, dass der aus quantisierten Signalen abgeleitete diskrete Winkel keine gleichförmige Winkelauflösung innerhalb einer Sinus-Cosinus-Periode hat. Näherungsweise kann die Auflösung mit sinusförmigen Signalen angenommen werden:
+
+.. math::
+
+	\delta_{min} \approx \frac{360°}{\pi\cdot\text{PPR}\cdot\delta_{ADC}}
+	
+.. math::
+
+	\bar{\delta} \cong \frac{360°}{4\cdot\text{PPR}\cdot\delta_{ADC}} 
+
+
+(:math:`\delta_{min}` , :math:`\;\bar{\delta}`: kleinste und mittlere Winkelauflösung in Grad; :math:`\;\delta_{ADC}` : Auflösung der Analog-Digital-Wandler in Inkrementen)
+
+Dabei gilt, dass die Auflösung der AD-Wandler für die Sinus- und Cosinus-Signale gleich ist.
+
+In Anwendungen in denen eine Winkeländerung zur Erfassung der Drehzahl verwendet wird, hat die Winkelauflösung direkten Einfluss auf das Auflösevermögen der Drehzahl.
+Wie bereits erläutert, errechnet sich die Drehzahl aus der Differenzierung des Winkels nach der Zeit, bzw. in der Praxis aus der Wnkeländerung innerhalb eines
+Abtastintervalls. Für die Drehzahlauflösung ergibt sich somit folgende Beziehung:
+
+.. math::
+
+	\delta_{n} = \frac{60}{T\cdot\delta} = \frac{60\cdot\text{f}}{\delta}
+
+(:math:`\delta_{n}` : Drehzahlauflösung in 1/min; T: Abtastintervall in Sekunden; f: Abtastfrequenz in Hertz; :math:`\;\delta`: Auflösung des Drehgebers in Schritten pro Umdrehung)
+
+In der Antriebstechnik ist das Ziel eine möglichst hohe Drehzahlauflösung zu erhalten. Gemäß der obigen Gleichung erfordert dies ein möglichst großes Abtastintervall (meist
+nicht sehr flexibel wählbar und durch weitere Faktoren hin zu kleineren Werten erforderlich) oder/und eine möglichst hohe Drehgeberauflösung (Bild unten).
+
+|
+
+.. image:: pics/drehzahlAufl.png
+   :width: 430px
+
+|
+
+Jedes Messgerät zeigt Messwertabweichungen (vergleichbare Begriffe: Ungenauigkeit, Nichtlinearität, Fehlergrenze, Messschrittabweichung). Diese gibt den Grad der Abweichung des angezeigten Werts von einem wahren Wert an.
