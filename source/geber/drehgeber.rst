@@ -340,8 +340,8 @@ Die Synchronisation wird bei digitalisierten Werten der Teilmessungen verwendet.
    &nbsp;<br>
    &nbsp;
    
-Auflösung, Messwertabweichung, Reproduzierbarkeit
--------------------------------------------------
+Auflösung
+---------
 
 Wie für alle Messgeräte sind auch für Drehgeber deren 
 
@@ -421,6 +421,26 @@ In der Antriebstechnik ist das Ziel eine möglichst hohe Drehzahlauflösung zu e
    &nbsp;<br>
    &nbsp;
 
+Reproduzierbarkeit
+------------------
+
+Unter :navy:`Wiederholgenauigkeit` versteht man die Fähigkeit eines Systems unter gleichen Bedingungen das gleiche zu tun. Auf ein Messgerät bezogen, beschreibt
+dies die Streuung des Ist-Messwerts die sich ergibt, wenn ein bestimmter Sollwert unter gleichen Bedingungen mehrfach angefahren wird. Bei Drehgebern zählen hierbei zu den Rahmenbedingungen neben den Umwelteinflüssen (z. B. Temperatur, relative Feuchte) auch anwendungsrelevante Parameter, wie Drehrichtung und Drehzahl. Die Reproduzierbarkeit beschreibt die Abweichung im Ist-Wert die sich ergibt, wenn ein bestimmter Sollwert unter den erlaubten Betriebsbedingungen angefahren wird. Somit sind Umwelteinflüsse, anwendungsspezifische Parameter sowie sensorische Einllüsse (z. B. Hysterese) mit berücksichtigt. Für Wiederholgenauigkeit und :navy:`Reproduzierbarkeit` werden für gewöhnlich die Standardabweichung oder ein Vielfaches davon als Zahlenwert angegeben. Aus Datenblättern geht die Natur des Werts leider nicht immer eindeutig hervor, so dass man selten weiß, ob die maximale Abweichung oder eine statistische Abweichung durch die Angabe verstanden wird.
+
+Wiederholgenauigkeit und Reproduzierbarkeit der Drehzahl ergeben sich auch aus den Kennwerten der Winkelposition, werden aber noch beeinflusst durch mögliche Schwankungen des Abtastintervalls. Auf die Auflösung, Genauigkeit, Wiederholgenauigkeit und Reproduzierbarkeit der Beschleunigung soll an dieser Stelle nicht eingegangen werden, da sie in der Praxis von untergeordneter Bedeutung ist.
+
+|
+
+.. raw:: html
+
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;
+
+Messwertabweichung
+------------------
+
 Jedes Messgerät zeigt :navy:`Messwertabweichungen` (vergleichbare Begriffe: Ungenauigkeit, Nichtlinearität, Fehlergrenze, Messschrittabweichung). Diese gibt den Grad der Abweichung des angezeigten Werts von einem wahren Wert an. Sie wird verursacht durch zufällige und systematische Fehler. Die Fehlerarten und vor allem die Auswirkungen der Messwertabweichung sind dabei gerätespezifisch.
 
 Der unabhängige Linearitätswert :math:`\epsilon` gibt die maximale Abweichung von der Geraden, entweder als Absolutwert oder relativ auf den Messbereich bezogen an:
@@ -460,14 +480,74 @@ Unabhängig von der Darstellung muss immer darauf geachtet werden, ob die Fehler
 
 Die Messwertabweichung der Drehzahl definiert sich auch aus der Genauigkeit der Winkelposition sowie der Genauigkeit des Zeitintervalls. Auch wenn die zeitliche Abweichung meist in „ppm" (engl.: „parts per million", dt.: Teile von einer Million) angegeben wird, ist diese nicht zu vernachlässigen, denn schließlich liegen die drehzahlrelevanten Genauigkeitskomponenten von Drehgebern im Bereich von Winkelsekunden und somit auch im ppm-Bereich. 1m allgemeinen Sinne wird darauf an dieser Stelle nicht eingegangen.
 
+|
+
+Messwertabweichung bei Drehgebern
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Oft wird bei Messgeräten als Messwertabweichung ein globaler Wert angegeben, d.h. die maximale Abweichung der Istkurve von der Sollkurve :math:`\epsilon_{\text{max}}\;` (s. vorletztes Bild). Bei Drehgebern kann es sinnvoll sein die Angabe in mehrere Kennwerte zu unterteilen. Somit wird konkret auf die Wirkung von Abweichungskomponenten für unterschiedliche Anwendungen eingegangen. Auch haben die Komponenten unterschiedliche Ursachen. Die Unterscheidung kann entsprechend helfen Korrekturmaßnahmen abzuleiten. Dabei kann die Ursache (Messung) oder die Wirkung (Kompensation) adressiert werden.
+
+Bei Drehgebern lassen sich in der Fehlerkurve meist periodische Komponenten identifizieren. Anteile davon beziehen sich auf eine mechanische Umdrehung. Basiert die Sensorik auf mehreren Teilungsperioden pro Umdrehung, so finden sich auch Komponenten in der Fehlerkurve, die sich auf diese Teilungsperiode zurückführen lassen. Die Abbildung unten stellt eine simulativ erstellte Fehlerkurve im Winkelbereich sowie deren Spektren dar, anhand derer näher auf die Fehlerkomponenten eingegangen werden kann.
+
+|
+
+.. image:: pics/winkelfehler.png
+   :width: 513px
+
+|
+
+Dargestellt sind in den Fehlerkurven die Werte für eine mechanische Umdrehung, wobei der Drehgeber 16 Teilungsperioden aufweist. In der Darstellung oben rechts sieht man die eigentliche Fehlerkurve, die sich ergibt, wenn von den gemessenen Winkelwerten deren Sollwerte abgezogen werden. Man erkennt eine niederfrequente Komponente, der hochfrequente Komponenten überlagert sind. Wird an dieser Stelle von Frequenzanalyse gesprochen, so bezieht man sich auf die *Ordnungsanalyse* (diese stammt aus dem Bereich der Geräusch- Oder Schwingungsanalyse rotierender Maschinen). Bei diesem Ansatz werden in der Praxis Messwerte nicht zeitlich äquidistant über eine Zeitreferenz abgetastet sondern winkel-äquidistant mittels einer Winkelreferenz. Zeitlich erfasste Winkelwerte lassen sich mit den Methoden der Ordnungsanalyse auch algorithmisch in den Winkelbereich umrechnen. Man befindet sich nicht mehr im Zeitbereich sondern im Winkelbereich. Berechnet man auf so erfasste Winkelwerte eine Fourier-Transformation so spricht man nicht klassisch von einem Frequenzspektrum mit der Einheit Hz (1/s) auf der Abszisse, sondern von einem Ordnungsspekuum mit der Einheit 1/U (U für Umdrehung). Typischerweise bezieht sich die erste Ordnung auf eine mechanische Umdrehung, was der bevorzugten Sichtweise in diesem Buch entspricht. Es ist aber auch möglich sich auf eine elektrische Periode zu beziehen. Zurück zu den nieder- und hochfrequenten Komponenten in der Abbildung oben. In Anlehnung an die Begrifflichkeiten von Datenwandlern (ADC und DAC) verwendet man die Begriffe :navy:`integrale Nichtlinearität` (engl.: „integral non-linearity", INL) für die niederfrequenten Ordnungen und :navy:`differentielle Nichtlinearität` (engl.: „differential non-linearity", DNL) für die Ordnungen, die sich aus der Anzahl der Teilungsperioden ableiten.
+
+Die :under:`integrale Nichtlinearität` beschreibt eine Eigenschaft, die sich primär auf die Genauigkeit eines Positionswertes bezieht und hat ihre Ursache meist im mechanischen Aufbau, wie beispielsweise der Exzentrizität der Codescheibe zur Drehachse oder dem exzentrischen Anbau des Drehgebers an die Applikation (Bild unten).
+
+|
+
+.. image:: pics/geoNicht.png
+   :width: 523px
+
+|
+
+Aus den geometrischen Verhältnissen lässt sich die Größe des integralen Fehlers ableiten:
+
+.. math::
+
+	\epsilon_{\text{INL}} = \varphi - \varphi' = \pm \arctan \frac{e}{r} [°] = \pm 206.265 \frac{e}{r} [''] 
+
+(:math:`\epsilon_{\text{INL}}\;` : durch Exzentrizität verursachter Winkelfehler in [°]; e : Exzentrizität in [m]; r: Codescheibenradius in [m])
+
+Aus der obigen Gleichung geht hervor, dass je kleiner die Codescheibe ist, desto besser muss sie zentriert werden, um eine geforderte maximale integrale Nichtlinearität zu erreichen. Die Näherungsformel gilt für kleine Winkel, d.h. kleine Verhältnisse von *e* zu *r*. Der Bezug der integralen Nichtlinearität auf die Signale wird in der Abbildung unten veranschaulicht. Die Punkte auf dem Einheitskreis repräsentieren einen gleichwertigen Punkt in je einer elektrischen Periode. Man erkennt, dass sich die Periodizität des Signals sinusförmig üner eine Umdrehung ändert.
+
+|
+
+.. image:: pics/winkelfehler2.png
+   :width: 531px
+
+|
+
+Die :under:`differentielle Nichtlinearität` beschreibt Winkelabweichungen innerhalb einer Teilungsperiode. Diese ist vor allem bei der Ableitung einer Drehzahlinformation aus der Winkelinformation relevant. Sie beschreibt Ungenauigkeiten, welche sich je Maßstabsperiode wiederholen, also eine vergleichsweise hohe Fehlerfrequenz in den Regler eintragen können. Da sich die differentielle Nichtlinearität auf eine Teilungsperiode bezieht, nimmt deren Einfluss auf den Gesamtwinkelfehler mit der Anzahl der Perioden pro Umdrehung ab.
+
+|
+
+Messwertabweichung bei Sinus-Cosinus basierter Winkelrechnung
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Messgeräte basierend auf der Auswertung von Sinus-Cosinus-Signalen haben einige Spezifika, die sich aus nicht perfekten, analogen Signalen ergeben. Basis für die
+Veranschaulichung ist die Erweiterung von Gl. 1.1 zu:
+
+.. math::
+
+	\varphi_i = \frac{1}{\text{PPR}} \arctan\left(\frac{A_{sin}\sin(\varphi_i + \Delta\varphi_{\text{sin}}) + O_{\text{sin}} + d_{\text{sin}}}{A_{cos}\cos(\varphi_i + \Delta\varphi_{\text{cos}}) + O_{\text{cos}} + d_{\text{cos}}}\right)
+
+(:math:`\varphi_i\;`: gemessener Winkel in der i -ten Periode; *PPR*: Anzahl der Sinus-Cosinus-Perioden pro Umdrehung; :math:`A_{sin}, A_{cos}`: Amplitudenwerten der Sinus-Cosinus-Signale in [V]; :math:`\varphi_{\text{sin}}, \varphi_{\text{cos}}`: Abweichungen der Phasenlage [°]; :math:`O_{\text{sin}}, O_{\text{cos}}`: Offsetwerte in [V]; :math:`d_{\text{sin}}, d_{\text{cos}}`: Momentanwerte der Störsignale in [V])
+
+Aus dieser Betrachtung ergeben sich Fehlerquellen für die Erfassung des Winkels innerhalb einer Signalperiode, die in der Tabell unten aufgelistet sind:
+
+Die Wirkung ohne Fehler (Abb. 2.20) und die der ersten drei Fehlerarten wird in den folgenden Abbildungen (Abb. 2.21 , 2.22, und2.23) veranschaulicht. Diese beziehen sich auf eine mechanische Umdrehung. Zur besseren Veranschaulichung der Fehlerwirkung berücksichtigen die Szenarien der Abbildungen eine kleine Periodenzahl ( PPR = 16 ) und haben deutlich überzogene Fehlerkomponenten. Auf die Darstellung der Wirkung der Signalstörungen wird verzichtet, da diese wie eine zufällige Mischung der drei anderen Fehlerarten zu interpretieren ist. Diese werden u. a. über das Signal-Rausch-Verhältnis beschrieben.
+
 .. raw:: html
 
    &nbsp;<br>
    &nbsp;<br>
    &nbsp;<br>
    &nbsp;
-
-Unter :navy:`Wiederholgenauigkeit` versteht man die Fähigkeit eines Systems unter gleichen Bedingungen das gleiche zu tun. Auf ein Messgerät bezogen, beschreibt
-dies die Streuung des Ist-Messwerts die sich ergibt, wenn ein bestimmter Sollwert unter gleichen Bedingungen mehrfach angefahren wird. Bei Drehgebern zählen hierbei zu den Rahmenbedingungen neben den Umwelteinflüssen (z. B. Temperatur, relative Feuchte) auch anwendungsrelevante Parameter, wie Drehrichtung und Drehzahl. Die Reproduzierbarkeit beschreibt die Abweichung im Ist-Wert die sich ergibt, wenn ein bestimmter Sollwert unter den erlaubten Betriebsbedingungen angefahren wird. Somit sind Umwelteinflüsse, anwendungsspezifische Parameter sowie sensorische Einllüsse (z. B. Hysterese) mit berücksichtigt. Für Wiederholgenauigkeit und :navy:`Reproduzierbarkeit` werden für gewöhnlich die Standardabweichung oder ein Vielfaches davon als Zahlenwert angegeben. Aus Datenblättern geht die Natur des Werts leider nicht immer eindeutig hervor, so dass man selten weiß, ob die maximale Abweichung oder eine statistische Abweichung durch die Angabe verstanden wird.
-
-Wiederholgenauigkeit und Reproduzierbarkeit der Drehzahl ergeben sich auch aus den Kennwerten der Winkelposition, werden aber noch beeinflusst durch mögliche Schwankungen des Abtastintervalls. Auf die Auflösung, Genauigkeit, Wiederholgenauigkeit und Reproduzierbarkeit der Beschleunigung soll an dieser Stelle nicht eingegangen werden, da sie in der Praxis von untergeordneter Bedeutung ist.
+  
