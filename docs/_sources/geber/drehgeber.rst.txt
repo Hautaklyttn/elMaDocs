@@ -331,6 +331,8 @@ Die Synchronisation wird bei digitalisierten Werten der Teilmessungen verwendet.
 .. image:: pics/syncMes.png
    :width: 499px
 
+|
+
 .. raw:: html
 
    &nbsp;<br>
@@ -339,16 +341,18 @@ Die Synchronisation wird bei digitalisierten Werten der Teilmessungen verwendet.
    &nbsp;
    
 Auflösung, Messwertabweichung, Reproduzierbarkeit
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
 
 Wie für alle Messgeräte sind auch für Drehgeber deren 
 
 .. raw:: html
 
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Auflösung,</font></b><br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Messwertabweichung,</font></b><br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Wiederholgenauigkeit und</font></b><br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Reproduzierbarkeit,</font></b><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080 size="3">Auflösung,</font></b><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080 size="3">Messwertabweichung,</font></b><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080 size="3">Wiederholgenauigkeit und</font></b><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080 size="3">Reproduzierbarkeit</font></b><br>
+
+|
 
 wichtige Kenndaten.
 
@@ -387,7 +391,7 @@ Es ist zu erkennen, dass der aus quantisierten Signalen abgeleitete diskrete Win
 	\bar{\delta} \cong \frac{360°}{4\cdot\text{PPR}\cdot\delta_{ADC}} 
 
 
-(:math:`\delta_{min}` , :math:`\;\bar{\delta}`: kleinste und mittlere Winkelauflösung in Grad; :math:`\;\delta_{ADC}` : Auflösung der Analog-Digital-Wandler in Inkrementen)
+(:math:`\delta_{min}` , :math:`\;\bar{\delta}\;`: kleinste und mittlere Winkelauflösung in Grad; :math:`\;\delta_{ADC}\;` : Auflösung der Analog-Digital-Wandler in Inkrementen)
 
 Dabei gilt, dass die Auflösung der AD-Wandler für die Sinus- und Cosinus-Signale gleich ist.
 
@@ -399,7 +403,7 @@ Abtastintervalls. Für die Drehzahlauflösung ergibt sich somit folgende Beziehu
 
 	\delta_{n} = \frac{60}{T\cdot\delta} = \frac{60\cdot\text{f}}{\delta}
 
-(:math:`\delta_{n}` : Drehzahlauflösung in 1/min; T: Abtastintervall in Sekunden; f: Abtastfrequenz in Hertz; :math:`\;\delta`: Auflösung des Drehgebers in Schritten pro Umdrehung)
+(:math:`\delta_{n}\;` : Drehzahlauflösung in 1/min; T: Abtastintervall in Sekunden; f: Abtastfrequenz in Hertz; :math:`\;\delta\;`: Auflösung des Drehgebers in Schritten pro Umdrehung)
 
 In der Antriebstechnik ist das Ziel eine möglichst hohe Drehzahlauflösung zu erhalten. Gemäß der obigen Gleichung erfordert dies ein möglichst großes Abtastintervall (meist
 nicht sehr flexibel wählbar und durch weitere Faktoren hin zu kleineren Werten erforderlich) oder/und eine möglichst hohe Drehgeberauflösung (Bild unten).

@@ -112,6 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#messbereich">Messbereich</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#winkelberechnung">Winkelberechnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#kodierung">Kodierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#auflosung-messwertabweichung-reproduzierbarkeit">Auflösung, Messwertabweichung, Reproduzierbarkeit</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../grundlagen/labview.html">LabView</a></li>
@@ -385,17 +386,24 @@ werden. Für magnetische Drehgeber gar wäre es eine große Herausforderung eine
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="../_images/syncMes.png"><img alt="../_images/syncMes.png" src="../_images/syncMes.png" style="width: 499px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 &nbsp;<br>
 &nbsp;<br>
 &nbsp;<br>
 &nbsp;</section>
+</section>
 <section id="auflosung-messwertabweichung-reproduzierbarkeit">
-<h3>Auflösung, Messwertabweichung, Reproduzierbarkeit<a class="headerlink" href="#auflosung-messwertabweichung-reproduzierbarkeit" title="Link to this heading">¶</a></h3>
+<h2>Auflösung, Messwertabweichung, Reproduzierbarkeit<a class="headerlink" href="#auflosung-messwertabweichung-reproduzierbarkeit" title="Link to this heading">¶</a></h2>
 <p>Wie für alle Messgeräte sind auch für Drehgeber deren</p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Auflösung,</font></b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Messwertabweichung,</font></b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Wiederholgenauigkeit und</font></b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080>Reproduzierbarkeit,</font></b><br><p>wichtige Kenndaten.</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080 size="3">Auflösung,</font></b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080 size="3">Messwertabweichung,</font></b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080 size="3">Wiederholgenauigkeit und</font></b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; &nbsp; <b><font color =#000080 size="3">Reproduzierbarkeit</font></b><br><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>wichtige Kenndaten.</p>
 <p>Unter <span class="navy">Auflösung</span> versteht man die Fähigkeit eines Messgerätes, unterschiedliche Werte innerhalb dessen Messbereichs zu unterscheiden. Bei rein analogen Systemen
 ist die Auflösung theoretisch unendlich groß, wird aber in der Realität durch Signalrauschen begrenzt. In digitalisierten Systemen wird die Auflösung zusätzlich
 durch das Auflösevermögen der verwendeten Analog-Digital-Wandler und (wenn auch heutzutage von untergeordneter Bedeutung) die Wortbreite der Recheneinheit sowie der verwendeten Algorithmen definiert. Bei Drehgebern bezieht sich die Auflösung auf den mechanischen Winkel. Es sind für den Anwender zwei Fälle zu unterscheiden: Drehgeber mit digitalen oder analogen Signalen.</p>
@@ -422,14 +430,14 @@ Einflussfaktoren zu beachten. Näher betrachtet werden die Drehgeber mit sinusf�
 \[\delta_{min} \approx \frac{360°}{\pi\cdot\text{PPR}\cdot\delta_{ADC}}\]</div>
 <div class="math notranslate nohighlight">
 \[\bar{\delta} \cong \frac{360°}{4\cdot\text{PPR}\cdot\delta_{ADC}}\]</div>
-<p>(<span class="math notranslate nohighlight">\(\delta_{min}\)</span> , <span class="math notranslate nohighlight">\(\;\bar{\delta}\)</span>: kleinste und mittlere Winkelauflösung in Grad; <span class="math notranslate nohighlight">\(\;\delta_{ADC}\)</span> : Auflösung der Analog-Digital-Wandler in Inkrementen)</p>
+<p>(<span class="math notranslate nohighlight">\(\delta_{min}\)</span> , <span class="math notranslate nohighlight">\(\;\bar{\delta}\;\)</span>: kleinste und mittlere Winkelauflösung in Grad; <span class="math notranslate nohighlight">\(\;\delta_{ADC}\;\)</span> : Auflösung der Analog-Digital-Wandler in Inkrementen)</p>
 <p>Dabei gilt, dass die Auflösung der AD-Wandler für die Sinus- und Cosinus-Signale gleich ist.</p>
 <p>In Anwendungen in denen eine Winkeländerung zur Erfassung der Drehzahl verwendet wird, hat die Winkelauflösung direkten Einfluss auf das Auflösevermögen der Drehzahl.
 Wie bereits erläutert, errechnet sich die Drehzahl aus der Differenzierung des Winkels nach der Zeit, bzw. in der Praxis aus der Wnkeländerung innerhalb eines
 Abtastintervalls. Für die Drehzahlauflösung ergibt sich somit folgende Beziehung:</p>
 <div class="math notranslate nohighlight">
 \[\delta_{n} = \frac{60}{T\cdot\delta} = \frac{60\cdot\text{f}}{\delta}\]</div>
-<p>(<span class="math notranslate nohighlight">\(\delta_{n}\)</span> : Drehzahlauflösung in 1/min; T: Abtastintervall in Sekunden; f: Abtastfrequenz in Hertz; <span class="math notranslate nohighlight">\(\;\delta\)</span>: Auflösung des Drehgebers in Schritten pro Umdrehung)</p>
+<p>(<span class="math notranslate nohighlight">\(\delta_{n}\;\)</span> : Drehzahlauflösung in 1/min; T: Abtastintervall in Sekunden; f: Abtastfrequenz in Hertz; <span class="math notranslate nohighlight">\(\;\delta\;\)</span>: Auflösung des Drehgebers in Schritten pro Umdrehung)</p>
 <p>In der Antriebstechnik ist das Ziel eine möglichst hohe Drehzahlauflösung zu erhalten. Gemäß der obigen Gleichung erfordert dies ein möglichst großes Abtastintervall (meist
 nicht sehr flexibel wählbar und durch weitere Faktoren hin zu kleineren Werten erforderlich) oder/und eine möglichst hohe Drehgeberauflösung (Bild unten).</p>
 <div class="line-block">
@@ -440,7 +448,6 @@ nicht sehr flexibel wählbar und durch weitere Faktoren hin zu kleineren Werten 
 <div class="line"><br /></div>
 </div>
 <p>Jedes Messgerät zeigt Messwertabweichungen (vergleichbare Begriffe: Ungenauigkeit, Nichtlinearität, Fehlergrenze, Messschrittabweichung). Diese gibt den Grad der Abweichung des angezeigten Werts von einem wahren Wert an.</p>
-</section>
 </section>
 </section>
 
