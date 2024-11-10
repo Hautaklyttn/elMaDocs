@@ -405,8 +405,7 @@ Abtastintervalls. Für die Drehzahlauflösung ergibt sich somit folgende Beziehu
 
 (:math:`\delta_{n}\;` : Drehzahlauflösung in 1/min; T: Abtastintervall in Sekunden; f: Abtastfrequenz in Hertz; :math:`\;\delta\;`: Auflösung des Drehgebers in Schritten pro Umdrehung)
 
-In der Antriebstechnik ist das Ziel eine möglichst hohe Drehzahlauflösung zu erhalten. Gemäß der obigen Gleichung erfordert dies ein möglichst großes Abtastintervall (meist
-nicht sehr flexibel wählbar und durch weitere Faktoren hin zu kleineren Werten erforderlich) oder/und eine möglichst hohe Drehgeberauflösung (Bild unten).
+In der Antriebstechnik ist das Ziel eine möglichst hohe Drehzahlauflösung zu erhalten. Gemäß der obigen Gleichung erfordert dies ein möglichst großes Abtastintervall (meist nicht sehr flexibel wählbar und durch weitere Faktoren hin zu kleineren Werten erforderlich) oder/und eine möglichst hohe Drehgeberauflösung (Bild unten).
 
 |
 
@@ -415,4 +414,60 @@ nicht sehr flexibel wählbar und durch weitere Faktoren hin zu kleineren Werten 
 
 |
 
-Jedes Messgerät zeigt Messwertabweichungen (vergleichbare Begriffe: Ungenauigkeit, Nichtlinearität, Fehlergrenze, Messschrittabweichung). Diese gibt den Grad der Abweichung des angezeigten Werts von einem wahren Wert an.
+.. raw:: html
+
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;
+
+Jedes Messgerät zeigt :navy:`Messwertabweichungen` (vergleichbare Begriffe: Ungenauigkeit, Nichtlinearität, Fehlergrenze, Messschrittabweichung). Diese gibt den Grad der Abweichung des angezeigten Werts von einem wahren Wert an. Sie wird verursacht durch zufällige und systematische Fehler. Die Fehlerarten und vor allem die Auswirkungen der Messwertabweichung sind dabei gerätespezifisch.
+
+Der unabhängige Linearitätswert :math:`\epsilon` gibt die maximale Abweichung von der Geraden, entweder als Absolutwert oder relativ auf den Messbereich bezogen an:
+
+.. math::
+
+	\epsilon = \varphi_{\text{Ist}} - \varphi_{\text{Soll}}
+	
+.. math::
+
+	\epsilon_{\text{rel.}} = \frac{\varphi_{\text{Ist}} - \varphi_{\text{Soll}}}{\text{Messbereich}}
+
+
+(:math:`\epsilon\;` : absoluter Winkelfehler in[°]; :math:`\;\epsilon_{\text{rel.}}\;` : relativer Winkelfehler in [°]; :math:`\;\varphi_{\text{Ist}}\;` : gemessener Winkel in [°];  :math:`\;\varphi_{\text{Soll}}\;` : realer Winkel in [°])
+
+Typischerweise wird der relative Winkel in Prozent angegeben. Es gibt aber auch Quellen, die den Fehler, oder in dem Fall dann die Genauigkeit in Bit angeben:
+
+.. math::
+
+	\epsilon_{\text{Bit}} = \log_{2} \frac{\text{Messbereich}}{\varphi_{\text{Ist}} - \varphi_{\text{Soll}}}
+
+|
+
+.. image:: pics/messwertabw.png
+   :width: 400px
+
+|
+
+Unabhängig von der Darstellung muss immer darauf geachtet werden, ob die Fehlerangabe sich auf den Scheitelwert des Fehlers bezieht, oder auf den Spitze-Spitze-Wert (Bild oben). Die Abbildung unten reflektiert die Parameter Auflösung und Genauigkeit in Bezug auf den Einheitskreis. Die Breite des grau hinterlegten Bereichs bezieht sich dabei auf die Messwertabweichung und somit auf die Genauigkeit. Die Dichte der Punkte entlang des Einheitskreises bezeichnet die Auflösung.
+
+|
+
+.. image:: pics/auflGen.png
+   :width: 516px
+
+|
+
+Die Messwertabweichung der Drehzahl definiert sich auch aus der Genauigkeit der Winkelposition sowie der Genauigkeit des Zeitintervalls. Auch wenn die zeitliche Abweichung meist in „ppm" (engl.: „parts per million", dt.: Teile von einer Million) angegeben wird, ist diese nicht zu vernachlässigen, denn schließlich liegen die drehzahlrelevanten Genauigkeitskomponenten von Drehgebern im Bereich von Winkelsekunden und somit auch im ppm-Bereich. 1m allgemeinen Sinne wird darauf an dieser Stelle nicht eingegangen.
+
+.. raw:: html
+
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;
+
+Unter :navy:`Wiederholgenauigkeit` versteht man die Fähigkeit eines Systems unter gleichen Bedingungen das gleiche zu tun. Auf ein Messgerät bezogen, beschreibt
+dies die Streuung des Ist-Messwerts die sich ergibt, wenn ein bestimmter Sollwert unter gleichen Bedingungen mehrfach angefahren wird. Bei Drehgebern zählen hierbei zu den Rahmenbedingungen neben den Umwelteinflüssen (z. B. Temperatur, relative Feuchte) auch anwendungsrelevante Parameter, wie Drehrichtung und Drehzahl. Die Reproduzierbarkeit beschreibt die Abweichung im Ist-Wert die sich ergibt, wenn ein bestimmter Sollwert unter den erlaubten Betriebsbedingungen angefahren wird. Somit sind Umwelteinflüsse, anwendungsspezifische Parameter sowie sensorische Einllüsse (z. B. Hysterese) mit berücksichtigt. Für Wiederholgenauigkeit und :navy:`Reproduzierbarkeit` werden für gewöhnlich die Standardabweichung oder ein Vielfaches davon als Zahlenwert angegeben. Aus Datenblättern geht die Natur des Werts leider nicht immer eindeutig hervor, so dass man selten weiß, ob die maximale Abweichung oder eine statistische Abweichung durch die Angabe verstanden wird.
+
+Wiederholgenauigkeit und Reproduzierbarkeit der Drehzahl ergeben sich auch aus den Kennwerten der Winkelposition, werden aber noch beeinflusst durch mögliche Schwankungen des Abtastintervalls. Auf die Auflösung, Genauigkeit, Wiederholgenauigkeit und Reproduzierbarkeit der Beschleunigung soll an dieser Stelle nicht eingegangen werden, da sie in der Praxis von untergeordneter Bedeutung ist.
