@@ -536,13 +536,102 @@ Veranschaulichung ist die Erweiterung von Gl. 1.1 zu:
 
 .. math::
 
-	\varphi_i = \frac{1}{\text{PPR}} \arctan\left(\frac{A_{sin}\sin(\varphi_i + \Delta\varphi_{\text{sin}}) + O_{\text{sin}} + d_{\text{sin}}}{A_{cos}\cos(\varphi_i + \Delta\varphi_{\text{cos}}) + O_{\text{cos}} + d_{\text{cos}}}\right)
+	\varphi_i = \frac{1}{\text{PPR}} \arctan\left(\frac{A_{sin}\sin(\varphi_i + \Delta\varphi_{\text{sin}}) + O_{\text{sin}} + d_{\text{sin}}}{A_{cos}\cos(\varphi_i + \Delta\varphi_{\text{cos}}) + O_{\text{cos}} + d_{\text{cos}}}\right)  \quad\quad\quad\quad  (1.3)  
 
-(:math:`\varphi_i\;`: gemessener Winkel in der i -ten Periode; *PPR*: Anzahl der Sinus-Cosinus-Perioden pro Umdrehung; :math:`A_{sin}, A_{cos}`: Amplitudenwerten der Sinus-Cosinus-Signale in [V]; :math:`\varphi_{\text{sin}}, \varphi_{\text{cos}}`: Abweichungen der Phasenlage [°]; :math:`O_{\text{sin}}, O_{\text{cos}}`: Offsetwerte in [V]; :math:`d_{\text{sin}}, d_{\text{cos}}`: Momentanwerte der Störsignale in [V])
+(:math:`\varphi_i\;`: gemessener Winkel in der i -ten Periode; *PPR*: Anzahl der Sinus-Cosinus-Perioden pro Umdrehung; :math:`A_{sin}, A_{cos}`: Amplitudenwerten der Sinus-Cosinus-Signale in [V]; 
+:math:`\varphi_{\text{sin}}, \varphi_{\text{cos}}`: Abweichungen der Phasenlage [°]; :math:`O_{\text{sin}}, O_{\text{cos}}`: Offsetwerte in [V]; :math:`d_{\text{sin}}, d_{\text{cos}}`: Momentanwerte der Störsignale in [V])
 
 Aus dieser Betrachtung ergeben sich Fehlerquellen für die Erfassung des Winkels innerhalb einer Signalperiode, die in der Tabell unten aufgelistet sind:
 
-Die Wirkung ohne Fehler (Abb. 2.20) und die der ersten drei Fehlerarten wird in den folgenden Abbildungen (Abb. 2.21 , 2.22, und2.23) veranschaulicht. Diese beziehen sich auf eine mechanische Umdrehung. Zur besseren Veranschaulichung der Fehlerwirkung berücksichtigen die Szenarien der Abbildungen eine kleine Periodenzahl ( PPR = 16 ) und haben deutlich überzogene Fehlerkomponenten. Auf die Darstellung der Wirkung der Signalstörungen wird verzichtet, da diese wie eine zufällige Mischung der drei anderen Fehlerarten zu interpretieren ist. Diese werden u. a. über das Signal-Rausch-Verhältnis beschrieben.
+Die Wirkung ohne Fehler und die der ersten drei Fehlerarten wird in den folgenden Abbildungen veranschaulicht. Diese beziehen sich auf eine mechanische Umdrehung. 
+Zur besseren Veranschaulichung der Fehlerwirkung berücksichtigen die Szenarien der Abbildungen eine kleine Periodenzahl ( PPR = 16 ) und haben deutlich überzogene Fehlerkomponenten. 
+Auf die Darstellung der Wirkung der Signalstörungen wird verzichtet, da diese wie eine zufällige Mischung der drei anderen Fehlerarten zu interpretieren ist. 
+Diese werden u. a. über das Signal-Rausch-Verhältnis beschrieben.
+
+.. list-table:: Fehlerquellen für Winkelabweichungen innerhalb einer Sinus-Cosinus-Periode
+   :widths: 100 100
+   :header-rows: 1
+
+   * - Fehlerart
+     - Fehler
+   * - Amplitudenfehler/Amplitudenungleichheit
+     - :math:`A_{sin} \ne A_{cos}`
+   * - Abweichung der Phasenlage der sinusförmigen Signale
+     - :math:`\varphi_{\text{sin}}, \varphi_{\text{cos}} \ne 0°`
+   * - Offsetfehler
+     - :math:`O_{\text{sin}}, O_{\text{cos}} \ne 0 V`
+   * - Störung der sinusförmigen Signale
+     - :math:`d_{\text{sin}}, d_{\text{cos}} \ne 0 V`       
+
+|
+
+|
+
+.. image:: pics/perfektSinCos.png
+   :width: 509px
+
+|
+
+|
+
+.. image:: pics/fehlerAmplitude.png
+   :width: 498px
+
+|
+
+Folgende Daumenregeln können herangezogen werden, wenn ein Winkelfehler auf eine Umdrehung aus der Messung der elektrischen Signale abgeschätzt werden soll:
+
+**Amplitudenfehler:** :math:`\hat{\epsilon} \approx \frac{\pm 0,29° / \text{%}}{\text{PPR}}`
+	
+**Offsetfehler:**  :math:`\hat{\epsilon} \approx \frac{\pm 0,57° / \text{%}}{\text{PPR}}` für den Offset in einem Signal bis  
+:math:`\hat{\epsilon} \approx \sqrt{2} \cdot \frac{\pm 0,57° / %}{\text{PPR}}` wenn beide Signale den gleichen Offsetbetrag aufweisen.
+
+**Phasenfehler:** :math:`\hat{\epsilon} \approx \frac{\pm 1,8° / \text{%}}{\text{PPR}}`
+
+|
+
+.. image:: pics/fehlerPhase.png
+   :width: 498px
+
+|
+
+Abb. 2.24 stellt dar wie der WInkelfehler für die drei Grundfehlerarten variiert. 
+Dabei werden entsprechend die Amplituden, die Offsets und die Phasen des Sinus- und des Cosinussignals unabhängig voneinander verändert. 
+Die Kurven berücksichtigen zusätzlich den Effekt der Anzahl der Perioden pro Umdrehung.
+Gleichung 1.3 vernachlässigt Abweichungen der sinusförmigen Signale von der idealen Sinusform, wie sie üblicherweise durch den Klirrfaktor
+beschrieben werden.
+Diese Abweichungen können verschiedene Ursachen haben. Abb. 2.25 zeigt ein Beispiel für diese Fehlerart und deren Wirkung auf den Winkelfehler. 
+Dabei wird eine nichtlineare Kennlinie für die Signalverarbeitungskette angenommen.
+
+|
+
+.. image:: pics/fehlerOffset.png
+   :width: 505px
+
+|
+
+All diese Fehlerarten können durch die zugrundeliegende Sensorik verursacht werden. Darüber hinaus hat aber auch die Sensorsignalverarbeitung in der gesamten Wirkkette einen hohen Einfluss. 
+
+**Amplitudenfehler** werden z. B. durch nicht angepasste Verstärkerstufen, unangepasste Serienimpedanzen in belasteten Schaltungsteilen oder Bauteiltoleranzen verursacht. 
+
+**Phasenfehler** entstehen z. B. durch unterschiedliche Gruppenlaufzeiten für die sinusförmigen Signale welche meist durch Bauteiltoleranzen der Komponenten der elektrischen Filter verursacht werden. 
+
+**Offsetfehler** werden z. B. durch nicht angepasste Verstärkerstufen oder Bauteiltoleranzen verursacht. Der **Klirrfaktor** wird z. B. durch die Sensorik (z.B. geringfügige Schwankungen des Strichmusters), 
+Nichtlinearitäten von Verstärkerstufen oder in der Analog-Digital-WandIung eingeleitet.
+
+Zusätzlich entstehen Fehler innerhalb einer Signalperiode durch die Interpolation. Geht man von der Interpolation gemäß Gl.1.1 aus, so werden die Sinus-Cosinus-Signale mittels eines linearen 
+Analog-Digital-WandIers digitalisiert und dann anhand der Arkustangensfunktion in einen Winkel umngerechnet. Neben der AD-Wandler Auflösung hat der Algorithmus zur Arkustangensberechnung
+Einfluss auf das Ergebnis. Die anderen beschriebenen Interpolationsverfahren führen ebenfalls Fehler in die Messung ein, auf die an dieser Stelle aber nicht eingegangen wird.
+
+|
+
+.. image:: pics/pprEinfluss.png
+   :width: 505px
+
+|
+
+
+
 
 .. raw:: html
 

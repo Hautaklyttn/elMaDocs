@@ -537,10 +537,98 @@ dies die Streuung des Ist-Messwerts die sich ergibt, wenn ein bestimmter Sollwer
 <p>Messgeräte basierend auf der Auswertung von Sinus-Cosinus-Signalen haben einige Spezifika, die sich aus nicht perfekten, analogen Signalen ergeben. Basis für die
 Veranschaulichung ist die Erweiterung von Gl. 1.1 zu:</p>
 <div class="math notranslate nohighlight">
-\[\varphi_i = \frac{1}{\text{PPR}} \arctan\left(\frac{A_{sin}\sin(\varphi_i + \Delta\varphi_{\text{sin}}) + O_{\text{sin}} + d_{\text{sin}}}{A_{cos}\cos(\varphi_i + \Delta\varphi_{\text{cos}}) + O_{\text{cos}} + d_{\text{cos}}}\right)\]</div>
-<p>(<span class="math notranslate nohighlight">\(\varphi_i\;\)</span>: gemessener Winkel in der i -ten Periode; <em>PPR</em>: Anzahl der Sinus-Cosinus-Perioden pro Umdrehung; <span class="math notranslate nohighlight">\(A_{sin}, A_{cos}\)</span>: Amplitudenwerten der Sinus-Cosinus-Signale in [V]; <span class="math notranslate nohighlight">\(\varphi_{\text{sin}}, \varphi_{\text{cos}}\)</span>: Abweichungen der Phasenlage [°]; <span class="math notranslate nohighlight">\(O_{\text{sin}}, O_{\text{cos}}\)</span>: Offsetwerte in [V]; <span class="math notranslate nohighlight">\(d_{\text{sin}}, d_{\text{cos}}\)</span>: Momentanwerte der Störsignale in [V])</p>
+\[\varphi_i = \frac{1}{\text{PPR}} \arctan\left(\frac{A_{sin}\sin(\varphi_i + \Delta\varphi_{\text{sin}}) + O_{\text{sin}} + d_{\text{sin}}}{A_{cos}\cos(\varphi_i + \Delta\varphi_{\text{cos}}) + O_{\text{cos}} + d_{\text{cos}}}\right)  \quad\quad\quad\quad  (1.3)\]</div>
+<p>(<span class="math notranslate nohighlight">\(\varphi_i\;\)</span>: gemessener Winkel in der i -ten Periode; <em>PPR</em>: Anzahl der Sinus-Cosinus-Perioden pro Umdrehung; <span class="math notranslate nohighlight">\(A_{sin}, A_{cos}\)</span>: Amplitudenwerten der Sinus-Cosinus-Signale in [V];
+<span class="math notranslate nohighlight">\(\varphi_{\text{sin}}, \varphi_{\text{cos}}\)</span>: Abweichungen der Phasenlage [°]; <span class="math notranslate nohighlight">\(O_{\text{sin}}, O_{\text{cos}}\)</span>: Offsetwerte in [V]; <span class="math notranslate nohighlight">\(d_{\text{sin}}, d_{\text{cos}}\)</span>: Momentanwerte der Störsignale in [V])</p>
 <p>Aus dieser Betrachtung ergeben sich Fehlerquellen für die Erfassung des Winkels innerhalb einer Signalperiode, die in der Tabell unten aufgelistet sind:</p>
-<p>Die Wirkung ohne Fehler (Abb. 2.20) und die der ersten drei Fehlerarten wird in den folgenden Abbildungen (Abb. 2.21 , 2.22, und2.23) veranschaulicht. Diese beziehen sich auf eine mechanische Umdrehung. Zur besseren Veranschaulichung der Fehlerwirkung berücksichtigen die Szenarien der Abbildungen eine kleine Periodenzahl ( PPR = 16 ) und haben deutlich überzogene Fehlerkomponenten. Auf die Darstellung der Wirkung der Signalstörungen wird verzichtet, da diese wie eine zufällige Mischung der drei anderen Fehlerarten zu interpretieren ist. Diese werden u. a. über das Signal-Rausch-Verhältnis beschrieben.</p>
+<p>Die Wirkung ohne Fehler und die der ersten drei Fehlerarten wird in den folgenden Abbildungen veranschaulicht. Diese beziehen sich auf eine mechanische Umdrehung.
+Zur besseren Veranschaulichung der Fehlerwirkung berücksichtigen die Szenarien der Abbildungen eine kleine Periodenzahl ( PPR = 16 ) und haben deutlich überzogene Fehlerkomponenten.
+Auf die Darstellung der Wirkung der Signalstörungen wird verzichtet, da diese wie eine zufällige Mischung der drei anderen Fehlerarten zu interpretieren ist.
+Diese werden u. a. über das Signal-Rausch-Verhältnis beschrieben.</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Fehlerquellen für Winkelabweichungen innerhalb einer Sinus-Cosinus-Periode</span><a class="headerlink" href="#id1" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Fehlerart</p></th>
+<th class="head"><p>Fehler</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Amplitudenfehler/Amplitudenungleichheit</p></td>
+<td><p><span class="math notranslate nohighlight">\(A_{sin} \ne A_{cos}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Abweichung der Phasenlage der sinusförmigen Signale</p></td>
+<td><p><span class="math notranslate nohighlight">\(\varphi_{\text{sin}}, \varphi_{\text{cos}} \ne 0°\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Offsetfehler</p></td>
+<td><p><span class="math notranslate nohighlight">\(O_{\text{sin}}, O_{\text{cos}} \ne 0 V\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Störung der sinusförmigen Signale</p></td>
+<td><p><span class="math notranslate nohighlight">\(d_{\text{sin}}, d_{\text{cos}} \ne 0 V\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/perfektSinCos.png"><img alt="../_images/perfektSinCos.png" src="../_images/perfektSinCos.png" style="width: 509px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/fehlerAmplitude.png"><img alt="../_images/fehlerAmplitude.png" src="../_images/fehlerAmplitude.png" style="width: 498px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Folgende Daumenregeln können herangezogen werden, wenn ein Winkelfehler auf eine Umdrehung aus der Messung der elektrischen Signale abgeschätzt werden soll:</p>
+<p><strong>Amplitudenfehler:</strong> <span class="math notranslate nohighlight">\(\hat{\epsilon} \approx \frac{\pm 0,29° / \text{%}}{\text{PPR}}\)</span></p>
+<p><strong>Offsetfehler:</strong>  <span class="math notranslate nohighlight">\(\hat{\epsilon} \approx \frac{\pm 0,57° / \text{%}}{\text{PPR}}\)</span> für den Offset in einem Signal bis
+<span class="math notranslate nohighlight">\(\hat{\epsilon} \approx \sqrt{2} \cdot \frac{\pm 0,57° / %}{\text{PPR}}\)</span> wenn beide Signale den gleichen Offsetbetrag aufweisen.</p>
+<p><strong>Phasenfehler:</strong> <span class="math notranslate nohighlight">\(\hat{\epsilon} \approx \frac{\pm 1,8° / \text{%}}{\text{PPR}}\)</span></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/fehlerPhase.png"><img alt="../_images/fehlerPhase.png" src="../_images/fehlerPhase.png" style="width: 498px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Abb. 2.24 stellt dar wie der WInkelfehler für die drei Grundfehlerarten variiert.
+Dabei werden entsprechend die Amplituden, die Offsets und die Phasen des Sinus- und des Cosinussignals unabhängig voneinander verändert.
+Die Kurven berücksichtigen zusätzlich den Effekt der Anzahl der Perioden pro Umdrehung.
+Gleichung 1.3 vernachlässigt Abweichungen der sinusförmigen Signale von der idealen Sinusform, wie sie üblicherweise durch den Klirrfaktor
+beschrieben werden.
+Diese Abweichungen können verschiedene Ursachen haben. Abb. 2.25 zeigt ein Beispiel für diese Fehlerart und deren Wirkung auf den Winkelfehler.
+Dabei wird eine nichtlineare Kennlinie für die Signalverarbeitungskette angenommen.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/fehlerOffset.png"><img alt="../_images/fehlerOffset.png" src="../_images/fehlerOffset.png" style="width: 505px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>All diese Fehlerarten können durch die zugrundeliegende Sensorik verursacht werden. Darüber hinaus hat aber auch die Sensorsignalverarbeitung in der gesamten Wirkkette einen hohen Einfluss.</p>
+<p><strong>Amplitudenfehler</strong> werden z. B. durch nicht angepasste Verstärkerstufen, unangepasste Serienimpedanzen in belasteten Schaltungsteilen oder Bauteiltoleranzen verursacht.</p>
+<p><strong>Phasenfehler</strong> entstehen z. B. durch unterschiedliche Gruppenlaufzeiten für die sinusförmigen Signale welche meist durch Bauteiltoleranzen der Komponenten der elektrischen Filter verursacht werden.</p>
+<p><strong>Offsetfehler</strong> werden z. B. durch nicht angepasste Verstärkerstufen oder Bauteiltoleranzen verursacht. Der <strong>Klirrfaktor</strong> wird z. B. durch die Sensorik (z.B. geringfügige Schwankungen des Strichmusters),
+Nichtlinearitäten von Verstärkerstufen oder in der Analog-Digital-WandIung eingeleitet.</p>
+<p>Zusätzlich entstehen Fehler innerhalb einer Signalperiode durch die Interpolation. Geht man von der Interpolation gemäß Gl.1.1 aus, so werden die Sinus-Cosinus-Signale mittels eines linearen
+Analog-Digital-WandIers digitalisiert und dann anhand der Arkustangensfunktion in einen Winkel umngerechnet. Neben der AD-Wandler Auflösung hat der Algorithmus zur Arkustangensberechnung
+Einfluss auf das Ergebnis. Die anderen beschriebenen Interpolationsverfahren führen ebenfalls Fehler in die Messung ein, auf die an dieser Stelle aber nicht eingegangen wird.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/pprEinfluss.png"><img alt="../_images/pprEinfluss.png" src="../_images/pprEinfluss.png" style="width: 505px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 &nbsp;<br>
 &nbsp;<br>
 &nbsp;<br>
