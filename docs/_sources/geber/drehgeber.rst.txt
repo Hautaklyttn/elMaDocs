@@ -548,6 +548,40 @@ Zur besseren Veranschaulichung der Fehlerwirkung berücksichtigen die Szenarien 
 Auf die Darstellung der Wirkung der Signalstörungen wird verzichtet, da diese wie eine zufällige Mischung der drei anderen Fehlerarten zu interpretieren ist. 
 Diese werden u. a. über das Signal-Rausch-Verhältnis beschrieben.
 
+|
+
+.. image:: pics/perfektSinCos.png
+   :width: 509px
+
+.. raw:: html
+
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;<br>
+
+.. image:: pics/fehlerAmplitude.png
+   :width: 498px
+
+.. raw:: html
+
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;<br>
+
+.. image:: pics/fehlerPhase.png
+   :width: 498px
+
+.. raw:: html
+
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;<br>
+
+.. image:: pics/fehlerOffset.png
+   :width: 505px
+
+|
+
 .. list-table:: Fehlerquellen für Winkelabweichungen innerhalb einer Sinus-Cosinus-Periode
    :widths: 100 100
    :header-rows: 1
@@ -565,20 +599,6 @@ Diese werden u. a. über das Signal-Rausch-Verhältnis beschrieben.
 
 |
 
-|
-
-.. image:: pics/perfektSinCos.png
-   :width: 509px
-
-|
-
-|
-
-.. image:: pics/fehlerAmplitude.png
-   :width: 498px
-
-|
-
 Folgende Daumenregeln können herangezogen werden, wenn ein Winkelfehler auf eine Umdrehung aus der Messung der elektrischen Signale abgeschätzt werden soll:
 
 **Amplitudenfehler:** :math:`\hat{\epsilon} \approx \frac{\pm 0,29° / \text{%}}{\text{PPR}}`
@@ -590,23 +610,23 @@ Folgende Daumenregeln können herangezogen werden, wenn ein Winkelfehler auf ein
 
 |
 
-.. image:: pics/fehlerPhase.png
-   :width: 498px
+.. image:: pics/pprEinfluss.png
+   :width: 505px
 
 |
 
-Abb. 2.24 stellt dar wie der WInkelfehler für die drei Grundfehlerarten variiert. 
+Die Abbildung oben stellt dar wie der WInkelfehler für die drei Grundfehlerarten variiert. 
 Dabei werden entsprechend die Amplituden, die Offsets und die Phasen des Sinus- und des Cosinussignals unabhängig voneinander verändert. 
 Die Kurven berücksichtigen zusätzlich den Effekt der Anzahl der Perioden pro Umdrehung.
 Gleichung 1.3 vernachlässigt Abweichungen der sinusförmigen Signale von der idealen Sinusform, wie sie üblicherweise durch den Klirrfaktor
 beschrieben werden.
-Diese Abweichungen können verschiedene Ursachen haben. Abb. 2.25 zeigt ein Beispiel für diese Fehlerart und deren Wirkung auf den Winkelfehler. 
+Diese Abweichungen können verschiedene Ursachen haben. Die Abbildung unten zeigt ein Beispiel für diese Fehlerart und deren Wirkung auf den Winkelfehler. 
 Dabei wird eine nichtlineare Kennlinie für die Signalverarbeitungskette angenommen.
 
 |
 
-.. image:: pics/fehlerOffset.png
-   :width: 505px
+.. image:: pics/klirrfaktor.png
+   :width: 514px
 
 |
 
@@ -623,15 +643,27 @@ Zusätzlich entstehen Fehler innerhalb einer Signalperiode durch die Interpolati
 Analog-Digital-WandIers digitalisiert und dann anhand der Arkustangensfunktion in einen Winkel umngerechnet. Neben der AD-Wandler Auflösung hat der Algorithmus zur Arkustangensberechnung
 Einfluss auf das Ergebnis. Die anderen beschriebenen Interpolationsverfahren führen ebenfalls Fehler in die Messung ein, auf die an dieser Stelle aber nicht eingegangen wird.
 
+
+Diese Fehlerarten sind systematisch und können gegebenenfalls korrigiert werden, sofern Sie nicht durch Umwelteinflüsse hervorgerufen oder verändert werden (z. B. Temperatur). 
+Dies ist bei den Störsignalen nicht der Fall, da sie zufälliger Natur sind. Diese haben starken Einfluss auf die Wiederholgenauigkeit und die Reproduzierbarkeit. Die anderen Fehlerarten beeinflussen 
+die Genauigkeit an sich.
+
+Auch können Fehler durch nicht synchrone Abtastung der Sinus-Cosinus-Signale induziert werden. Ist man z.B. versucht den Analog-Digital-WandIer eines „einfachen" Mikroprozessors zu verwenden, 
+so findet man für gewöhnlich einen Wandler mit einem vorgeschalteten Multiplexer ohne spezielle Mehrfach-Abtasthalteglieder (engl.: „sample-and-hold"). Die Quadratursignale können dann
+nur sequentiell erfasst werden. Dies hat im Winkelsignal die gleiche Wirkung wie ein Phasenfehler der Sinus-Cosinus-SignaIe. Allerdings ist dieser drehzahlabhängig.
+Für kleine Zeitunterschiede in der Abtastung im Verhältnis zur Periodenlänge gilt die folgende Gleichung:
+
+.. math::
+
+	\hat{\epsilon} = \frac{\Delta t \cdot 360° \cdot n}{60}
+
+(:math:`\hat{\epsilon}`: maximale Fehleramplitude auf eine Umdrehung in Grad; :math:`\Delta t`: Zeitversatz in der Abtastung in Sekunden; *n*: Drehzahl in 1/min)
+
 |
 
-.. image:: pics/pprEinfluss.png
-   :width: 505px
-
-|
-
-
-
+Dabei fällt auf, dass der Fehler unabhångig ist von der Auflösung, im Sinne von Perioden pro Umdrehung. 
+Die Reduzierung des Fehlers wird durch die höhere Signalfrequenz bei gegebener Drehzahl wieder aufgehoben. 
+Die Abbildung unten zeigt wie Sich der Fehler über Drehzahl und Zeitversatz verhält.
 
 .. raw:: html
 
