@@ -47,10 +47,8 @@ Dabei wird die Auflösung durch die Anzahl der Schlitze festgelegt.
 Magnetische Systeme
 ^^^^^^^^^^^^^^^^^^^
 Sensoren tasten rotierende Magnete oder ferromagnetische Maßverkörperungen ab und erzeugen daraus ein Signal. 
-Diese Systeme sind in der Regel robuster als optische Systeme. Es kann auch von der klassischen Form abgewichen werden,
-z. B. sind bei einem DR-Einbaugeber Magnete im Lüfterrad eingelassen. Diese Magnete werden von
-Magnetfeldsensoren auf einem Gebermodul erfasst, welches am Stehbolzen befestigt ist.
-Durch Interpretation der Messwerte werden entsprechende inkremetelle Signale erzeugt.
+Diese Systeme sind in der Regel robuster als optische Systeme. Es kann auch von der klassischen Form abgewichen werden, z. B. sind bei einem DR-Einbaugeber Magnete im Lüfterrad eingelassen. Diese Magnete werden von
+Magnetfeldsensoren auf einem Gebermodul erfasst, welches am Stehbolzen befestigt ist. Durch Interpretation der Messwerte werden entsprechende inkrementelle Signale erzeugt.
 
 |
 
@@ -85,7 +83,7 @@ Absolutwertgeber
 Absolutwertgeber mit asynchron-serieller-Schnittstelle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In den letzten Jahren haben sich auch sogenannte Kombigeber am Markt etabliert. Solche Geber sind die Sin-Cos-Geber mit Absolutwert-lnformation.
+In den letzten Jahren haben sich auch sogenannte **Kombigeber** (oder **Universalgeber**) am Markt etabliert. Solche Geber sind Sin-Cos-Geber mit Absolutwert-lnformation.
 Diese liefern neben der aktuellen Drehzahl des Motors auch Absolutwert-lnformationen und bieten somit technische und finanzielle Vorteile, wenn ein Absolutwertgeber erforderlich ist.
 
 Der Absolutwertgeber mit einer asynchronen Schnittstelle ist ein typischer Kombigeber. Neben einem Sin-/Cos-Signal für die Drehzahlerfassung und einer Absolutwertinformation 
@@ -94,8 +92,8 @@ Eingabefehler des Anwenders, da dieser keine Antriebsdaten eingeben muss.
 
 Absolutwertgeber mit asynchroner Schnittstelle gibt es als:
 
-1. Anbaugeber für Asynchronmotoren und Synchrone Servomotoren
-2. Einbaugeber für Synchrone Servomotoren
+1. Anbaugeber für Asynchronmotoren und synchrone Servomotoren
+2. Einbaugeber für synchrone Servomotoren
 
 Beides gibt es in Single-Turn-Ausführung und in Multi-Turn-Ausführung.
 
@@ -106,7 +104,7 @@ erfolgen dann nur noch zyklisch zur Plausibilitätskontrolle.
 
 Ein Umrichter mit asynchron-serieller Schnittstelle erhält über den Parameterkanal sowohl die Lageinformation als auch den Zeitpunkt, für den diese Position gilt. Parallel
 dazu werden ständig die einlaufenden Analogsignale (Sin-/Cos-Signale) auf dem Prozessdatenkanal empfangen und gezählt.
-Der Geber ist wahlweise als Single- Oder Multi-Tum-Variante ausgeführt. Single-Turn bedeutet, dass die Information der Absolutposition sich immer nur auf eine Umdrehung
+Der Geber ist wahlweise als Single- Oder Multi-Turn-Variante ausgeführt. Single-Turn bedeutet, dass die Information der Absolutposition sich immer nur auf eine Umdrehung
 bezieht. Die Multi-Turn-Variante des Gebers kann über nachgeschaltete, untersetzte Codescheiben bzw- mittels eines elektronischen Umdrehungszählers zusätzlich noch
 Auskunft über die Anzahl der Umdrehungen (typisch z. B. 4096) geben. Je nach Umrichter erfolgt somit z. B. nach der maximalen Anzahl der der Geber-Umdrehungen
 ein Geberüberlauf, der jedoch im Non-Volatile-SRAM (NVS) des Umrichters mitgezählt wird. Bis zu 256 Geberüberläufe werden gespeichert (bei 4096 Umdrehungen). Wenn
