@@ -13,5 +13,6 @@ elMaDocs
    Asynchronmaschine <motoren/asyncMot>
    Weitere Motortypen <motoren/weitMot>
    Drehgeber <geber/drehgeber>
+   Drehgeber - Misc <geber/drehgeberMisc>
    LabView <grundlagen/labview>
 
