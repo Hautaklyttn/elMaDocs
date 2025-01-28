@@ -6,7 +6,7 @@ Drehgeber - Allgemeine Infos
 
 .. raw:: html
 
-   <font size="-2">(Verschiedene Quellen aus Büchern, Dissertationen und Artikeln)</font>
+   <font size="-2">(Verschiedene Quellen: Bücher, Dissertationen und Artikel)</font>
 
 ------------
 
@@ -16,7 +16,7 @@ Welche Aufgaben haben Gebersysteme?
 Gebersysteme an Antriebssystemen haben je nach Anforderung unterschiedliche Aufgaben zu erfüllen:
 
 - Eine der häufigsten Aufgaben eines Gebersystems ist es, eine **Positionierung des Antriebssystems** zu ermöglichen. Diese Positionierung kann sowohl inkrementell als auch absolut sein. Hierbei kann der Geber am Motor oder an der Strecke angebaut sein.
-- Des Weiteren können Gebersysteme für die **Drehzahlregelung** eingesetzt werden. Durch ein direktes Motorfeedback lassen Sich Drehzahlgüte und Regelverhalten, auch bei großen Laständerungen, entscheidend verbessern. 
+- Des Weiteren können Gebersysteme für die **Drehzahlregelung** eingesetzt werden. Durch ein direktes Motorfeedback lassen sich Drehzahlgüte und Regelverhalten, auch bei großen Laständerungen, entscheidend verbessern. 
 - Bei Synchronmotoren ist für die **dynamische Regelung bei unterschiedlichsten Lastbedingungen** die Rückmeldung der Rotorposition für das Stellen des Drehfeldes notwendig.
 
 Mit der Auswahl des richtigen Gebers und der optimalen Kombination der Signale für Regelprozesse und Positionierung kann ein optimales Antriebssystem erstellt werden.
@@ -94,8 +94,8 @@ Eingabefehler des Anwenders, da dieser keine Antriebsdaten eingeben muss.
 
 Absolutwertgeber mit asynchroner Schnittstelle gibt es als:
 
-   1. Anbaugeber für Asynchronmotoren und Synchrone Servomotoren
-   2. Einbaugeber für Synchrone Servomotoren
+1. Anbaugeber für Asynchronmotoren und Synchrone Servomotoren
+2. Einbaugeber für Synchrone Servomotoren
 
 Beides gibt es in Single-Turn-Ausführung und in Multi-Turn-Ausführung.
 
@@ -183,3 +183,103 @@ Die nachstehende Grafik gibt einen Überblick über die prinzipielle Hardwarestr
 
 |
 
+Welche Geber verwendet man bei welchem Motor?
+---------------------------------------------
+
+Gebersysteme für asynchrone Drehstrom- oder Servomotoren
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Bei asynchronen Motoren werden Gebersysteme in der Regel aus 2 Gründen eingesetzt:
+
+- Drehzahlregelung (Um eine hohe Drehzahlgüte zu erreichen und auf Laständerungen optimal reagieren können)
+- Positionierung
+
+Hierbei kommen in Regel folgende Geber zum Einsatz
+**Inkrementalgeber mit geringer Auflösung**  
+
+- können nur zur Positionierung und nicht zur Drehzahlregelung eingesetzt werden
+- nur Einfachpositionierung (Eil- Schleichgang) möglich
+- dadurch geringere Dynamik des Systems
+- Referenzfahrt notwendig
+	  
+**Inkrementelle Drehgeber**  
+
+- zur Drehzahlregelung
+- zur Positionierung
+- Referenzfahrt ist notwendig
+
+**Absolutwertgeber**
+
+- zur Positionierung
+- keine Referenzfahrt notwendig
+- wenn kein Echtzeitkanal (Kombigeber mit entweder Sin/Cos-, TTL-, HTL-Signal) vorhanden ist, wird ein zusätzliches Gebersystem zur Drehzahlregelung benötigt
+
+|
+
+Gebersysteme für synchrone Servomotoren
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Für eine dynamische Regelung wird bei Synchronmotoren noch die Rotorlage für das Regelsystem benötigt. 
+In der Regel kommen bei synchronen Servomotoren zwei Systeme zur Rotorlageerkennung zum Einsatz
+
+**Resolver**
+
+- zur Rotorlageerkennung
+- zur Drehzahlregelung
+- zur Positionierung
+- Referenzfahrt notwendig
+
+**Absolutwertgeber**
+
+- zur Rotorlageerkennung
+- Absolutwertgeber fur Servomotoren sind in der Regel Kombigeber mit einem Echtzeitkanal (Sin/Cos) für die Drehzahlregelung
+- zur Positionierung
+- Bei Single-Turn-Gebern ist in der Regel eine Referenzfahrt notwendig
+- bei Multi-Tum-Gebem ist keine Referenzfahlt notwendig
+
+|
+
+Gebersysteme für lineare Servosysteme
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Messlineale**
+
+- zur Positionierung
+- mit Absolutwertinformation auf dem Maßband ist keine Referenzfahrt notwendig bei rein inkrementeller Information auf dem Maßband ist eine Referenzfahrt notwendig
+
+|
+
+Welche Gebersysteme setzt SEW-EURODRIVE ein ?
+---------------------------------------------
+
+Inkrementalgeber mit geringer Auflösung
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mit den Inkrementalgebern mit geringer Auflösung kann man einfache nichtdynamische Positionierungen realisieren. Des Weiteren kann einfach und preisgünstig übewacht
+werden, ob sich der Motor dreht. Wenn ein Zweispur-Geber verwendet wird, kann zusätzlich die Drehrichtung des Motors ermittelt werden.
+
+|
+
+Inkrementalgeber
+^^^^^^^^^^^^^^^^
+Inkrementalgeber eignen sich zur Drehzahlregelung und Positionierung. Sie haben 2 Signalspuren und eine Nullimpulsspur. Die Inkrementalgeber sind als Hohlwellengeber,
+Spreizwellengeber, Steckwelle mit Endgewinde Oder Vollwellengeber mit Kupplung ausgeführt. Signalausgang: TTL, HTL Oder Sin/Cos.
+
+|
+
+Single-Turn-Kombigeber
+^^^^^^^^^^^^^^^^^^^^^^
+Die Absolutwertgeber sind zumeist Kombigeber. Sie beinhalten einen Single-Turn-Absolutwertgeber und einen hochauflösenden Sinusgeber. 
+Für die Datenübertragung der Absolutwerte steht eine asynchron-serielle-Schnittstelle zur Verfügung. Sie eignen Sich für den Betrieb von Synchronmotoren.
+Hierbei können sie zur Drehzahlregelung oder zur Positionierung über eine Umdrehung eingesetzt werden.
+
+|
+
+Absolutwengeber
+^^^^^^^^^^^^^^^
+Die Absolutwertgeber sind zumeist Kombigeber. Sie beinhalten einen Multi-Turn-Absolutwertgeber und einen hochauflösenden Sinusgeber.
+Für die Datenübertragung der Absolutwerte stehen wahlweise eine SSI-Schnittstelle und eine asynchron-serielle- Schnittstelle zur Verfügung.
+
+|
+
+------------
+
+|
