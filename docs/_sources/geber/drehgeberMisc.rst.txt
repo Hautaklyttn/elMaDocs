@@ -33,6 +33,8 @@ Mit der Auswahl des richtigen Gebers und der optimalen Kombination der Signale f
 
 |
 
+|
+
 Inkrementalgeber
 ----------------
 
@@ -74,6 +76,8 @@ Zusätzlich gibt es noch die analoge Ausgabe:
 
 Sin-/Cos-Signale werden üblicherweise einer Gleichspannung von 2,5 V überlagert. Da die Sin-/Cos-Signale symmetrisch übertragen und differenziell ausgewertet werden (U_ss = 1 V), 
 sind sie unempfindlich gegen asymmetrische Störungen und haben ein gutes EMV-Verhalten.
+
+|
 
 |
 
@@ -192,6 +196,7 @@ Bei asynchronen Motoren werden Gebersysteme in der Regel aus 2 Gründen eingeset
 - Positionierung
 
 Hierbei kommen in Regel folgende Geber zum Einsatz
+
 **Inkrementalgeber mit geringer Auflösung**  
 
 - können nur zur Positionierung und nicht zur Drehzahlregelung eingesetzt werden
@@ -212,6 +217,7 @@ Hierbei kommen in Regel folgende Geber zum Einsatz
 - wenn kein Echtzeitkanal (Kombigeber mit entweder Sin/Cos-, TTL-, HTL-Signal) vorhanden ist, wird ein zusätzliches Gebersystem zur Drehzahlregelung benötigt
 
 |
+
 
 Gebersysteme für synchrone Servomotoren
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -243,6 +249,8 @@ Gebersysteme für lineare Servosysteme
 
 - zur Positionierung
 - mit Absolutwertinformation auf dem Maßband ist keine Referenzfahrt notwendig bei rein inkrementeller Information auf dem Maßband ist eine Referenzfahrt notwendig
+
+|
 
 |
 
