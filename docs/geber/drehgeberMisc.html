@@ -1,0 +1,508 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="">
+    <link rel="icon" type="image/x-icon" href="">
+
+  
+  <title>Drehgeber - Allgemeine Infos &mdash; elMaDocs</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+
+
+  <link rel="stylesheet" href="../_static/css/img.css" type="text/css"/>
+  
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/styleConfig.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/hacks.css" type="text/css" />
+  
+
+  
+
+  <link rel="stylesheet" href="../_static/css/darker.css" type="text/css" media="(prefers-color-scheme: dark)"/>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="elMaDocs" href="../index.html"/>
+        <link rel="next" title="LabView" href="../grundlagen/labview.html"/>
+        <link rel="prev" title="Drehgeber" href="drehgeber.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script type="module" src="https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle.mjs"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+	
+	
+        <div role="search">
+	  
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	  
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../grundlagen/grundlagen.html">Grundlagen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../grundlagen/grundlagen.html#das-magnetische-feld">Das magnetische Feld</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grundlagen/grundlagen.html#die-magnetischen-grundgroszen">Die magnetischen Grundgrößen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grundlagen/grundlagen.html#drehstrom-oder-gleichstrom">Drehstrom oder Gleichstrom?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grundlagen/grundlagen.html#was-wird-wo-eingesetzt">Was wird wo eingesetzt?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grundlagen/grundlagen.html#merksatze">Merksätze</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../motoren/dcMot.html">Gleichstrommaschine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#uberblick">Überblick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#der-stander">Der Ständer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#der-laufer">Der Läufer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#die-wirkungsweise">Die Wirkungsweise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/dcMot.html#schaltungsarten">Schaltungsarten</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../motoren/syncMot.html">Synchronmaschine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/syncMot.html#permantenterregte-synchronmaschine">Permantenterregte Synchronmaschine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/syncMot.html#fremderregte-synchronmaschine">Fremderregte Synchronmaschine</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../motoren/asyncMot.html">Asynchronmaschine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/asyncMot.html#aufbau">Aufbau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/asyncMot.html#eigenschaften">Eigenschaften</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../motoren/weitMot.html">Weitere Motortypen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motoren/weitMot.html#synchron-reluktanzmotor">Synchron-Reluktanzmotor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="drehgeber.html">Drehgeber</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="drehgeber.html#aufbau">Aufbau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drehgeber.html#winkel-drehzahl-und-winkelbeschleunigung">Winkel, Drehzahl und Winkelbeschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drehgeber.html#messbereich">Messbereich</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drehgeber.html#winkelberechnung">Winkelberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drehgeber.html#kodierung">Kodierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drehgeber.html#auflosung">Auflösung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drehgeber.html#reproduzierbarkeit">Reproduzierbarkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drehgeber.html#messwertabweichung">Messwertabweichung</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Drehgeber - Misc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#welche-aufgaben-haben-gebersysteme">Welche Aufgaben haben Gebersysteme?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inkrementalgeber">Inkrementalgeber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#absolutwertgeber">Absolutwertgeber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resolver">Resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#welche-geber-verwendet-man-bei-welchem-motor">Welche Geber verwendet man bei welchem Motor?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#welche-gebersysteme-setzt-sew-eurodrive-ein">Welche Gebersysteme setzt SEW-EURODRIVE ein ?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../grundlagen/labview.html">LabView</a></li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">elMaDocs </a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+      	<div id="dark-mode-toggle-container">
+	  <dark-mode-toggle appearance="toggle" dark="switch to light mode" light="switch to dark mode">
+	  </dark-mode-toggle>
+	</div>
+  <section id="drehgeber-allgemeine-infos">
+<h1>Drehgeber - Allgemeine Infos<a class="headerlink" href="#drehgeber-allgemeine-infos" title="Link to this heading">¶</a></h1>
+<font size="-2">(Verschiedene Quellen: Bücher, Dissertationen und Artikel)</font><hr class="docutils" />
+<section id="welche-aufgaben-haben-gebersysteme">
+<h2>Welche Aufgaben haben Gebersysteme?<a class="headerlink" href="#welche-aufgaben-haben-gebersysteme" title="Link to this heading">¶</a></h2>
+<p>Gebersysteme an Antriebssystemen haben je nach Anforderung unterschiedliche Aufgaben zu erfüllen:</p>
+<ul class="simple">
+<li><p>Eine der häufigsten Aufgaben eines Gebersystems ist es, eine <strong>Positionierung des Antriebssystems</strong> zu ermöglichen. Diese Positionierung kann sowohl inkrementell als auch absolut sein. Hierbei kann der Geber am Motor oder an der Strecke angebaut sein.</p></li>
+<li><p>Des Weiteren können Gebersysteme für die <strong>Drehzahlregelung</strong> eingesetzt werden. Durch ein direktes Motorfeedback lassen sich Drehzahlgüte und Regelverhalten, auch bei großen Laständerungen, entscheidend verbessern.</p></li>
+<li><p>Bei Synchronmotoren ist für die <strong>dynamische Regelung bei unterschiedlichsten Lastbedingungen</strong> die Rückmeldung der Rotorposition für das Stellen des Drehfeldes notwendig.</p></li>
+</ul>
+<p>Mit der Auswahl des richtigen Gebers und der optimalen Kombination der Signale für Regelprozesse und Positionierung kann ein optimales Antriebssystem erstellt werden.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/artenGebersysteme.png"><img alt="../_images/artenGebersysteme.png" src="../_images/artenGebersysteme.png" style="width: 625px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/wofuerGebersysteme.png"><img alt="../_images/wofuerGebersysteme.png" src="../_images/wofuerGebersysteme.png" style="width: 623px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="inkrementalgeber">
+<h2>Inkrementalgeber<a class="headerlink" href="#inkrementalgeber" title="Link to this heading">¶</a></h2>
+<section id="optisches-system">
+<h3>Optisches System<a class="headerlink" href="#optisches-system" title="Link to this heading">¶</a></h3>
+<p>Inkrementelle Drehgeber wandeln die Drehzahl in eine diskrete Anzahl von elektrische Impulsen um.
+Dies erfolgt mit einer Codescheibe mit radialen, lichtdurchlässigen Schlitzen, die optoelektronisch abgetastet wird.
+Dabei wird die Auflösung durch die Anzahl der Schlitze festgelegt.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="magnetische-systeme">
+<h3>Magnetische Systeme<a class="headerlink" href="#magnetische-systeme" title="Link to this heading">¶</a></h3>
+<p>Sensoren tasten rotierende Magnete oder ferromagnetische Maßverkörperungen ab und erzeugen daraus ein Signal.
+Diese Systeme sind in der Regel robuster als optische Systeme. Es kann auch von der klassischen Form abgewichen werden, z. B. sind bei einem DR-Einbaugeber Magnete im Lüfterrad eingelassen. Diese Magnete werden von
+Magnetfeldsensoren auf einem Gebermodul erfasst, welches am Stehbolzen befestigt ist. Durch Interpretation der Messwerte werden entsprechende inkrementelle Signale erzeugt.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="signalpegel">
+<h3>Signalpegel<a class="headerlink" href="#signalpegel" title="Link to this heading">¶</a></h3>
+<p>Bei den inkrementellen digitalen Gebern werden 2 Signalpegel unterschieden:</p>
+<p><strong>TTL (Transistor-Transistor-Logik)</strong></p>
+<p>Die Signalpegel betragen U_low &lt;= 0,5 V und U_high &gt;= 2,5 V. Vom Sender zum Empfänger wird jeweils ein positives und ein negatives Signal (z. B. A, A_inv) übertragen und differenziell ausgewertet.
+Durch diese symmetrische und differenzielle Auswertung können Gleichtaktstörungen minimiert und höhere Datenraten erzielt werden.</p>
+<p><strong>HTL (Hochvolt-Transistor-Logik)</strong></p>
+<p>Die Signalpegel betragen U_low &lt;= 3 V und U_high &gt;= U_B-3,5 V (U_B = 24V). Die Signale werden symmetrisch übertragen und differenziell ausgewertet.
+Aufgrund dessen und wegen des hohen Spannungspegels haben HTL-Geber ein sehr gutes EMV-Verhalten.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Zusätzlich gibt es noch die analoge Ausgabe:</p>
+<p><strong>sin/cos</strong></p>
+<p>Sin-/Cos-Signale werden üblicherweise einer Gleichspannung von 2,5 V überlagert. Da die Sin-/Cos-Signale symmetrisch übertragen und differenziell ausgewertet werden (U_ss = 1 V),
+sind sie unempfindlich gegen asymmetrische Störungen und haben ein gutes EMV-Verhalten.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="absolutwertgeber">
+<h2>Absolutwertgeber<a class="headerlink" href="#absolutwertgeber" title="Link to this heading">¶</a></h2>
+<section id="absolutwertgeber-mit-asynchron-serieller-schnittstelle">
+<h3>Absolutwertgeber mit asynchron-serieller-Schnittstelle<a class="headerlink" href="#absolutwertgeber-mit-asynchron-serieller-schnittstelle" title="Link to this heading">¶</a></h3>
+<p>In den letzten Jahren haben sich auch sogenannte <strong>Kombigeber</strong> (oder <strong>Universalgeber</strong>) am Markt etabliert. Solche Geber sind Sin-Cos-Geber mit Absolutwert-lnformation.
+Diese liefern neben der aktuellen Drehzahl des Motors auch Absolutwert-lnformationen und bieten somit technische und finanzielle Vorteile, wenn ein Absolutwertgeber erforderlich ist.</p>
+<p>Der Absolutwertgeber mit einer asynchronen Schnittstelle ist ein typischer Kombigeber. Neben einem Sin-/Cos-Signal für die Drehzahlerfassung und einer Absolutwertinformation
+besitzt dieser Geber auch ein elektronisches Typenschild, in dem unter anderem Antriebsdaten abgelegt werden können. Dies erleichtert die Inbetriebnahme und reduziert mögliche
+Eingabefehler des Anwenders, da dieser keine Antriebsdaten eingeben muss.</p>
+<p>Absolutwertgeber mit asynchroner Schnittstelle gibt es als:</p>
+<ol class="arabic simple">
+<li><p>Anbaugeber für Asynchronmotoren und synchrone Servomotoren</p></li>
+<li><p>Einbaugeber für synchrone Servomotoren</p></li>
+</ol>
+<p>Beides gibt es in Single-Turn-Ausführung und in Multi-Turn-Ausführung.</p>
+<p>Zu Beginn des Einschaltvorgangs erfasst die Baugruppe des Absolutwertgebers die absolute Lage. Daraus kann der Umrichter für Synchronmotoren die Kommutierungsinformation errechnen.
+Der Umrichter liest diese Lageinformation über eine RS-485-Verbindung (Parameterkanal) aus und setzt einen Zählerstand. Ausgehend von diesem absoluten Wert werden die
+Positionsänderungen über die Spuren des Sin-/Cos-Gebers erfasst und analog über den Prozessdatenkanal an den Umrichter übertragen. Weitere Abfragen der Absolutposition
+erfolgen dann nur noch zyklisch zur Plausibilitätskontrolle.</p>
+<p>Ein Umrichter mit asynchron-serieller Schnittstelle erhält über den Parameterkanal sowohl die Lageinformation als auch den Zeitpunkt, für den diese Position gilt. Parallel
+dazu werden ständig die einlaufenden Analogsignale (Sin-/Cos-Signale) auf dem Prozessdatenkanal empfangen und gezählt.
+Der Geber ist wahlweise als Single- Oder Multi-Turn-Variante ausgeführt. Single-Turn bedeutet, dass die Information der Absolutposition sich immer nur auf eine Umdrehung
+bezieht. Die Multi-Turn-Variante des Gebers kann über nachgeschaltete, untersetzte Codescheiben bzw- mittels eines elektronischen Umdrehungszählers zusätzlich noch
+Auskunft über die Anzahl der Umdrehungen (typisch z. B. 4096) geben. Je nach Umrichter erfolgt somit z. B. nach der maximalen Anzahl der der Geber-Umdrehungen
+ein Geberüberlauf, der jedoch im Non-Volatile-SRAM (NVS) des Umrichters mitgezählt wird. Bis zu 256 Geberüberläufe werden gespeichert (bei 4096 Umdrehungen). Wenn
+die Spannung an den Versorgungs-Pins unter einen Grenzwert abfällt (z. B. bei Netzausfall), so erkennt dies der NVSRAM und die Daten werden nullspannungssicher gespeichert.</p>
+<p>Überlauf-Beispiel:
+Im Moment des Wiedereinschaltens gibt der EEPROM im Umrichter folgendes aus:</p>
+<ul class="simple">
+<li><p>Den absoluten Wert innerhalb eines Überlaufs (typisch 4096 x 4096)</p></li>
+<li><p>Die Anzahl der Überläufe (O — 255)</p></li>
+</ul>
+<p>Wird nach Wegnahme der Versorgungsspannung der Antrieb, der sich kurz vor einem Überlauf befindet, über den Geberüberlaufpunkt verschoben, besteht beim Wiedereinschalten
+eine Diskrepanz zwischen den erfassten und den abgelegten absoluten Werten. Die Geberelektronik korrigiert daraufhin automatisch die gespeicherten mit den erfassten Werten.
+Die Geberüberläufe werden im Umrichter mitgezählt, wodurch die absolute Position bestimmt werden kann.
+Der Anwender bekommt die eigentlichen Geberüberläufe nicht zu sehen, diese werden im Umrichter gespeichert. Somit ist der Geber mit asynchon-serieller-Schnittstelle ein
+echter Absolutwertgeber.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="absolutwertgeber-mit-ssi-synchron-serielles-interface">
+<h3>Absolutwertgeber mit SSI (synchron-serielles-Interface)<a class="headerlink" href="#absolutwertgeber-mit-ssi-synchron-serielles-interface" title="Link to this heading">¶</a></h3>
+<p>Die Absolutwert-lnformation wird durch eine Codescheibe z.B. mit Gray Code erzeugt, die in der Regel optisch abgetastet wird. Dabei ist jeder Winkelposition ein eindeutiges
+Code-Muster zugeordnet. Somit kann die absolute Position der Motorwelle bestimmt werden. Die Besonderheit bei einem einschrittigen Gray Code im Gegensatz zum Binärcode ist,
+dass sich immer nur 1 Bit ändert und damit eine fehlerhafte Abtastung sofort erkannt wird.</p>
+<p>Neben der Single-Turn-Ausführung gibt es auch Multi-Turn-Geber, bei denen die absolute Position über mehrere Umdrehungen bestimmt wird.
+Zur Erfassung der Umdrehungen werden verschiedene technische Lösungen angeboten. Verbreitet sind Micro-Getriebestufen, die magnetisch oder optisch mittels
+Codescheiben abgetastet werden. Die Multi-Turn-Einheit ist ebenfalls als speichernder elektronischer Zähler verfügbar.
+Beim einem optischen Drehgeber sind die Codescheiben jeweils durch eine Getriebestufe mit der Untersetzung i = 16 voneinander entkoppelt. Bei 3 zusätzlichen
+Codescheiben (üblicher Wert) können also 16 x 16 x 16 = 4096 Umdrehungen absolut aufgelöst werden.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/codeGetriebe.png"><img alt="../_images/codeGetriebe.png" src="../_images/codeGetriebe.png" style="width: 631px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="resolver">
+<h2>Resolver<a class="headerlink" href="#resolver" title="Link to this heading">¶</a></h2>
+<p>Bei synchronen Servomotoren ist das am häufigsten Gebersystem der Resolver. Ein Resolver kann innerhalb einer Motorumdrehung die absolute Lage der
+Motorwelle ermitteln. Aus dem Resolversignal wird die Drehzahl und die absolute Position je Umdrehung abgeleitet.
+Der Resolver besteht aus 2 Funktionsbaugruppen, dem Stator und dem Rotor.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/resolver.png"><img alt="../_images/resolver.png" src="../_images/resolver.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Der Umrichter liefert ein hochfrequentes Erregersignal mit konstanter Amplitude und konstanter Frequenz. Dieses hochfrequente Signal wird über den Stator auf den Rotor
+des Resolvers übertragen. Durch die Drehung des Resolver-Rotors werden in der Statorwicklung des Drehtransformators rotorlageabhängige Spannungen induziert.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/resolver2.png"><img alt="../_images/resolver2.png" src="../_images/resolver2.png" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Abhängig von der Lage des Rotors ändern Sich die Amplituden der Spannungen U_sin und U_cos und werden über jeweils einen Differenzverstärker der Auswertung zugeführt.
+Die Differenzverstärker filtern Störsignale (Gleichtaktstörungen) auf den potenzialfreien Spursignalen U_sin und U_cos aus.
+Die aktuelle mechanische Lage kann aus den abgetasteten Spursignalen ermittelt werden
+p x alpha = arctan(U_sin /U_cos)
+Die nachstehende Grafik gibt einen Überblick über die prinzipielle Hardwarestruktur einer Resolverauswertung, die nach dem abtastenden Verfahren arbeitet.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/resolver3.png"><img alt="../_images/resolver3.png" src="../_images/resolver3.png" style="width: 625px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="welche-geber-verwendet-man-bei-welchem-motor">
+<h2>Welche Geber verwendet man bei welchem Motor?<a class="headerlink" href="#welche-geber-verwendet-man-bei-welchem-motor" title="Link to this heading">¶</a></h2>
+<section id="gebersysteme-fur-asynchrone-drehstrom-oder-servomotoren">
+<h3>Gebersysteme für asynchrone Drehstrom- oder Servomotoren<a class="headerlink" href="#gebersysteme-fur-asynchrone-drehstrom-oder-servomotoren" title="Link to this heading">¶</a></h3>
+<p>Bei asynchronen Motoren werden Gebersysteme in der Regel aus 2 Gründen eingesetzt:</p>
+<ul class="simple">
+<li><p>Drehzahlregelung (Um eine hohe Drehzahlgüte zu erreichen und auf Laständerungen optimal reagieren können)</p></li>
+<li><p>Positionierung</p></li>
+</ul>
+<p>Hierbei kommen in Regel folgende Geber zum Einsatz
+<strong>Inkrementalgeber mit geringer Auflösung</strong></p>
+<ul class="simple">
+<li><p>können nur zur Positionierung und nicht zur Drehzahlregelung eingesetzt werden</p></li>
+<li><p>nur Einfachpositionierung (Eil- Schleichgang) möglich</p></li>
+<li><p>dadurch geringere Dynamik des Systems</p></li>
+<li><p>Referenzfahrt notwendig</p></li>
+</ul>
+<p><strong>Inkrementelle Drehgeber</strong></p>
+<ul class="simple">
+<li><p>zur Drehzahlregelung</p></li>
+<li><p>zur Positionierung</p></li>
+<li><p>Referenzfahrt ist notwendig</p></li>
+</ul>
+<p><strong>Absolutwertgeber</strong></p>
+<ul class="simple">
+<li><p>zur Positionierung</p></li>
+<li><p>keine Referenzfahrt notwendig</p></li>
+<li><p>wenn kein Echtzeitkanal (Kombigeber mit entweder Sin/Cos-, TTL-, HTL-Signal) vorhanden ist, wird ein zusätzliches Gebersystem zur Drehzahlregelung benötigt</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="gebersysteme-fur-synchrone-servomotoren">
+<h3>Gebersysteme für synchrone Servomotoren<a class="headerlink" href="#gebersysteme-fur-synchrone-servomotoren" title="Link to this heading">¶</a></h3>
+<p>Für eine dynamische Regelung wird bei Synchronmotoren noch die Rotorlage für das Regelsystem benötigt.
+In der Regel kommen bei synchronen Servomotoren zwei Systeme zur Rotorlageerkennung zum Einsatz</p>
+<p><strong>Resolver</strong></p>
+<ul class="simple">
+<li><p>zur Rotorlageerkennung</p></li>
+<li><p>zur Drehzahlregelung</p></li>
+<li><p>zur Positionierung</p></li>
+<li><p>Referenzfahrt notwendig</p></li>
+</ul>
+<p><strong>Absolutwertgeber</strong></p>
+<ul class="simple">
+<li><p>zur Rotorlageerkennung</p></li>
+<li><p>Absolutwertgeber fur Servomotoren sind in der Regel Kombigeber mit einem Echtzeitkanal (Sin/Cos) für die Drehzahlregelung</p></li>
+<li><p>zur Positionierung</p></li>
+<li><p>Bei Single-Turn-Gebern ist in der Regel eine Referenzfahrt notwendig</p></li>
+<li><p>bei Multi-Tum-Gebem ist keine Referenzfahlt notwendig</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="gebersysteme-fur-lineare-servosysteme">
+<h3>Gebersysteme für lineare Servosysteme<a class="headerlink" href="#gebersysteme-fur-lineare-servosysteme" title="Link to this heading">¶</a></h3>
+<p><strong>Messlineale</strong></p>
+<ul class="simple">
+<li><p>zur Positionierung</p></li>
+<li><p>mit Absolutwertinformation auf dem Maßband ist keine Referenzfahrt notwendig bei rein inkrementeller Information auf dem Maßband ist eine Referenzfahrt notwendig</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="welche-gebersysteme-setzt-sew-eurodrive-ein">
+<h2>Welche Gebersysteme setzt SEW-EURODRIVE ein ?<a class="headerlink" href="#welche-gebersysteme-setzt-sew-eurodrive-ein" title="Link to this heading">¶</a></h2>
+<section id="inkrementalgeber-mit-geringer-auflosung">
+<h3>Inkrementalgeber mit geringer Auflösung<a class="headerlink" href="#inkrementalgeber-mit-geringer-auflosung" title="Link to this heading">¶</a></h3>
+<p>Mit den Inkrementalgebern mit geringer Auflösung kann man einfache nichtdynamische Positionierungen realisieren. Des Weiteren kann einfach und preisgünstig übewacht
+werden, ob sich der Motor dreht. Wenn ein Zweispur-Geber verwendet wird, kann zusätzlich die Drehrichtung des Motors ermittelt werden.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id1">
+<h3>Inkrementalgeber<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>Inkrementalgeber eignen sich zur Drehzahlregelung und Positionierung. Sie haben 2 Signalspuren und eine Nullimpulsspur. Die Inkrementalgeber sind als Hohlwellengeber,
+Spreizwellengeber, Steckwelle mit Endgewinde Oder Vollwellengeber mit Kupplung ausgeführt. Signalausgang: TTL, HTL Oder Sin/Cos.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="single-turn-kombigeber">
+<h3>Single-Turn-Kombigeber<a class="headerlink" href="#single-turn-kombigeber" title="Link to this heading">¶</a></h3>
+<p>Die Absolutwertgeber sind zumeist Kombigeber. Sie beinhalten einen Single-Turn-Absolutwertgeber und einen hochauflösenden Sinusgeber.
+Für die Datenübertragung der Absolutwerte steht eine asynchron-serielle-Schnittstelle zur Verfügung. Sie eignen Sich für den Betrieb von Synchronmotoren.
+Hierbei können sie zur Drehzahlregelung oder zur Positionierung über eine Umdrehung eingesetzt werden.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="absolutwengeber">
+<h3>Absolutwengeber<a class="headerlink" href="#absolutwengeber" title="Link to this heading">¶</a></h3>
+<p>Die Absolutwertgeber sind zumeist Kombigeber. Sie beinhalten einen Multi-Turn-Absolutwertgeber und einen hochauflösenden Sinusgeber.
+Für die Datenübertragung der Absolutwerte stehen wahlweise eine SSI-Schnittstelle und eine asynchron-serielle- Schnittstelle zur Verfügung.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+</section>
+
+
+	    </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../grundlagen/labview.html" class="btn btn-neutral float-right" title="LabView">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="drehgeber.html" class="btn btn-neutral" title="Drehgeber"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2024, Hautaklyttn.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="https://poraodojuca.dev">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/sphinx_highlight.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>
