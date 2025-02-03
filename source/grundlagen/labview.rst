@@ -126,7 +126,7 @@ Um Zwischenwerte auf einer Verbindung zu prüfen, verwendet man das Tool **„Pr
 |
 
 .. image:: pics/probeWatch.png
-   :width:628px
+   :width: 628px
 
 |
 
@@ -142,7 +142,7 @@ Mit dem Haltepunkt-Manager ( *Ansicht* -> *Haltepunkt-Manager* ) kann man Haltep
 |
 
 .. image:: pics/breakpointMan.png
-   :width:317px
+   :width: 317px
 
 |
 
@@ -169,7 +169,7 @@ Beispielsweise kann eine typische DAQ-Anwendung in **Prozesse für die Datenerfa
 |
 
 .. image:: pics/dreiSchleifen.png
-   :width:434px
+   :width: 434px
 
 |
 
@@ -230,7 +230,7 @@ Wenn eine Synchronisierung zwischen zwei Schleifen erforderlich ist, die keine D
 |
 
 .. image:: pics/occurence.png
-   :width:535px
+   :width: 535px
 
 |
 
