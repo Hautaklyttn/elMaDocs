@@ -557,12 +557,20 @@ Diese werden u. a. über das Signal-Rausch-Verhältnis beschrieben.
 .. image:: pics/perfektSinCos.png
    :width: 509px
 
-.. |br|
+.. raw:: html
+
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;<br>
 
 .. image:: pics/fehlerAmplitude.png
    :width: 498px
 
-.. |br|
+.. raw:: html
+
+   &nbsp;<br>
+   &nbsp;<br>
+   &nbsp;<br>
 
 .. image:: pics/fehlerPhase.png
    :width: 498px
