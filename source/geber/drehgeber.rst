@@ -1,6 +1,10 @@
 .. include:: <isonum.txt>
 .. include:: <isogrk1.txt>
 
+.. |br| raw:: html
+
+   <br />
+
 Drehgeber
 =========
 
@@ -553,20 +557,12 @@ Diese werden u. a. über das Signal-Rausch-Verhältnis beschrieben.
 .. image:: pics/perfektSinCos.png
    :width: 509px
 
-.. raw:: html
-
-   &nbsp;<br>
-   &nbsp;<br>
-   &nbsp;<br>
+.. |br|
 
 .. image:: pics/fehlerAmplitude.png
    :width: 498px
 
-.. raw:: html
-
-   &nbsp;<br>
-   &nbsp;<br>
-   &nbsp;<br>
+.. |br|
 
 .. image:: pics/fehlerPhase.png
    :width: 498px
