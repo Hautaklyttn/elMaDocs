@@ -478,7 +478,7 @@ Unabhängig von der Darstellung muss immer darauf geachtet werden, ob die Fehler
 
 |
 
-Die Messwertabweichung der Drehzahl definiert sich auch aus der Genauigkeit der Winkelposition sowie der Genauigkeit des Zeitintervalls. Auch wenn die zeitliche Abweichung meist in „ppm" (engl.: „parts per million", dt.: Teile von einer Million) angegeben wird, ist diese nicht zu vernachlässigen, denn schließlich liegen die drehzahlrelevanten Genauigkeitskomponenten von Drehgebern im Bereich von Winkelsekunden und somit auch im ppm-Bereich. 1m allgemeinen Sinne wird darauf an dieser Stelle nicht eingegangen.
+Die **Messwertabweichung der Drehzahl** definiert sich auch aus der Genauigkeit der Winkelposition sowie der Genauigkeit des Zeitintervalls. Auch wenn die zeitliche Abweichung meist in „ppm" (engl.: „parts per million", dt.: Teile von einer Million) angegeben wird, ist diese nicht zu vernachlässigen, denn schließlich liegen die drehzahlrelevanten Genauigkeitskomponenten von Drehgebern im Bereich von Winkelsekunden und somit auch im ppm-Bereich. Im allgemeinen Sinne wird darauf an dieser Stelle nicht eingegangen.
 
 |
 
@@ -487,7 +487,7 @@ Messwertabweichung bei Drehgebern
 
 Oft wird bei Messgeräten als Messwertabweichung ein globaler Wert angegeben, d.h. die maximale Abweichung der Istkurve von der Sollkurve :math:`\epsilon_{\text{max}}\;` (s. vorletztes Bild). Bei Drehgebern kann es sinnvoll sein die Angabe in mehrere Kennwerte zu unterteilen. Somit wird konkret auf die Wirkung von Abweichungskomponenten für unterschiedliche Anwendungen eingegangen. Auch haben die Komponenten unterschiedliche Ursachen. Die Unterscheidung kann entsprechend helfen Korrekturmaßnahmen abzuleiten. Dabei kann die Ursache (Messung) oder die Wirkung (Kompensation) adressiert werden.
 
-Bei Drehgebern lassen sich in der Fehlerkurve meist periodische Komponenten identifizieren. Anteile davon beziehen sich auf eine mechanische Umdrehung. Basiert die Sensorik auf mehreren Teilungsperioden pro Umdrehung, so finden sich auch Komponenten in der Fehlerkurve, die sich auf diese Teilungsperiode zurückführen lassen. Die Abbildung unten stellt eine simulativ erstellte Fehlerkurve im Winkelbereich sowie deren Spektren dar, anhand derer näher auf die Fehlerkomponenten eingegangen werden kann.
+Bei Drehgebern lassen sich in der Fehlerkurve meist **periodische Komponenten** identifizieren. Anteile davon beziehen sich auf eine mechanische Umdrehung. Basiert die Sensorik auf mehreren Teilungsperioden pro Umdrehung, so finden sich auch Komponenten in der Fehlerkurve, die sich auf diese Teilungsperiode zurückführen lassen. Die Abbildung unten stellt eine simulativ erstellte Fehlerkurve im Winkelbereich sowie deren Spektren dar, anhand derer näher auf die Fehlerkomponenten eingegangen werden kann.
 
 |
 
@@ -541,9 +541,9 @@ Veranschaulichung ist die Erweiterung von Gl. 1.1 zu:
 (:math:`\varphi_i\;`: gemessener Winkel in der i -ten Periode; *PPR*: Anzahl der Sinus-Cosinus-Perioden pro Umdrehung; :math:`A_{sin}, A_{cos}`: Amplitudenwerten der Sinus-Cosinus-Signale in [V]; 
 :math:`\varphi_{\text{sin}}, \varphi_{\text{cos}}`: Abweichungen der Phasenlage [°]; :math:`O_{\text{sin}}, O_{\text{cos}}`: Offsetwerte in [V]; :math:`d_{\text{sin}}, d_{\text{cos}}`: Momentanwerte der Störsignale in [V])
 
-Aus dieser Betrachtung ergeben sich Fehlerquellen für die Erfassung des Winkels innerhalb einer Signalperiode, die in der Tabell unten aufgelistet sind:
+Aus dieser Betrachtung ergeben sich **Fehlerquellen für die Erfassung des Winkels** innerhalb einer Signalperiode, die in der Tabelle unten aufgelistet sind:
 
-Die Wirkung ohne Fehler und die der ersten drei Fehlerarten wird in den folgenden Abbildungen veranschaulicht. Diese beziehen sich auf eine mechanische Umdrehung. 
+Die Wirkung ohne Fehler und die der ersten drei Fehlerarten werden in den folgenden Abbildungen veranschaulicht. Diese beziehen sich auf eine mechanische Umdrehung. 
 Zur besseren Veranschaulichung der Fehlerwirkung berücksichtigen die Szenarien der Abbildungen eine kleine Periodenzahl ( PPR = 16 ) und haben deutlich überzogene Fehlerkomponenten. 
 Auf die Darstellung der Wirkung der Signalstörungen wird verzichtet, da diese wie eine zufällige Mischung der drei anderen Fehlerarten zu interpretieren ist. 
 Diese werden u. a. über das Signal-Rausch-Verhältnis beschrieben.
@@ -636,10 +636,11 @@ All diese Fehlerarten können durch die zugrundeliegende Sensorik verursacht wer
 
 **Phasenfehler** entstehen z. B. durch unterschiedliche Gruppenlaufzeiten für die sinusförmigen Signale welche meist durch Bauteiltoleranzen der Komponenten der elektrischen Filter verursacht werden. 
 
-**Offsetfehler** werden z. B. durch nicht angepasste Verstärkerstufen oder Bauteiltoleranzen verursacht. Der **Klirrfaktor** wird z. B. durch die Sensorik (z.B. geringfügige Schwankungen des Strichmusters), 
-Nichtlinearitäten von Verstärkerstufen oder in der Analog-Digital-WandIung eingeleitet.
+**Offsetfehler** werden z. B. durch nicht angepasste Verstärkerstufen oder Bauteiltoleranzen verursacht.  
 
-Zusätzlich entstehen Fehler innerhalb einer Signalperiode durch die Interpolation. Geht man von der Interpolation gemäß Gl.1.1 aus, so werden die Sinus-Cosinus-Signale mittels eines linearen 
+Der **Klirrfaktor** wird z. B. durch die Sensorik (z.B. geringfügige Schwankungen des Strichmusters), Nichtlinearitäten von Verstärkerstufen oder in der Analog-Digital-WandIung eingeleitet.
+
+Zusätzlich **entstehen Fehler innerhalb einer Signalperiode durch die Interpolation**. Geht man von der Interpolation gemäß Gl.1.1 aus, so werden die Sinus-Cosinus-Signale mittels eines linearen 
 Analog-Digital-WandIers digitalisiert und dann anhand der Arkustangensfunktion in einen Winkel umngerechnet. Neben der AD-Wandler Auflösung hat der Algorithmus zur Arkustangensberechnung
 Einfluss auf das Ergebnis. Die anderen beschriebenen Interpolationsverfahren führen ebenfalls Fehler in die Messung ein, auf die an dieser Stelle aber nicht eingegangen wird.
 
