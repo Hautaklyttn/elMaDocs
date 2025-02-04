@@ -649,7 +649,7 @@ Diese Fehlerarten sind systematisch und können gegebenenfalls korrigiert werden
 Dies ist bei den Störsignalen nicht der Fall, da sie zufälliger Natur sind. Diese haben starken Einfluss auf die Wiederholgenauigkeit und die Reproduzierbarkeit. Die anderen Fehlerarten beeinflussen 
 die Genauigkeit an sich.
 
-Auch können Fehler durch nicht synchrone Abtastung der Sinus-Cosinus-Signale induziert werden. Ist man z.B. versucht den Analog-Digital-WandIer eines „einfachen" Mikroprozessors zu verwenden, 
+Auch können Fehler durch **nicht synchrone Abtastung der Sinus-Cosinus-Signale** induziert werden. Ist man z.B. versucht den Analog-Digital-WandIer eines „einfachen" Mikroprozessors zu verwenden, 
 so findet man für gewöhnlich einen Wandler mit einem vorgeschalteten Multiplexer ohne spezielle Mehrfach-Abtasthalteglieder (engl.: „sample-and-hold"). Die Quadratursignale können dann
 nur sequentiell erfasst werden. Dies hat im Winkelsignal die gleiche Wirkung wie ein Phasenfehler der Sinus-Cosinus-SignaIe. Allerdings ist dieser drehzahlabhängig.
 Für kleine Zeitunterschiede in der Abtastung im Verhältnis zur Periodenlänge gilt die folgende Gleichung:
