@@ -15,7 +15,7 @@ LabView
 Grundlagen
 ----------  
 
-LabVIEW-Programme werden als **virtuelle Instrumente** oder **VI**s bezeichnet, da mit ihnen Messinstrumente wie Oszilloskope oder Multimeter nachgeahmt werden. LabVIEW enthält eine Vielzahl von Werkzeugen zur Erfassung, Analyse, Darstellung und Speicherung von Daten sowie zur Fehlersuche in Programmcode.
+LabVIEW-Programme werden als **virtuelle Instrumente** oder **VIs**  bezeichnet, da mit ihnen Messinstrumente wie Oszilloskope oder Multimeter nachgeahmt werden. LabVIEW enthält eine Vielzahl von Werkzeugen zur Erfassung, Analyse, Darstellung und Speicherung von Daten sowie zur Fehlersuche in Programmcode.
 
 In LabVIEW erstellen Sie mithilfe von Bedien- und Anzeigeelementen eine Benutzeroberfläche, die als **Frontpanel** bezeichnet wird. Bedienelemente sind Eingabeelemente wie Drehknöpfe, Druckschalter oder Drehregler. Zu den Anzeigeelementen zählen alle Ausgabeelemente wie Graphen oder LEDs. Nachdem Sie das Frontpanel erstellt haben, können Sie mit Hilfe von VIs und Funktionen den Programmcode zur Steuerung der Frontpanel-Objekte hinzufügen. Dieser Code befindet sich im Blockdiagramm.
 
@@ -144,9 +144,10 @@ Mit dem Haltepunkt-Manager ( *Ansicht* -> *Haltepunkt-Manager* ) kann man Haltep
 .. image:: pics/breakpointMan.png
    :width: 317px
 
-|
+|br|
+|br|
+|br|
 
-|
 
 FPGA (im LabVIEW-Kontext)
 -------------------------
