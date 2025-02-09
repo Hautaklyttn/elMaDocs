@@ -125,7 +125,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../geber/drehgeberMisc.html#welche-gebersysteme-setzt-sew-eurodrive-ein">Welche Gebersysteme setzt SEW-EURODRIVE ein ?</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">LabView</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LabView</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#grundlagen">Grundlagen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugging">Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fpga-im-labview-kontext">FPGA (im LabVIEW-Kontext)</a></li>
+</ul>
+</li>
 </ul>
 
           
@@ -178,6 +183,213 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+<section id="grundlagen">
+<h2>Grundlagen<a class="headerlink" href="#grundlagen" title="Link to this heading">¶</a></h2>
+<p>LabVIEW-Programme werden als <strong>virtuelle Instrumente</strong> oder <a href="#id1"><span class="problematic" id="id2">**</span></a>VI**s bezeichnet, da mit ihnen Messinstrumente wie Oszilloskope oder Multimeter nachgeahmt werden. LabVIEW enthält eine Vielzahl von Werkzeugen zur Erfassung, Analyse, Darstellung und Speicherung von Daten sowie zur Fehlersuche in Programmcode.</p>
+<p>In LabVIEW erstellen Sie mithilfe von Bedien- und Anzeigeelementen eine Benutzeroberfläche, die als <strong>Frontpanel</strong> bezeichnet wird. Bedienelemente sind Eingabeelemente wie Drehknöpfe, Druckschalter oder Drehregler. Zu den Anzeigeelementen zählen alle Ausgabeelemente wie Graphen oder LEDs. Nachdem Sie das Frontpanel erstellt haben, können Sie mit Hilfe von VIs und Funktionen den Programmcode zur Steuerung der Frontpanel-Objekte hinzufügen. Dieser Code befindet sich im Blockdiagramm.</p>
+<p>LabVIEW ermöglicht die Kommunikation mit unterschiedlichsten Geräten, z.B. mit Datenerfassungskarten, Bildverarbeitungs- und Motorsteuerungsmodulen sowie GPIB-, PXI-, VXI und seriellen Geräten (RS-232 und RS-485).</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Link to this heading">¶</a></h2>
+<p>Wenn das VI ausgeführt wird, aber falsche Ergebnisse liefert, liegt ein Funktionsfehler im Code vor. LabVIEW bietet mehrere Tools, mit denen wir analysieren können, wo sich das VI nicht wie erwartet verhält.</p>
+<p>Wenn wir ein VI ausführen, werden in der Symbolleiste des Blockdiagramms Schaltflächen angezeigt, mit denen wir das VI debuggen können. Die folgende Symbolleiste wird im Blockdiagramm angezeigt:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/symbolleiste.png"><img alt="../_images/symbolleiste.png" src="../_images/symbolleiste.png" style="width: 506px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Klicken wir auf die Schaltfläche <strong>Ausführung hervorheben</strong>, wird eine Animation der Blockdiagrammausführung angezeigt, wenn wir das VI ausführen. Dadurch lässt sich der Datenfluss durch das Blockdiagramm nachvollziehen. Durch erneutes Klicken auf die Schaltfläche wird die Hervorhebung der Ausführung deaktiviert.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/lightbulb.png"><img alt="../_images/lightbulb.png" src="../_images/lightbulb.png" style="width: 201px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Die Hervorhebung der Ausführung zeigt die Bewegung von Daten im Blockdiagramm von einem Knoten zum anderen mithilfe von Blasen, die sich entlang der Drähte bewegen. Verwenden wir die Hervorhebung der Ausführung in Verbindung mit Einzelschritten, kann man sehen, wie sich Datenwerte durch ein VI von Knoten zu Knoten bewegen. Man kann die Ausführung eines VIs jederzeit unterbrechen, indem man auf die Schaltfläche „Pause“ in der Symbolleiste klickt:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/pause.png"><img alt="../_images/pause.png" src="../_images/pause.png" style="width: 156px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Wenn das VI angehalten wird, wechselt die Farbe der Schaltfläche zu Rot.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Sobald man das VI anhält, können wir die folgenden Tools verwenden, um zusätzliche Einblicke in die Ausführung Ihrer Anwendung zu erhalten:</strong></p>
+<p>Klickt man auf die Schaltfläche <strong>Drahtwerte beibehalten</strong>, werden die Drahtwerte an jedem Punkt im Ausführungsfluss gespeichert, sodass wir beim Platzieren einer Sonde auf dem Draht sofort den aktuellsten Wert der Daten beibehalten können, die durch den Draht geleitet wurden.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/drahtwerteHalten.png"><img alt="../_images/drahtwerteHalten.png" src="../_images/drahtwerteHalten.png" style="width: 188px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Man muss das VI mindestens einmal erfolgreich ausführen, bevor die Drahtwerte beibehalten werden.</p>
+<p>Wir klicken auf die Schaltfläche <strong>Step Into</strong>, um einen Knoten zu öffnen und anzuhalten.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/stepInto.png"><img alt="../_images/stepInto.png" src="../_images/stepInto.png" style="width: 100px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Wenn wir erneut auf die Schaltfläche <em>Step Into</em> klicken, wird die erste Aktion ausgeführt und bei der nächsten Aktion des SubVIs oder der Struktur angehalten. Wir können auch die Tasten Strg und Pfeil nach unten drücken. Beim Durchlaufen eines VIs in Einzelschritten wird das VI Knoten für Knoten durchlaufen. Jeder Knoten blinkt, um anzuzeigen, wann er zur Ausführung bereit ist.</p>
+<p>Wir klicken auf die Schaltfläche <strong>Step Over</strong>, um einen Knoten auszuführen und beim nächsten Knoten anzuhalten.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/stepOver.png"><img alt="../_images/stepOver.png" src="../_images/stepOver.png" style="width: 101px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Man kann auch die Tasten Strg und Pfeil nach rechts drücken. Indem man über den Knoten geht, führt man ihn aus, ohne ihn in Einzelschritten zu durchlaufen.</p>
+<p>Wir klicken auf die Schaltfläche <strong>Step Out</strong>, um die Ausführung des aktuellen Knotens zu beenden und anzuhalten.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/stepOut.png"><img alt="../_images/stepOut.png" src="../_images/stepOut.png" style="width: 100px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Wenn die Ausführung des VIs abgeschlossen ist, wird die Schaltfläche <em>Step Out</em> grau dargestellt. Wir können auch die Tasten Strg und Pfeil nach oben drücken. Indem wir einen Knoten verlassen, durchlaufen wir den Knoten in Einzelschritten und navigieren zum nächsten Knoten.</p>
+<p>Die Schaltfläche <strong>Warnung</strong> wird angezeigt, wenn ein VI eine Warnung enthält und wir das Kontrollkästchen Warnungen anzeigen im Fenster Fehlerliste aktiviert haben.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/warnung.png"><img alt="../_images/warnung.png" src="../_images/warnung.png" style="width: 93px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Eine Warnung weist darauf hin, dass ein potenzielles Problem mit dem Blockdiagramm vorliegt, verhindert jedoch nicht die Ausführung des VIs.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="sondenuberwachungsfenster">
+<h3>Sondenüberwachungsfenster<a class="headerlink" href="#sondenuberwachungsfenster" title="Link to this heading">¶</a></h3>
+<p>Um Zwischenwerte auf einer Verbindung zu prüfen, verwendet man das Tool <strong>„Probe“</strong> ( <em>Ansicht</em> -&gt; <em>Probe-Überwachungsfenster</em> ) während ein VI ausgeführt wird. Um eine Probe zu generieren, bewegt man den Cursor über eine Verbindung, während das VI ausgeführt wird, oder man klickt mit der rechten Maustaste auf die Verbindung und wählt „Probe“. Man verwendet das Tool „Probe“, wenn man ein kompliziertes Blockdiagramm mit einer Reihe von Operationen hat, von denen jede einzelne falsche Daten zurückgeben könnte. Am besten verwendet man das Tool „Probe“ mit <em>Ausführungshervorhebung</em>, <em>Einzelschritten</em> und <em>Haltepunkten</em>, um festzustellen, ob und wo Daten falsch sind. Wenn Daten verfügbar sind, aktualisiert die Probe die Daten sofort und zeigt sie im Probe-Überwachungsfenster während der Ausführungshervorhebung, Einzelschritten oder wenn Sie an einem Haltepunkt anhalten, an.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/probeWatch.png"><img alt="../_images/probeWatch.png" src="../_images/probeWatch.png" style="width: 628px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Wenn die Ausführung an einem Knoten aufgrund einer Einzelschrittausführung oder eines Haltepunkts angehalten wird, kann man auch die gerade ausgeführte Verbindung prüfen, um den Wert anzuzeigen, der durch diese Verbindung geflossen ist.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="haltepunkt-manager">
+<h3>Haltepunkt-Manager<a class="headerlink" href="#haltepunkt-manager" title="Link to this heading">¶</a></h3>
+<p>Mit dem Haltepunkt-Manager ( <em>Ansicht</em> -&gt; <em>Haltepunkt-Manager</em> ) kann man Haltepunkte in Ihrem Code anzeigen, hinzufügen oder löschen. Ein Haltepunkt unterbricht die Ausführung des VIs, wenn das entsprechende Objekt ausgeführt wird. Man kann es auf ein VI, eine Struktur, eine Verbindung oder einen Operator platzieren.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/breakpointMan.png"><img alt="../_images/breakpointMan.png" src="../_images/breakpointMan.png" style="width: 317px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="fpga-im-labview-kontext">
+<h2>FPGA (im LabVIEW-Kontext)<a class="headerlink" href="#fpga-im-labview-kontext" title="Link to this heading">¶</a></h2>
+<p>Mithilfe des LabVIEW FPGA-Moduls können Entwickler eine Vielzahl von Datenerfassungs- und Verarbeitungsroutinen implementieren, die auf FPGA-Zielen wie RIO- und CompactRIO-Geräten ausgeführt werden. <strong>Die Hardwareausführung bietet eine höhere Leistung und Determinismus als die meisten prozessorbasierten Softwarelösungen.</strong> Sobald der Code kompiliert und auf dem FPGA ausgeführt wird, läuft er ohne das mit der Softwareausführung und Thread-Priorisierung verbundene Jitter, das für die meisten gängigen Betriebssysteme typisch ist und in Echtzeitbetriebssystemen sogar in viel geringerem Maße auftritt.</p>
+<p>Die grafische Programmiermethode von LabVIEW ist von Natur aus parallel und eignet sich für die Entwicklung hochparallelen Codes. <strong>Auf einem CPU-basierten Ziel wie Windows wird der grafische Code in die serielle Programmausführung eingeplant, wobei alle Funktionen und Vorgänge sequenziell auf dem Prozessor ausgeführt werden.</strong> Der LabVIEW-Scheduler kümmert sich um die Verwaltung mehrerer Schleifen, Timings, Prioritäten und anderer Einstellungen, die bestimmen, wann jede Funktion ausgeführt wird. Dieser sequenzielle Vorgang verursacht eine zeitliche Interaktion zwischen verschiedenen Teilen einer Anwendung und erzeugt Jitter bei der Programmausführung.</p>
+<p>Auf einem FPGA-basierten Ziel wird jeder Anwendungsprozess (Teilmenge der von Ihnen definierten Anwendung) <span class="under">innerhalb einer Schleifenstruktur</span> implementiert. Das LabVIEW-Diagramm wird den FPGA-Gates und -Slices zugeordnet, <strong>sodass parallele Schleifen im Blockdiagramm in verschiedenen Abschnitten der FPGA-Struktur implementiert werden.</strong> Dadurch können alle Prozesse gleichzeitig (parallel) ausgeführt werden. Die Zeitabfolge jedes Prozesses ist unabhängig vom Rest des Diagramms, wodurch Jitter vermieden wird. Dies bedeutet auch, dass Sie zusätzliche Schleifen hinzufügen können, ohne die Leistung zuvor implementierter Prozesse zu beeinträchtigen. Sie können Operationen hinzufügen, die die Interaktion zwischen Schleifen zur Synchronisierung oder zum Austausch von Daten ermöglichen.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="parallele-ausfuhrung">
+<h3>Parallele Ausführung<a class="headerlink" href="#parallele-ausfuhrung" title="Link to this heading">¶</a></h3>
+<p>Durch die parallele Natur der grafischen Programmierung und die wirklich parallele Implementierung des LabVIEW-Diagramms auf dem FPGA können Sie <strong>die Ausführungsgeschwindigkeit weiter optimieren, indem Sie Ihren Anwendungscode in kleinere Prozesse partitionieren</strong>. Dadurch kann jeder Prozess eine höhere Schleifenrate und eine insgesamt höhere Ausführungsrate für die Anwendung erreichen, als wenn die gesamte Anwendung in einer Schleife ausgeführt würde.</p>
+<p>Beispielsweise kann eine typische DAQ-Anwendung in <strong>Prozesse für die Datenerfassung, Datenverarbeitung und Datenübertragung</strong> an eine Hostanwendung partitioniert werden. Diese Aufgaben könnten als Sequenz in einer einzigen Schleife implementiert werden, könnten aber auch als drei separate Schleifen codiert werden, wie unten gezeigt.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/dreiSchleifen.png"><img alt="../_images/dreiSchleifen.png" src="../_images/dreiSchleifen.png" style="width: 434px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Datenübertragung und -synchronisierung zwischen parallelen Schleifen oder Codesegmenten können mithilfe von Standard-LabVIEW-FPGA-Tools wie</p>
+<ul class="simple">
+<li><p><em>FIFOs</em> und</p></li>
+<li><p><em>Occurrence</em></p></li>
+</ul>
+<p>abgewickelt werden.</p>
+<p><strong>FIFOs</strong> ermöglichen das Speichern und Puffern von Daten in Ihrer FPGA-Anwendung und sind daher nützlich, um Daten zwischen zwei verschiedenen Teilen des Blockdiagramms oder an SubVIs weiterzugeben. Sie können auch verwendet werden, um zwei verschiedene Schleifen zu synchronisieren, sodass die empfangende Schleife basierend auf den empfangenen Daten mit der sendenden synchronisiert wird. In einem FPGA-VI können mehrere FIFOs erstellt werden, und jedes FIFO kann mit einem individuellen Datentyp und einer individuellen Tiefe konfiguriert werden. Für den Blockspeicher konfigurierte FIFOs teilen sich den auf dem FPGA verfügbaren Benutzerspeicher und verbrauchen selbst keines der FPGA-Gates. <span class="under">Mithilfe des Timeout-Parameters an den FIFO-Lese- und Schreibknoten können Sie das individuelle Verhalten dieser Knoten konfigurieren.</span></p>
+<section id="fifo-timeout">
+<h4>FIFO ‘Timeout’<a class="headerlink" href="#fifo-timeout" title="Link to this heading">¶</a></h4>
+<p><strong>Schreiben</strong> FIFO Methode</p>
+<p><em>Timeout</em> gibt die Anzahl der Taktimpulse an, die die Funktion auf freien Speicherplatz im FIFO wartet, <span class="under">wenn der FIFO voll ist.</span></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Wert</p></th>
+<th class="head"><p>Bedeutung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-1</p></td>
+<td><p>verhindert, dass die Funktion ein Timeout durchführt. =&gt; Blockiert das .vi an dieser Stelle bis Daten kommen!</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>keine Wartezeit.</p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;1</p></td>
+<td><p>Wartezeit auf freien Speicher in Taktimpulsen</p></td>
+</tr>
+</tbody>
+</table>
+<p>Wenn <em>Timeout?</em> TRUE ist, schreibt die Funktion das Element nicht in den FIFO.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Lesen</strong> FIFO Methode</p>
+<p><em>Timeout</em> gibt die Zeit in Taktimpulsen an, die die Methode auf verfügbare Daten im FIFO wartet, <span class="under">wenn der FIFO leer ist.</span></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Wert</p></th>
+<th class="head"><p>Bedeutung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-1</p></td>
+<td><p>verhindert, dass die Funktion ein Timeout durchführt. =&gt; Blockiert das .vi an dieser Stelle bis Daten kommen!</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>keine Wartezeit. =&gt; FIFO-Methodenknoten als <em>zeitgesteuerte Einzelzyklusschleife</em></p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;1</p></td>
+<td><p>Wartezeit auf neue Daten in Taktimpulsen</p></td>
+</tr>
+</tbody>
+</table>
+<p>Wenn <em>Timeout?</em> TRUE ist, ist das Element undefiniert und es erfolgt kein Lesevorgang.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Wenn eine Synchronisierung zwischen zwei Schleifen erforderlich ist, die keine Daten direkt austauschen, können Sie <strong>Occurrence</strong> verwenden. Ein Occurrence ermöglicht es Ihnen, eine Schleife mithilfe der Funktion <em>„Wait for Occurrence“</em> zu blockieren, bis eine andere Schleife einen bestimmten Vorgang abgeschlossen hat und die Funktion <em>„Set Occurrence“</em> aufruft, wie im folgenden Diagramm dargestellt.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/occurence.png"><img alt="../_images/occurence.png" src="../_images/occurence.png" style="width: 535px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Diese Technik kann auf nahezu jede Anwendung angewendet werden. Indem Sie den Datenfluss innerhalb Ihrer Anwendung betrachten, können Sie verschiedene Prozesse identifizieren, die unabhängig voneinander ausgeführt werden können, auch wenn sie im größeren Schema der Anwendung synchronisiert werden müssen. Dieser modulare Programmieransatz verbessert nicht nur die Leistung, sondern hilft Ihnen auch dabei, Ihren Anwendungscode zu organisieren und zu verwalten. So können Sie Ihre Anwendung einfacher testen und debuggen und die Codewiederverwendung in zukünftigen Anwendungen mit ähnlichen Anforderungen verbessern.</p>
+</section>
+</section>
+</section>
 </section>
 
 

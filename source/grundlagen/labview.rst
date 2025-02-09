@@ -13,7 +13,7 @@ LabView
 |
 
 Grundlagen
-----------
+----------  
 
 LabVIEW-Programme werden als **virtuelle Instrumente** oder **VI**s bezeichnet, da mit ihnen Messinstrumente wie Oszilloskope oder Multimeter nachgeahmt werden. LabVIEW enthält eine Vielzahl von Werkzeugen zur Erfassung, Analyse, Darstellung und Speicherung von Daten sowie zur Fehlersuche in Programmcode.
 
@@ -155,7 +155,7 @@ Mithilfe des LabVIEW FPGA-Moduls können Entwickler eine Vielzahl von Datenerfas
 
 Die grafische Programmiermethode von LabVIEW ist von Natur aus parallel und eignet sich für die Entwicklung hochparallelen Codes. **Auf einem CPU-basierten Ziel wie Windows wird der grafische Code in die serielle Programmausführung eingeplant, wobei alle Funktionen und Vorgänge sequenziell auf dem Prozessor ausgeführt werden.** Der LabVIEW-Scheduler kümmert sich um die Verwaltung mehrerer Schleifen, Timings, Prioritäten und anderer Einstellungen, die bestimmen, wann jede Funktion ausgeführt wird. Dieser sequenzielle Vorgang verursacht eine zeitliche Interaktion zwischen verschiedenen Teilen einer Anwendung und erzeugt Jitter bei der Programmausführung.
 
-Auf einem FPGA-basierten Ziel wird jeder Anwendungsprozess (Teilmenge der von Ihnen definierten Anwendung) :underline:`innerhalb einer Schleifenstruktur` implementiert. Das LabVIEW-Diagramm wird den FPGA-Gates und -Slices zugeordnet, **sodass parallele Schleifen im Blockdiagramm in verschiedenen Abschnitten der FPGA-Struktur implementiert werden.** Dadurch können alle Prozesse gleichzeitig (parallel) ausgeführt werden. Die Zeitabfolge jedes Prozesses ist unabhängig vom Rest des Diagramms, wodurch Jitter vermieden wird. Dies bedeutet auch, dass Sie zusätzliche Schleifen hinzufügen können, ohne die Leistung zuvor implementierter Prozesse zu beeinträchtigen. Sie können Operationen hinzufügen, die die Interaktion zwischen Schleifen zur Synchronisierung oder zum Austausch von Daten ermöglichen.
+Auf einem FPGA-basierten Ziel wird jeder Anwendungsprozess (Teilmenge der von Ihnen definierten Anwendung) :under:`innerhalb einer Schleifenstruktur` implementiert. Das LabVIEW-Diagramm wird den FPGA-Gates und -Slices zugeordnet, **sodass parallele Schleifen im Blockdiagramm in verschiedenen Abschnitten der FPGA-Struktur implementiert werden.** Dadurch können alle Prozesse gleichzeitig (parallel) ausgeführt werden. Die Zeitabfolge jedes Prozesses ist unabhängig vom Rest des Diagramms, wodurch Jitter vermieden wird. Dies bedeutet auch, dass Sie zusätzliche Schleifen hinzufügen können, ohne die Leistung zuvor implementierter Prozesse zu beeinträchtigen. Sie können Operationen hinzufügen, die die Interaktion zwischen Schleifen zur Synchronisierung oder zum Austausch von Daten ermöglichen.
 
 |
 
@@ -180,14 +180,14 @@ Datenübertragung und -synchronisierung zwischen parallelen Schleifen oder Codes
 
 abgewickelt werden.
 
-**FIFOs** ermöglichen das Speichern und Puffern von Daten in Ihrer FPGA-Anwendung und sind daher nützlich, um Daten zwischen zwei verschiedenen Teilen des Blockdiagramms oder an SubVIs weiterzugeben. Sie können auch verwendet werden, um zwei verschiedene Schleifen zu synchronisieren, sodass die empfangende Schleife basierend auf den empfangenen Daten mit der sendenden synchronisiert wird. In einem FPGA-VI können mehrere FIFOs erstellt werden, und jedes FIFO kann mit einem individuellen Datentyp und einer individuellen Tiefe konfiguriert werden. Für den Blockspeicher konfigurierte FIFOs teilen sich den auf dem FPGA verfügbaren Benutzerspeicher und verbrauchen selbst keines der FPGA-Gates. :underline:`Mithilfe des Timeout-Parameters an den FIFO-Lese- und Schreibknoten können Sie das individuelle Verhalten dieser Knoten konfigurieren.`
+**FIFOs** ermöglichen das Speichern und Puffern von Daten in Ihrer FPGA-Anwendung und sind daher nützlich, um Daten zwischen zwei verschiedenen Teilen des Blockdiagramms oder an SubVIs weiterzugeben. Sie können auch verwendet werden, um zwei verschiedene Schleifen zu synchronisieren, sodass die empfangende Schleife basierend auf den empfangenen Daten mit der sendenden synchronisiert wird. In einem FPGA-VI können mehrere FIFOs erstellt werden, und jedes FIFO kann mit einem individuellen Datentyp und einer individuellen Tiefe konfiguriert werden. Für den Blockspeicher konfigurierte FIFOs teilen sich den auf dem FPGA verfügbaren Benutzerspeicher und verbrauchen selbst keines der FPGA-Gates. :under:`Mithilfe des Timeout-Parameters an den FIFO-Lese- und Schreibknoten können Sie das individuelle Verhalten dieser Knoten konfigurieren.`
 
 FIFO 'Timeout'
 ++++++++++++++
 
 **Schreiben** FIFO Methode
 
-*Timeout* gibt die Anzahl der Taktimpulse an, die die Funktion auf freien Speicherplatz im FIFO wartet, :underline:`wenn der FIFO voll ist.`
+*Timeout* gibt die Anzahl der Taktimpulse an, die die Funktion auf freien Speicherplatz im FIFO wartet, :under:`wenn der FIFO voll ist.`
 
 .. list-table::
    :header-rows: 1
@@ -207,7 +207,7 @@ Wenn *Timeout?* TRUE ist, schreibt die Funktion das Element nicht in den FIFO.
 
 **Lesen** FIFO Methode
 
-*Timeout* gibt die Zeit in Taktimpulsen an, die die Methode auf verfügbare Daten im FIFO wartet, :underline:`wenn der FIFO leer ist.`
+*Timeout* gibt die Zeit in Taktimpulsen an, die die Methode auf verfügbare Daten im FIFO wartet, :under:`wenn der FIFO leer ist.`
 
 .. list-table::
    :header-rows: 1
